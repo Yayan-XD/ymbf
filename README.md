@@ -12,7 +12,7 @@
 </p>
 
 #### Results
- <img src="#" width="640" title="Menu" alt="Menu">
+ <img src="https://github.com/Yayan-XD/ymbf/blob/main/.ppk/hasil.jpg" width="640" title="Menu" alt="Menu">
 </p>
 
 ###### notice me: if you get cp results, save 3/7 days then log in.
