@@ -214,6 +214,8 @@ def awokawokawokawokawokawokawokawokawokawokawokawok():
                     moch_yayan()
             else:
                 moch_yayan()
+        elif yan =='8':
+        	info_tools()
         elif yan =='0':
             	print '\n'
                 tod()
