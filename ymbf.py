@@ -324,7 +324,7 @@ def publik():
         raw_input(' [%s ENTER%s ] '%(O,N))
         moch_yayan()
     except (KeyError,IOError):
-    	os.remove(ppk)
+    	os.remove(kntl)
     	jalan('\n %s[%s!%s] Gagal dump id, kemungkinan id tidaklah publik.\n'%(N,M,N))
         raw_input(' [ %sKEMBALI%s ] '%(O,N))
         moch_yayan()
