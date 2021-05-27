@@ -81,7 +81,6 @@ logo = '''%s     __  ____  ______  ____
 # crack selesai
 def hasil(ok,cp):
 	if len(ok) != 0 or len(cp) != 0:
-		print '\n\n %s[%s#%s] crack selesai...\n\n'%(N,K,N)
 		print '\n\n [%s+%s] total OK : %s%s%s'%(O,N,H,str(len(ok)),N)
 		print ' [%s+%s] total CP : %s%s%s'%(O,N,K,str(len(cp)),N)
 		exit()
