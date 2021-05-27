@@ -85,6 +85,8 @@ def hasil(ok,cp):
 		print '\n\n %s[%s#%s] crack selesai...\n\n'%(N,K,N)
 		print '\n\n [%s+%s] total OK : %s%s%s'%(O,N,H,str(len(ok)),N)
 		print ' [%s+%s] total CP : %s%s%s'%(O,N,K,str(len(cp)),N)
+		os.remove(self.pler)
+		exit()
 	else:
 		print '\n\n [%s!%s] opshh kamu tidak mendapatkan hasil :('%(M,N)
 		os.remove(self.pler)
@@ -602,9 +604,7 @@ class __crack__:
                                     except:
                                         pass
 
-                            os.remove(self.pler)
                             hasil(ok,cp)
-                            exit()
                         elif cin == '2':
                             print '\n [+] hasil OK disimpan ke -> results/OK-%s-%s-%s.txt' % (ha, op, ta)
                             print ' [+] hasil CP disimpan ke -> results/CP-%s-%s-%s.txt' % (ha, op, ta)
@@ -617,9 +617,7 @@ class __crack__:
                                     except:
                                         pass
 
-                            os.remove(self.pler)
                             hasil(ok,cp)
-                            exit()
                         elif cin == '3':
                             print '\n [+] hasil OK disimpan ke -> results/OK-%s-%s-%s.txt' % (ha, op, ta)
                             print ' [+] hasil CP disimpan ke -> results/CP-%s-%s-%s.txt' % (ha, op, ta)
@@ -632,9 +630,7 @@ class __crack__:
                                     except:
                                         pass
 
-                            os.remove(self.pler)
                             hasil(ok,cp)
-                            exit()
                         else:
                             print '\n %s[%s!%s] input yang bener goblok!'%(N,M,N)
                             time.sleep(2)
@@ -788,9 +784,7 @@ class __crack__:
                     except:
                         pass
 
-            os.remove(self.pler)
             hasil(ok,cp)
-            exit()
         elif yan in ('2', '02'):
             print '\n [+] hasil OK disimpan ke -> results/OK-%s-%s-%s.txt' % (ha, op, ta)
             print ' [+] hasil CP disimpan ke -> results/CP-%s-%s-%s.txt' % (ha, op, ta)
@@ -832,9 +826,7 @@ class __crack__:
                     except:
                         pass
 
-            os.remove(self.pler)
             hasil(ok,cp)
-            exit()
         elif yan in ('3', '03'):
             print '\n [+] hasil OK disimpan ke -> results/OK-%s-%s-%s.txt' % (ha, op, ta)
             print ' [+] hasil CP disimpan ke -> results/CP-%s-%s-%s.txt' % (ha, op, ta)
@@ -876,9 +868,7 @@ class __crack__:
                     except:
                         pass
 
-            os.remove(self.pler)
             hasil(ok,cp)
-            exit()
             
 if __name__ == '__main__':
     os.system('git pull')
