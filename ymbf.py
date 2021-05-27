@@ -20,7 +20,6 @@ import base64
 from concurrent.futures import ThreadPoolExecutor as YayanGanteng
 from datetime import datetime
 from time import sleep
-ua = requests.get("https://raw.githubusercontent.com/avsid/data-anggaxd/main/ua.txt").text.strip()
 ct = datetime.now()
 n = ct.month
 bulan = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'Nopember', 'Desember']
