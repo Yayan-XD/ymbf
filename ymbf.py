@@ -305,7 +305,7 @@ def publik():
         xxx = requests.get('https://graph.facebook.com/%s/friends?limit=%s&access_token=%s'%(csy,ihh,__cindy__))
         id = []
         z = json.loads(xxx.text)
-        ppk = ('dump/' + ahh + '.json').replace(' ', '_')
+        kntl = ('dump/' + ahh + '.json').replace(' ', '_')
         ys = open(ppk, 'w')
         for a in z['data']:
             id.append(a['id'] + '<=>' + a['name'])
@@ -317,7 +317,7 @@ def publik():
 
         ys.close()
         jalan('\n\n %s[%s✓%s] berhasil dump id dari teman publik'%(N,H,N))
-        print ' [%s•%s] salin output file 👉 ( %s%s%s )'%(B,N,M,ppk,N)
+        print ' [%s•%s] salin output file 👉 ( %s%s%s )'%(B,N,M,kntl,N)
         print 50 * '-'
         raw_input(' [%s ENTER%s ] '%(O,N))
         moch_yayan()
@@ -416,8 +416,8 @@ def cek_ingfo():
         time.sleep(0.01)
         yayanxd()
     try:
-        ppk = raw_input('\n [?] masukan id fb : ')
-        if ppk in ('user', 'User', 'USER'):
+        ajg = raw_input('\n [?] masukan id fb : ')
+        if ajg in ('user', 'User', 'USER'):
         	jalan('\n [%s+%s] anda akan di arahkan ke browser!'%(O,N));time.sleep(2)
         	os.system('xdg-open https://commentpicker.com/find-facebook-id.php')
         	cek_ingfo()
