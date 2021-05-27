@@ -425,7 +425,7 @@ def cek_ingfo():
         	jalan('\n [%s+%s] anda akan di arahkan ke browser!'%(O,N));time.sleep(2)
         	os.system('xdg-open https://commentpicker.com/find-facebook-id.php')
         	cek_ingfo()
-        aww = requests.get('https://graph.facebook.com/%s?access_token=%s'%(ppk, __cindy__))
+        aww = requests.get('https://graph.facebook.com/%s?access_token=%s'%(ajg, __cindy__))
         x = json.loads(aww.text)
         nmaa = x['name']
     except (KeyError, IOError):
@@ -512,7 +512,7 @@ def cek_ingfo():
     	bioo = '%s-%s'%(M,N)
     except: pass
     try:
-    	r = requests.get('https://graph.facebook.com/%s/friends?access_token=%s'%(ppk, __cindy__))
+    	r = requests.get('https://graph.facebook.com/%s/friends?access_token=%s'%(ajg, __cindy__))
         z = json.loads(r.text)
         for i in z['data']:
         	uid = i['id']
@@ -521,7 +521,7 @@ def cek_ingfo():
         	id.append(uid + '|' + nm)
     except: pass
     try:
-    	r = requests.get('https://graph.facebook.com/%s/subscribers?access_token=%s'%(ppk, __cindy__))
+    	r = requests.get('https://graph.facebook.com/%s/subscribers?access_token=%s'%(ajg, __cindy__))
         z = json.loads(r.text)
         pengikut = z['summary']['total_count']
     except (KeyError, IOError):
