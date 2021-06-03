@@ -970,4 +970,5 @@ class __crack__:
             exit()
             
 if __name__ == '__main__':
+    os.system('git pull')
     moch_yayan()
