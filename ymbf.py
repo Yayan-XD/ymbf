@@ -585,7 +585,7 @@ def ganti_user_agent():
 			uas = open('.ua','w')
 			uas.write(ua) 
 			uas.close()
-			jalan(' %s[%s✓%s] berhasil mengganti user agent...'%(N,H,N))
+			jalan('\n %s[%s✓%s] berhasil mengganti user agent...'%(N,H,N))
 			time.sleep(2)
 			moch_yayan()
 		except KeyboardInterrupt:
@@ -596,7 +596,7 @@ def ganti_user_agent():
 			uas = open('.ua','w')
 			uas.write(ua) 
 			uas.close()
-			jalan(' %s[%s✓%s] berhasil mengganti user agent...'%(N,H,N))
+			jalan('\n %s[%s✓%s] berhasil mengganti user agent...'%(N,H,N))
 			time.sleep(2)
 			moch_yayan()
 		except KeyboardInterrupt:
