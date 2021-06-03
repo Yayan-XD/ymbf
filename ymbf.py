@@ -736,6 +736,7 @@ class __crack__:
             	user_agent = open('YNTKTS.txt', 'r').read()
             except (KeyError, IOError):
             	user_agent = requests.get('https://raw.githubusercontent.com/Yayan-XD/ymbf/main/data/cy.txt').text.strip()
+            except: pass
             headers_ = {'x-fb-connection-bandwidth': str(random.randint(20000000.0, 30000000.0)), 'x-fb-sim-hni': str(random.randint(20000, 40000)), 
                'x-fb-net-hni': str(random.randint(20000, 40000)), 
                'x-fb-connection-quality': 'EXCELLENT', 
@@ -783,6 +784,7 @@ class __crack__:
             	user_agent = open('YNTKTS.txt', 'r').read()
             except (KeyError, IOError):
             	user_agent = requests.get('https://raw.githubusercontent.com/Yayan-XD/ymbf/main/data/cy.txt').text.strip()
+            except: pass
             headers_ = {'x-fb-connection-bandwidth': str(random.randint(20000000.0, 30000000.0)), 'x-fb-sim-hni': str(random.randint(20000, 40000)), 
                'x-fb-net-hni': str(random.randint(20000, 40000)), 
                'x-fb-connection-quality': 'EXCELLENT', 
@@ -829,6 +831,7 @@ class __crack__:
             	user_agent = open('YNTKTS.txt', 'r').read()
             except (KeyError, IOError):
             	user_agent = requests.get('https://raw.githubusercontent.com/Yayan-XD/ymbf/main/data/cy.txt').text.strip()
+            except: pass
             headers_ = {'x-fb-connection-bandwidth': str(random.randint(20000000.0, 30000000.0)), 'x-fb-sim-hni': str(random.randint(20000, 40000)), 
                'x-fb-net-hni': str(random.randint(20000, 40000)), 
                'x-fb-connection-quality': 'EXCELLENT', 
