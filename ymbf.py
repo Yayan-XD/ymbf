@@ -14,8 +14,8 @@
 #######################################################
 
             ##   RATU ERROR PROJECTS ##
-# Thanks for Angga,Azim,Dapunta,Rizal,Hamzah,Jesicca,Iqbal,Yayan #
-###################################################################
+# Thanks for : Angga,Azim,Dapunta,Rizal,Hamzah,Jesicca,Iqbal,Yayan #
+####################################################################
 
 
    ############# JANGAN DI UBAH ASU NANTI ERROR! #############
