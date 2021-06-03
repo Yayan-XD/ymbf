@@ -8,8 +8,8 @@
 # Github         : https://github.com/Yayan-XD        #
 # Facebook       : https://www.facebook.com/KM39453   #
 # Instagram      : https://www.instagram.com/yayanxd_ #
-# Fansfage.      : https://www.facebook.com/Yayanxyz  #
-# Blogspot.      : https://squadcyberpeopleteam.blogspot.com #
+# Fansfage       : https://www.facebook.com/Yayanxyz  #
+# Blogspot       : https://squadcyberpeopleteam.blogspot.com #
 # Python version : 2.7                                #
 #######################################################
 
