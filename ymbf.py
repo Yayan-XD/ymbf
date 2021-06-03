@@ -4,7 +4,7 @@
 #######################################################
 # Name           : Y-MBF (MBF) <token method>         #
 # File           : ymbf.py                            #
-# Author         : Moch Yayan Juan Alvredo XD         #
+# Author         : Moch Yayan Juan Alvredo XD.        #
 # Github         : https://github.com/Yayan-XD        #
 # Facebook       : https://www.facebook.com/KM39453   #
 # Instagram      : https://www.instagram.com/yayanxd_ #
