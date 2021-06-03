@@ -13,7 +13,7 @@
 # Python version : 2.7                                #
 #######################################################
 
-            ##   RATU ERROR PROJECTS ##
+            ##   RATU ERROR PROJECTS   ##
 # Thanks for : Angga,Azim,Dapunta,Rizal,Hamzah,Jesicca,Iqbal,Yayan #
 ####################################################################
 
