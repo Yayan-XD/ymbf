@@ -3,8 +3,7 @@
 </h1>
 </div>
 <p align="center">
-  Made with ❤️ by <a href="https://www.facebook.com/KM39453">YayanXD_</a>
-</p>
+  Made with ❤️ by <a href=" https://www.facebook.com/ARIS.MUNANDAR30
 <p align="center">
  
 ### menu
