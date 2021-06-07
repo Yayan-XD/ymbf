@@ -190,7 +190,7 @@ def awokawokawokawokawokawokawokawokawokawokawokawok():
         elif yan =='3':
                 followers()
         elif yan =='4':
-                public()
+                postingan()
         elif yan =='5':
                 __crack__().slurr()
         elif yan =='6':
