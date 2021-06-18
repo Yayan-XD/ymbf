@@ -927,7 +927,7 @@ class __crack__:
                         pass
 
             print '\n\n %s[%s#%s] crack selesai...'%(N,K,N)
-           # os.remove(self.apk)
+            os.remove(self.apk)
             hasil(ok,cp)
             exit()
         elif yan in ('2', '02'):
