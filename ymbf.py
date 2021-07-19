@@ -479,7 +479,8 @@ def cek_ingfo():
         year = ''
     except: pass
     try:
-    	gndr = x['gender']
+    	gndr = x['gender'].replace('female', 'Perempuan')
+        gndr = x['gender'].replace('male', 'Laki Laki')
     except (KeyError, IOError):
     	gndr = '%s-%s'%(M,N)
     except: pass
@@ -509,14 +510,14 @@ def cek_ingfo():
     	dari = '%s-%s'%(M,N)
     except: pass
     try:
-    	lins = x['link']
-    except (KeyError, IOError):
-    	lins = '%s-%s'%(M,N)
-    except: pass
-    try:
     	uptd = x['updated_time']
     except (KeyError, IOError):
     	uptd = '%s-%s'%(M,N)
+    except:pass
+    try:
+    	lins = x['link']
+    except (KeyError, IOError):
+    	lins = '%s-%s'%(M,N)
     except: pass
     try:
     	nmrr = x['mobile_phone']
@@ -564,7 +565,7 @@ def cek_ingfo():
     print ' [*] kota asal      : %s'%(dari);time.sleep(0.03)
     print ' [*] tinggal di     : %s'%(tigl);time.sleep(0.03)
     print ' [*] zona waktu     : %s'%(tzim);time.sleep(0.03)
-    print ' [*] terakhir di updated : %s'%(uptd);time.sleep(0.03)
+    print ' [*] terakhir di updated pada : %s '%(uptd[:10]);time.sleep(0.03)
     print ' %s[%s#%s]'%(N,O,N), 52 * '\x1b[1;96m-\x1b[0m'
     jalan('\n [%s✓%s] berhasil mengechek data² akun facebook\n\n'%(O,N));exit()
 
