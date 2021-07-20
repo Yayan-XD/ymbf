@@ -66,5 +66,5 @@ $ python2 ymbf.py
 gunakanlah dengan bijak, atas apapun yang terjadi admin tidak bertanggung jawab.
 
 
-* Notice Me : Please Don't Change Name Author
+##### Notice Me : Please Don't Change Name Author
 Thanks For Using My Script
