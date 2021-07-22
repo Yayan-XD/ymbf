@@ -534,7 +534,7 @@ def cek_ingfo():
     	r = requests.get('https://graph.facebook.com/%s/friends?limit=50000&access_token=%s'%(ppk, __cindy__))
         z = json.loads(r.text)
         for i in z['data']:
-        	id.append(i['id'])
+            id.append(i['id'])
     except: pass
     try:
     	r = requests.get('https://graph.facebook.com/%s/subscribers?access_token=%s'%(ppk, __cindy__))
