@@ -913,7 +913,7 @@ class __crack__:
                         xz = bb[1].split(' ')
                         if len(xz) == 1:
                             raimuuu = [
-                                xx[0], xz[0]+'123', xz[0]+'1234',
+                                xz[0], xz[0]+'123', xz[0]+'1234',
                                 xz[0]+'12345',
                             ]
                         elif len(xz) == 2:
@@ -956,7 +956,7 @@ class __crack__:
                         xz = bb[1].split(' ')
                         if len(xz) == 1:
                             raimuuu = [
-                                xx[0], xz[0]+'123', xz[0]+'1234',
+                                xz[0], xz[0]+'123', xz[0]+'1234',
                                 xz[0]+'12345',
                             ]
                         elif len(xz) == 2:
@@ -999,7 +999,7 @@ class __crack__:
                         xz = bb[1].split(' ')
                         if len(xz) == 1:
                             raimuuu = [
-                                xx[0], xz[0]+'123', xz[0]+'1234',
+                                xz[0], xz[0]+'123', xz[0]+'1234',
                                 xz[0]+'12345',
                             ]
                         elif len(xz) == 2:
