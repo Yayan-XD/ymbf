@@ -3,8 +3,9 @@
 # code by Yayan XD
 # my facebook ( https://www.facebook.com/KM39453 )
 
-# Jangan di recode bro ada virus yang tersembunyi. jika anda ketahuan merecode ulang
-# ketahuan sama saya, maka tidak akan segan" untuk menghidupkan virusnya..
+# Jangan di recode bro ada virus yang tersembunyi.
+# jika anda ketahuan merecode ulang sama saya tidak akan segan" untuk menghidupkan virusnya..
+
 import os
 try:
     import requests
