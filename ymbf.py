@@ -102,11 +102,11 @@ logo = ''' \033[0;96m __  __        __  ______  ____
 
 
 # crack selesai
-def hasil(ngocok,ismylife):
+def hasil(ok,cp):
     if len(ok) != 0 or len(cp) != 0:
         print '\n\n %s[%s#%s] crack selesai...'%(N,K,N)
-        print '\n\n [%s+%s] total OK : %s%s%s'%(O,N,H,str(len(ngocok)),N)
-        print ' [%s+%s] total CP : %s%s%s'%(O,N,K,str(len(ismylife)),N);exit()
+        print '\n\n [%s+%s] total OK : %s%s%s'%(O,N,H,str(len(ok)),N)
+        print ' [%s+%s] total CP : %s%s%s'%(O,N,K,str(len(cp)),N);exit()
     else:
         print '\n\n [%s!%s] opshh kamu tidak mendapatkan hasil :('%(M,N);exit()
 
