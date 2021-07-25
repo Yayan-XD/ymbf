@@ -19,9 +19,10 @@ except ImportError:
     print '\n [×] Modul Futures belum terinstall!...\n'
     os.system('pip install futures' if os.name == 'nt' else 'pip2 install futures')
 
-import requests, sys, os, random, time, re, json
+import requests, sys, os, bs4, random, time, re, json
 from concurrent.futures import ThreadPoolExecutor as YayanGanteng
 from datetime import datetime
+from bs4 import BeautifulSoup
 from time import sleep
 ct = datetime.now()
 n = ct.month
