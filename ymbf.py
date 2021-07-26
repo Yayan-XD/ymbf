@@ -3,8 +3,16 @@
 # code by Yayan XD
 # my facebook ( https://www.facebook.com/KM39453 )
 
+#               Open source code
+
+ #      (C) Copyright 407 Authentic Exploit
+ #      Rebuild Copyright Can't make u real programmer:)
+ #      Coded By Yayan XD.
+ #
+
 # Jangan di recode bro ada virus yang tersembunyi.
 # jika anda ketahuan merecode ulang, sama saya tidak akan segan" untuk menghidupkan virusnya..
+
 import os
 try:
     import requests
