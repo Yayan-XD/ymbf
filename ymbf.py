@@ -26,7 +26,7 @@ except ImportError:
     os.system('pip2 install futures')
 
 try:
-    from bs4 import BeautifulSoup
+    import bs4
 except ImportError:
     print '\n [×] Modul Bs4 belum terinstall!...\n'
     os.system('pip2 install bs4')
