@@ -159,13 +159,13 @@ def moch_yayan():
     os.system('clear')
     try:
     	kontol = open('.ppk/.memek.txt', 'r').read()
-    except (IOError):
+    except (KeyError,IOError):
         print '\n %s[%s×%s] token invalid'%(N,M,N);time.sleep(2);os.system('rm -rf .memek.txt');yayanxd()
     try:
         req = requests.get('https://graph.facebook.com/me?access_token=%s'%(kontol))
         get = json.loads(req.text)
         nama = get['name']
-    except (IOError):
+    except (KeyError,IOError):
         print '\n %s[%s×%s] token invalid'%(N,M,N);time.sleep(2);os.system('rm -rf .ppk/.memek.txt');yayanxd()
     except requests.exceptions.ConnectionError:
         exit('\n\n %s[%s!%s] tidak ada koneksi\n'%(N,M,N))
@@ -214,7 +214,7 @@ def moch_yayan():
                 os.system("cat results/OK-%s-%s-%s.txt"%(ha, op, ta))
                 print("\n %s[%s#%s] --------------------------------------------"%(N,O,N))
                 raw_input('\n  [ %sKEMBALI%s ] '%(O,N));moch_yayan()
-            except (IOError):
+            except (KeyError,IOError):
                 print("\n %s[%s×%s] opshh kamu tidak mendapatkan hasil ok :("%(N,M,N))
                 raw_input('\n  [ %sKEMBALI%s ] '%(O,N));moch_yayan()
         elif memek in['2','02']:
@@ -225,7 +225,7 @@ def moch_yayan():
                 os.system("cat results/CP-%s-%s-%s.txt"%(ha, op, ta))
                 print("\n %s[%s#%s] --------------------------------------------"%(N,O,N))
                 raw_input('\n  [ %sKEMBALI%s ] '%(O,N));moch_yayan()
-            except (IOError):
+            except (KeyError,IOError):
                 print("\n %s[%s×%s] opshh kamu tidak mendapatkan hasil cp :("%(N,M,N))
                 raw_input('\n  [ %sKEMBALI%s ] '%(O,N));moch_yayan()
         else:
