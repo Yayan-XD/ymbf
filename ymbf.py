@@ -387,7 +387,7 @@ def postingan(kontol):
 
 # cek ingfo
 def cek_ingfo(kontol):
-    user = raw_input("\n [+] masukan username : ")
+    user = raw_input("\n [%s+%s] masukan id atau username : "%(O,N))
     url = ("https://lookup-id.com/")
     if "facebook" in user:
         payload = {"fburl": user, "check": "Lookup"}
