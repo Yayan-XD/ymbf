@@ -34,7 +34,7 @@ except ImportError:
 import requests, sys, bs4, os, random, time, re, json
 from concurrent.futures import ThreadPoolExecutor as YayanGanteng
 from requests.exceptions import ConnectionError
-from bs4 import BeautifulSoup as parser
+from bs4 import BeautifulSoup
 from datetime import datetime
 from time import sleep
 ct = datetime.now()
@@ -387,26 +387,22 @@ def postingan(kontol):
 
 # cek ingfo
 def cek_ingfo(kontol):
-    user = raw_input("\n [+] masukan id atau username : ")
+    user = raw_input("\n [+] masukan username : ")
     url = ("https://lookup-id.com/")
     if "facebook" in user:
-    	payload = {"fburl": user, "check": "Lookup"}
+        payload = {"fburl": user, "check": "Lookup"}
     else:
-    	payload = {"fburl": "https://free.facebook.com/" + user, "check": "Lookup"}
+        payload = {"fburl": "https://free.facebook.com/" + user, "check": "Lookup"}
     halaman = requests.post(url, data = payload).text.encode("utf-8")
-    sop_ = parser(halaman, "html.parser")
+    sop_ = BeautifulSoup(halaman, "html.parser")
     email_ = sop_.find("span", id = "code")
-    if email_ == None:
-    	aww = requests.get('https://graph.facebook.com/%s?access_token=%s'%(idt, kontol))
-    	x = json.loads(aww.text)
     idt = email_.text
+    aww = requests.get('https://graph.facebook.com/%s?access_token=%s'%(idt, kontol))
+    x = json.loads(aww.text)
     try:
-    	aww = requests.get('https://graph.facebook.com/%s?access_token=%s'%(idt, kontol))
-    	x = json.loads(aww.text)
         nmaa = x['name']
     except (KeyError, IOError):
-    	nmaa = '%s-%s'%(M,N)
-    except: pass
+        nmaa = '%s-%s'%(M,N)
     print '\n  * Ingformasi akun Facebook *';time.sleep(0.03)
     print '\n [*] nama lengkap : %s'%(nmaa);time.sleep(0.03)
     try:
