@@ -182,7 +182,7 @@ def moch_yayan():
         cek_ingfo(kontol)
     elif pepek in['7','07']:
         try:
-            dirs = os.listdir("dump")
+            dirs = os.listdir("results")
             print '\n [ hasil crack yang tersimpan di file anda ]\n'
             for file in dirs:
                 print(" [%s+%s] %s"%(O,N,file))
