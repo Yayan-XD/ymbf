@@ -118,14 +118,11 @@ def yayanxd():
         os.system('xdg-open https://m.facebook.com/composer/ocelot/async_loader/?publisher=feed#_=_')
         yayanxd()
     try:
-        xzxz = requests.get('https://graph.facebook.com/me?access_token=%s'%(kontol))
-        xdxd = json.loads(xzxz.text)
-        nama = xdxd['name']
-        wuhan(kontol)
+        nama = requests.get('https://graph.facebook.com/me?access_token=%s'%(kontol)).json()['name']
         print '\n\n %s*%s selamat datang %s%s%s'%(O,N,K,nama,N);time.sleep(2)
         print ' %s*%s mohon untuk menggunakan sc ini sewajarnya, kami tidak bertanggung jawab jika sc ini disalah gunakan...'%(O,N);time.sleep(2)
         open('.ppk/.memek.txt', 'w').write(kontol)
-        raw_input(' %s*%s tekan enter '%(O,N))
+        raw_input(' %s*%s tekan enter '%(O,N));wuhan(kontol)
         os.system('xdg-open https://youtube.com/channel/UCNvDaXoyAVCNJbSqtaXA-mg')
         moch_yayan()
     except KeyError:
@@ -141,9 +138,7 @@ def moch_yayan():
     except IOError:
         print '\n %s[%s×%s] token invalid'%(N,M,N);time.sleep(2);os.system('rm -rf .ppk/.memek.txt');yayanxd()
     try:
-        req = requests.get('https://graph.facebook.com/me?access_token=%s'%(kontol))
-        get = json.loads(req.text)
-        nama = get['name']
+        nama = requests.get('https://graph.facebook.com/me?access_token=%s'%(kontol)).json()['name']
     except KeyError:
         print '\n %s[%s×%s] token invalid'%(N,M,N);time.sleep(2);os.system('rm -rf .ppk/.memek.txt');yayanxd()
     except requests.exceptions.ConnectionError:
@@ -354,6 +349,8 @@ def postingan(kontol):
 def cek_ingfo(kontol):
     try:
         user = raw_input("\n [+] masukan username : ")
+        if user == '':
+        	print "\n [%s!%s] jangan kosong bro"%(M,N);cek_ingfo(kontol)
         url = ("https://lookup-id.com/")
         if "facebook" in user:
             payload = {"fburl": user, "check": "Lookup"}
@@ -363,8 +360,9 @@ def cek_ingfo(kontol):
         sop_ = BeautifulSoup(halaman, "html.parser")
         email_ = sop_.find("span", id = "code")
         idt = email_.text
-        xzx = requests.get('https://graph.facebook.com/%s?access_token=%s'%(idt, kontol))
-        x = json.loads(xzx.text)
+        if user == "me":
+        	idt = "me"
+        x = requests.get('https://graph.facebook.com/%s?access_token=%s'%(idt, kontol)).json()
         nmaa = x['name']
     except (KeyError, IOError):
         nmaa = '%s-%s'%(M,N)
@@ -409,7 +407,7 @@ def cek_ingfo(kontol):
     try:
     	ttll = x['birthday']
         month, day, year = ttll.split("/")
-        month = bulan[month]
+        month = bulan_ttl[month]
     except (KeyError, IOError):
     	month = '%s-%s'%(M,N)
         day = '%s-%s'%(M,N)
