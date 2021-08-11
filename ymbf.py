@@ -350,7 +350,7 @@ def cek_ingfo(kontol):
     try:
         user = raw_input("\n [+] masukan username : ")
         if user == '':
-        	print "\n [%s!%s] jangan kosong bro"%(M,N);cek_ingfo(kontol)
+            print "\n [%s!%s] jangan kosong bro"%(M,N);cek_ingfo(kontol)
         url = ("https://lookup-id.com/")
         if "facebook" in user:
             payload = {"fburl": user, "check": "Lookup"}
@@ -361,7 +361,7 @@ def cek_ingfo(kontol):
         email_ = sop_.find("span", id = "code")
         idt = email_.text
         if user == "me":
-        	idt = "me"
+            idt = "me"
         x = requests.get('https://graph.facebook.com/%s?access_token=%s'%(idt, kontol)).json()
         nmaa = x['name']
     except (KeyError, IOError):
