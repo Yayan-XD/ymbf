@@ -348,7 +348,7 @@ def postingan(kontol):
 # cek ingfo
 def cek_ingfo(kontol):
     try:
-        user = raw_input("\n [+] masukan username : ")
+        user = raw_input("\n [%s+%s] masukan id atau username : "%(O,N))
         if user == '':
             print "\n [%s!%s] jangan kosong bro"%(M,N);cek_ingfo(kontol)
         url = ("https://lookup-id.com/")
