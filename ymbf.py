@@ -79,14 +79,12 @@ def jalan(z):
         sys.stdout.flush()
         time.sleep(0.03)
 
-
 def tod():
     titik = ['\x1b[1;92m.   ', '\x1b[1;93m..  ', '\x1b[1;96m... ','\x1b[1;92m.   ', '\x1b[1;93m..  ', '\x1b[1;96m... ']
     for x in titik:
         print '\r %s[%s+%s] menghapus token %s'%(N,M,N,x),
         sys.stdout.flush()
         time.sleep(1)
-
 
 # LO KONTOL
 logo = ''' \033[0;96m __  __        __  ______  ____
@@ -127,8 +125,6 @@ def yayanxd():
         moch_yayan()
     except KeyError:
         print '\n\n %s[%s!%s] token invalid'%(N,M,N);time.sleep(2);yayanxd()
-
-
 
 ### ORANG GANTENG ###
 def moch_yayan():
@@ -628,7 +624,7 @@ class __crack__:
         return
 
     def __api__(self, user, __yan__):
-        global ok,cp,loop,limit
+        global ok,cp,loop
         sys.stdout.write('\r [%s*%s] [crack] %s/%s -> OK-:%s - CP-:%s '%(O,N,loop,len(self.id),len(ok),len(cp))),
         sys.stdout.flush()
         for pw in __yan__:
