@@ -142,20 +142,20 @@ def moch_yayan():
     os.system('clear')
     print logo
     IP = requests.get('http://yayanxd.herokuapp.com/ip').text
-    print '___________________________________________________________\n'
-    print ' (\033[0;96m•\033[0m) ACTIVE USER : %s'%(nama)
+    print '___________________________________________________________\n';time.sleep(0.03)
+    print ' (\033[0;96m•\033[0m) ACTIVE USER : %s'%(nama);time.sleep(0.03)
     print ' (\033[0;96m•\033[0m) IP DEVICE   : %s'%(IP)
-    print '___________________________________________________________\n'
-    print ' [%s1%s]. Dump id dari teman'%(O,N)
-    print ' [%s2%s]. Dump id dari teman publik'%(O,N)
-    print ' [%s3%s]. Dump id dari total followers'%(O,N)
-    print ' [%s4%s]. Dump id dari like postingan'%(O,N)
-    print ' [%s5%s]. Mulai crack'%(O,N)
-    print ' [%s6%s]. Check ingformasi akun fb'%(O,N)
-    print ' [%s7%s]. Lihat hasil crack'%(O,N)
-    print ' [%s8%s]. Settings user agent'%(O,N)
-    print ' [%s9%s]. Ingfo %sscript%s'%(O,N,O,N)
-    print ' [%s0%s]. logout (%shapus token%s)'%(M,N,M,N)
+    print '___________________________________________________________\n';time.sleep(0.03)
+    print ' [%s1%s]. Dump id dari teman'%(O,N);time.sleep(0.03)
+    print ' [%s2%s]. Dump id dari teman publik'%(O,N);time.sleep(0.03)
+    print ' [%s3%s]. Dump id dari total followers'%(O,N);time.sleep(0.03)
+    print ' [%s4%s]. Dump id dari like postingan'%(O,N);time.sleep(0.03)
+    print ' [%s5%s]. Mulai crack'%(O,N);time.sleep(0.03)
+    print ' [%s6%s]. Check ingformasi akun fb'%(O,N);time.sleep(0.03)
+    print ' [%s7%s]. Lihat hasil crack'%(O,N);time.sleep(0.03)
+    print ' [%s8%s]. Settings user agent'%(O,N);time.sleep(0.03)
+    print ' [%s9%s]. Ingfo %sscript%s'%(O,N,O,N);time.sleep(0.03)
+    print ' [%s0%s]. logout (%shapus token%s)'%(M,N,M,N);time.sleep(0.03)
     pepek = raw_input('\n [*] menu : ')
     if pepek == '':
         print '\n %s[%s×%s] jangan kosong kentod!'%(N,M,N);time.sleep(2);moch_yayan()
