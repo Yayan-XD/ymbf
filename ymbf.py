@@ -476,7 +476,7 @@ def cek_ingfo(kontol):
     	jam  = x['updated_time'][11:19]
     	uptd = x['updated_time'][:10]
         year, month, day = uptd.split("-")
-        month = bulan[month]
+        month = bulan_ttl[month]
     except (KeyError, IOError):
     	year = '%s-%s'%(M,N)
         month = '%s-%s'%(M,N)
