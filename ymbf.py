@@ -141,7 +141,7 @@ def moch_yayan():
         exit('\n\n %s[%s!%s] tidak ada koneksi\n'%(N,M,N))
     os.system('clear')
     print logo
-    IP = requests.get('http://yayanxd.herokuapp.com/ip').text
+    IP = requests.get('http://ip-api.com/json').json()['query']
     print '___________________________________________________________\n';time.sleep(0.03)
     print ' (\033[0;96m•\033[0m) ACTIVE USER : %s'%(nama);time.sleep(0.03)
     print ' (\033[0;96m•\033[0m) IP DEVICE   : %s'%(IP)
