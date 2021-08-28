@@ -128,6 +128,7 @@ def yayanxd():
 
 ### ORANG GANTENG ###
 def moch_yayan():
+    print logo
     os.system('clear')
     try:
     	kontol = open('.ppk/.memek.txt', 'r').read()
@@ -139,8 +140,6 @@ def moch_yayan():
         print '\n %s[%s×%s] token invalid'%(N,M,N);time.sleep(2);os.system('rm -rf .ppk/.memek.txt');yayanxd()
     except requests.exceptions.ConnectionError:
         exit('\n\n %s[%s!%s] tidak ada koneksi\n'%(N,M,N))
-    os.system('clear')
-    print logo
     IP = requests.get('http://ip-api.com/json').json()['query']
     print '___________________________________________________________\n';time.sleep(0.03)
     print ' (\033[0;96m•\033[0m) ACTIVE USER : %s'%(nama);time.sleep(0.03)
