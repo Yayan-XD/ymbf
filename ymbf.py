@@ -178,13 +178,17 @@ def moch_yayan():
                 print(" [%s+%s] %s"%(O,N,file))
             file = raw_input("\n [%s?%s] masukan nama file :%s "%(M,N,H))
             if file == "":
-                file = raw_input("\n [%s?%s] masukan nama file :%s %s"%(M,N,H,N))
+                file = raw_input("\n %s[%s?%s] masukan nama file :%s %s"%(N,M,N,H,N))
             total = open("results/%s"%(file)).read().splitlines()
-            print(" %s[%s#%s] --------------------------------------------"%(N,O,N))
+            print(" %s[%s#%s] --------------------------------------------"%(N,O,N));time.sleep(2)
             nm_file = ("%s"%(file)).replace("-", " ")
             hps_nm  = nm_file.replace(".txt", "").replace("OK", "").replace("CP", "")
-            print(" [%s×%s] Hasil %scrack%s pada tanggal %s:%s%s%s total %s: %s%s%s\n"%(O,N,O,N,M,O,hps_nm,N,M,O,len(total),O))
-            os.system("cat results/%s"%(file))
+            jalan(" [%s*%s] Hasil %scrack%s pada tanggal %s:%s%s%s total %s: %s%s%s"%(M,N,O,N,M,O,hps_nm,N,M,O,len(total),O))
+            print(" %s[%s#%s] --------------------------------------------"%(N,O,N));time.sleep(2)
+            for memek in total:
+            	kontol = memek.replace("\n","")
+                titid  = kontol.replace(" [✓] ","").replace(" [×] ", "")
+                print(" %s[%s+%s] %s%s%s"%(N,H,N,O,titid,N));time.sleep(0.03)
             print("\n %s[%s#%s] --------------------------------------------"%(N,O,N))
             raw_input('\n  [ %sKEMBALI%s ] '%(O,N));moch_yayan()
         except (IOError):
