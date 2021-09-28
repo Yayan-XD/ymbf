@@ -189,7 +189,7 @@ def moch_yayan():
             	kontol = memek.replace("\n","")
                 titid  = kontol.replace(" [✓] "," \x1b[0m[\x1b[1;92m✓\x1b[0m]\x1b[1;92m ").replace(" [×] ", " \x1b[0m[\x1b[1;93m×\x1b[0m]\x1b[1;93m ")
                 print(titid);time.sleep(0.03)
-            print("\n %s[%s#%s] --------------------------------------------"%(N,O,N))
+            print(" %s[%s#%s] --------------------------------------------"%(N,O,N))
             raw_input('\n  [ %sKEMBALI%s ] '%(O,N));moch_yayan()
         except (IOError):
             print("\n %s[%s×%s] opshh kamu tidak mendapatkan hasil :("%(N,M,N))
