@@ -175,7 +175,7 @@ def moch_yayan():
             dirs = os.listdir("results")
             print '\n [ hasil crack yang tersimpan di file anda ]\n'
             for file in dirs:
-                print(" [%s+%s] %s"%(O,N,file))
+                print(" [%s+%s] %s"%(O,N,file));time.sleep(0.2)
             file = raw_input("\n [%s?%s] masukan nama file :%s "%(M,N,H))
             if file == "":
                 file = raw_input("\n %s[%s?%s] masukan nama file :%s %s"%(N,M,N,H,N))
