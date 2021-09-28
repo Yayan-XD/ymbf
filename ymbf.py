@@ -173,10 +173,10 @@ def moch_yayan():
     elif pepek in['7','07']:
         try:
             dirs = os.listdir("results")
-            print '\n [ hasil crack yang tersimpan di file anda ]\n'
+            print '\n [ hasil crack yang tersimpan di file anda ]\n';time.sleep(0.2)
             for file in dirs:
                 print(" [%s+%s] %s"%(O,N,file));time.sleep(0.2)
-            file = raw_input("\n [%s?%s] masukan nama file :%s "%(M,N,H))
+            file = raw_input("\n [%s?%s] masukan nama file :%s "%(M,N,H));time.sleep(0.2)
             if file == "":
                 file = raw_input("\n %s[%s?%s] masukan nama file :%s %s"%(N,M,N,H,N))
             total = open("results/%s"%(file)).read().splitlines()
