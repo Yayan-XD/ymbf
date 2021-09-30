@@ -347,21 +347,10 @@ def postingan(kontol):
 # cek ingfo
 def cek_ingfo(kontol):
     try:
-        user = raw_input("\n [%s+%s] masukan id atau username : "%(O,N))
+        user = raw_input("\n [%s+%s] masukan id facebook : "%(O,N))
         if user == '':
             print "\n [%s!%s] jangan kosong bro"%(M,N);cek_ingfo(kontol)
-        url = ("https://lookup-id.com/")
-        if "facebook" in user:
-            payload = {"fburl": user, "check": "Lookup"}
-        else:
-            payload = {"fburl": "https://free.facebook.com/" + user, "check": "Lookup"}
-        halaman = requests.post(url, data = payload).text.encode("utf-8")
-        sop_ = BeautifulSoup(halaman, "html.parser")
-        email_ = sop_.find("span", id = "code")
-        idt = email_.text
-        if user == "me":
-            idt = "me"
-        x = requests.get('https://graph.facebook.com/%s?access_token=%s'%(idt, kontol)).json()
+        x = requests.get('https://graph.facebook.com/%s?access_token=%s'%(user, kontol)).json()
         nmaa = x['name']
     except (KeyError, IOError):
         nmaa = '%s-%s'%(M,N)
