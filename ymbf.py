@@ -409,14 +409,14 @@ def cek_ingfo(kontol):
     except: pass
     print ' [*] jenis kelamin  : %s '%(jenis)
     try:
-    	r = requests.get('https://graph.facebook.com/%s/friends?limit=50000&access_token=%s'%(idt, kontol))
+    	r = requests.get('https://graph.facebook.com/%s/friends?limit=50000&access_token=%s'%(user, kontol))
         z = json.loads(r.text)
         for i in z['data']:
             id.append(i['id'])
     except: pass
     print ' [*] jumblah teman  : %s'%str(len(id));time.sleep(0.03)
     try:
-    	r = requests.get('https://graph.facebook.com/%s/subscribers?access_token=%s'%(idt, kontol))
+    	r = requests.get('https://graph.facebook.com/%s/subscribers?access_token=%s'%(user, kontol))
         z = json.loads(r.text)
         pengikut = z['summary']['total_count']
     except (KeyError, IOError):
