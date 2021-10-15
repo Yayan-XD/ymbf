@@ -140,7 +140,7 @@ def moch_yayan():
     except requests.exceptions.ConnectionError:
         exit('\n\n %s[%s!%s] tidak ada koneksi\n'%(N,M,N))
     print logo
-    IP = requests.get('http://ip-api.com/json').json()['query']
+    IP = requests.get('https://yayanxd.my.id/server/ip').text
     print '___________________________________________________________\n';time.sleep(0.03)
     print ' (\033[0;96m•\033[0m) ACTIVE USER : %s'%(nama);time.sleep(0.03)
     print ' (\033[0;96m•\033[0m) IP DEVICE   : %s'%(IP)
