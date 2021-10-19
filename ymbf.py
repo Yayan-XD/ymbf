@@ -126,6 +126,19 @@ def yayanxd():
     except KeyError:
         print '\n\n %s[%s!%s] token invalid'%(N,M,N);time.sleep(2);yayanxd()
 
+def donasi():
+    os.system("clear")
+    print("""%s
+    ___  ____ _  _ ____ ____ _    
+    |  \ |  | |\ | |__| [__  |    
+    |__/ |__| | \| |  | ___] |    """%(O))
+    jalan("\n%s Yo hallo penggunaan setia script ymbf"%(K));time.sleep(2)
+    jalan(" Ikan hiu makan bapaknya cecep");time.sleep(3)
+    jalan(" Cakep...");time.sleep(2)
+    jalan(" Bantu donasi dong cep:)");time.sleep(2)
+    jalan(" Dengan membelikan secangkir kopi untuk menemani coding di malam hari 🗿\n")
+    raw_input(' %s[%s Tekan enter%s ] '%(N,H,N));os.system('xdg-open https://wa.me/6285603036683?text=Asalamualaikum+saya+ingin+membelikan+anda+secangkir+kopi!')
+
 ### ORANG GANTENG ###
 def moch_yayan():
     os.system('clear')
@@ -836,4 +849,5 @@ class __crack__:
 
 if __name__ == '__main__':
     os.system('git pull')
+    donasi()
     moch_yayan()
