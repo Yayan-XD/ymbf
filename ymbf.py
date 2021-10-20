@@ -14,6 +14,12 @@ N = '\x1b[0m'    # WARNA MATI
 H = '\x1b[1;92m' # HIJAU
 K = '\x1b[1;93m' # KUNING
 
+def jalan(z):
+    for e in z + '\n':
+        sys.stdout.write(e)
+        sys.stdout.flush()
+        time.sleep(0.03)
+
 def donasi():
     os.system("clear")
     print("""%s
