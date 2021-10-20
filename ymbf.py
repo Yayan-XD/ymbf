@@ -1,4 +1,4 @@
-import os, sys
+import os, sys, time
 
 O = '\x1b[1;96m' # BIRU MUDA
 N = '\x1b[0m'    # WARNA MATI
