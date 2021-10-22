@@ -98,7 +98,7 @@ lo_ngentod = '1714009362122228'
 # crack selesai
 def hasil(ok,cp):
     if len(ok) != 0 or len(cp) != 0:
-        print '\n %s[%s#%s] crack selesai...'%(N,K,N)
+        print '\n\n %s[%s#%s] crack selesai...'%(N,K,N)
         print '\n\n [%s+%s] total OK : %s%s%s'%(O,N,H,str(len(ok)),N)
         print ' [%s+%s] total CP : %s%s%s'%(O,N,K,str(len(cp)),N);exit()
     else:
