@@ -190,8 +190,8 @@ def moch_yayan():
             print(" %s[%s#%s] --------------------------------------------"%(N,O,N));time.sleep(2)
             for memek in total:
             	kontol = memek.replace("\n","")
-                titid  = kontol.replace(" [✓] ","").replace(" [×] ", "")
-                print(" %s[%s+%s] %s%s%s"%(N,H,N,O,titid,N));time.sleep(0.03)
+                titid  = kontol.replace(" [✓] "," \x1b[0m[\x1b[1;92m✓\x1b[0m]\x1b[1;92m ").replace(" [×] ", " \x1b[0m[\x1b[1;93m×\x1b[0m]\x1b[1;93m ")
+                print("%s%s"%(titid,N));time.sleep(0.03)
             print("\n %s[%s#%s] --------------------------------------------"%(N,O,N))
             raw_input('\n  [ %sKEMBALI%s ] '%(O,N));moch_yayan()
         except (IOError):
