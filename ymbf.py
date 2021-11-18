@@ -316,35 +316,6 @@ def followers(kontol):
         jalan('\n %s[%s!%s] Gagal dump id, kemungkinan id tidaklah publik.\n'%(N,M,N))
         raw_input(' [ %sKEMBALI%s ] '%(O,N));moch_yayan()
 
-# dump id dari followers hehe
-def followers(kontol):
-    try:
-        os.mkdir('dump')
-    except:pass
-    try:
-        csy = raw_input('\n %s[%s?%s] id follow  : '%(N,O,N))
-        mmk = raw_input(' %s[%s?%s] nama file  : '%(N,O,N))
-        asw = raw_input(' %s[%s?%s] limit id   : '%(N,O,N))
-        ah  = ('dump/' + mmk + '.json').replace(' ', '_')
-        ys  = open(ah, 'w')
-        for a in requests.get('https://graph.facebook.com/%s/subscribers?limit=%s&access_token=%s'%(csy,asw,kontol)).json()["data"]:
-            id.append(a['id'] + '<=>' + a['name'])
-            ys.write(a['id'] + '<=>' + a['name'] + '\n')
-            w = random.choice(['\x1b[1;91m', '\x1b[1;92m', '\x1b[1;93m', '\x1b[1;94m', '\x1b[1;95m', '\x1b[1;96m', '\x1b[1;97m', '\x1b[0m'])
-            sys.stdout.write('\r\033[0m - ' + w + '%s%s                                        \r\n\n [\033[0;96m%s\033[0m] [\033[0;91m%s\033[0m] Proses Dump Id...'%(a['name'],N,datetime.now().strftime('%H:%M:%S'), len(id)
-            )); sys.stdout.flush()
-            time.sleep(0.0050)
-
-        ys.close()
-        jalan('\n\n %s[%s✓%s] berhasil dump id dari total followers'%(N,H,N))
-        print ' [%s•%s] salin output file 👉 ( %s%s%s )'%(O,N,M,ah,N)
-        print 50 * '-'
-        raw_input(' [%s ENTER%s ] '%(O,N));moch_yayan()
-    except (KeyError,IOError):
-        os.remove(ah)
-        jalan('\n %s[%s!%s] Gagal dump id, kemungkinan id tidaklah publik.\n'%(N,M,N))
-        raw_input(' [ %sKEMBALI%s ] '%(O,N));moch_yayan()
-
 # dump id dari postingan hehe
 def postingan(kontol):
     try:
