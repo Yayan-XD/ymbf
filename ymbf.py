@@ -560,7 +560,7 @@ class __crack__:
                     def __yan__(ysc=None): # ycs => Yayan sayang Cindy:3
                         cin = raw_input('\n [*] method : ')
                         if cin == '':
-                            print '\n %s[%s×%s] jangan kosong bro'%(N,M,N);self.__yan__()
+                            print '\n %s[%s×%s] jangan kosong bro'%(N,M,N);__yan__()()
                         elif cin == '1':
                             print '\n [%s+%s] hasil OK disimpan ke -> results/OK-%s-%s-%s.txt'%(O,N,ha, op, ta)
                             print ' [%s+%s] hasil CP disimpan ke -> results/CP-%s-%s-%s.txt'%(O,N,ha, op, ta)
@@ -601,7 +601,7 @@ class __crack__:
                             os.remove(self.apk)
                             hasil(ok,cp)
                         else:
-                            print '\n %s[%s×%s] input yang bener'%(N,M,N);self.__yan__()
+                            print '\n %s[%s×%s] input yang bener'%(N,M,N);__yan__()
                     print '\n [ pilih method login - silahkan coba satu² ]\n'
                     print ' [%s1%s]. method API (fast)'%(O,N)
                     print ' [%s2%s]. method mbasic (slow)'%(O,N)
@@ -615,7 +615,7 @@ class __crack__:
             print ' [%s3%s]. method mobile (super slow)'%(O,N)
             self.__pler__()
         else:
-            print '\n %s[%s×%s] y/t goblok!'%(N,M,N);time.sleep(2);moch_yayan()
+            print '\n %s[%s×%s] Y/t goblok!'%(N,M,N);self.plerr()
         return
 
     def __api__(self, user, __yan__):
