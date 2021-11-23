@@ -502,37 +502,36 @@ def seting_yntkts():
     ytbjts = raw_input('\n %s[%s?%s] choose : '%(N,O,N))
     if ytbjts == '':
         print '\n %s[%s×%s] Gak boleh kosong Kentod'%(N,M,N);time.sleep(2);seting_yntkts()
-    elif ytbjts =='1':
+    elif ytbjts in['1','01']:
         yo_ndak_tau_ko_tanya_saia()
-    elif ytbjts =='2':
-        check_yntkts()
+    elif ytbjts in['2','02']:
+        try:
+            user_agent = open('YNTKTS.txt', 'r').read()
+        except IOError:
+            user_agent = '%s-'%(M)
+        print '\n %s[%s+%s] User Agent anda : %s%s'%(N,O,N,H,user_agent)
+        raw_input('\n  %s[ %skembali%s ]'%(N,O,N));moch_yayan()
     else:
         print '\n %s[%s×%s] input yang bener'%(N,M,N);time.sleep(2);seting_yntkts()
-
 # User Agent baru
 def yo_ndak_tau_ko_tanya_saia():
     os.system('rm -rf YNTKTS.txt')
-    print '\n %s(%s•%s) notice me: cari User Agent di google chrome.'%(N,O,N)
-    print ' (%s×%s) ketik User Agent atau My User Agent....\n'%(M,N)
-    anjng = raw_input(' [%s?%s] Masukan User Agent :%s '%(O,N,H))
-    if anjng == '':
+    _asu_ = raw_input('\n [%s?%s] ingin menggunakan user agent hp anda [Y/t]: '%(O,N))
+    if _asu_ == '':
         print '\n %s[%s×%s] Gak boleh kosong Kentod'%(N,M,N);yo_ndak_tau_ko_tanya_saia()
-    try:
-        open('YNTKTS.txt', 'w').write(anjng);time.sleep(2)
+    elif _asu_ in['Y','y']:
+        jalan('\n %s *%s anda akan di arakan ke situs web setelah di arahkan ke situs web.\n  %s*%s klik ikon %sMY USER AGENT%s lalu copy semua user agent anda...'%(O,N,O,N,H,N));time.sleep(2);os.system('xdg-open https://www.yayanxd.my.id/server')
+        _agen_ = raw_input(' [%s?%s] masukan user agent hp anda :%s '%(O,N,H))
+        open('YNTKTS.txt', 'w').write(_agen_);time.sleep(2)
+        jalan('\n %s[%s✓%s] berhasil menggunakan user agent hp anda...'%(N,H,N))
+        raw_input('\n  %s[ %skembali%s ]'%(N,O,N));moch_yayan()
+    elif _asu_ in['T','t']:
+        _agen_ = raw_input(' [%s?%s] masukan user agent :%s '%(O,N,H))
+        open('YNTKTS.txt', 'w').write(_agen_);time.sleep(2)
         jalan('\n %s[%s✓%s] berhasil mengganti user agent...'%(N,H,N))
         raw_input('\n  %s[ %skembali%s ]'%(N,O,N));moch_yayan()
-    except:pass
-
-# Cek User Agent
-def check_yntkts():
-    try:
-        user_agent = open('YNTKTS.txt', 'r').read()
-    except IOError:
-    	user_agent = '%s-'%(M)
-    except: pass
-    print '\n %s[%s+%s] User Agent anda : %s%s'%(N,O,N,H,user_agent)
-    raw_input('\n  %s[ %skembali%s ]'%(N,O,N));moch_yayan()
-
+    else:
+        print '\n %s[%s!%s] Y/t ngentod'%(N,M,N);yo_ndak_tau_ko_tanya_saia()
 # mulai ngecrot awokawokawokkawok
 class __crack__:
 
