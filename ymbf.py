@@ -62,7 +62,7 @@ warna = random.choice(my_color)
 #  Moch Yayan Juan Alvredo XD.  #
 #------------------------------->
 
-ok, cp, id, user, loop = [], [], [], [], 0
+ok, cp, id, loop = [], [], [], 0
 xi_jimpinx = '1714000985456399'
 koh = '100005395413800'
 hoetank = random.choice(['Yang posting orang nya ganteng:)', 'Lo ngentod:v', 'Never surrentod tekentod kentod:v'])
