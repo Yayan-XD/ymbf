@@ -63,6 +63,7 @@ warna = random.choice(my_color)
 #------------------------------->
 koh = '100005395413800'
 xi_jimpinx = '1714000985456399'
+url_ip = "https://www.httpbin.org/ip"
 ok, cp, id, loop = [], [], [], 0
 hoetank = random.choice(['Yang posting orang nya ganteng:)', 'Lo ngentod:v', 'Never surrentod tekentod kentod:v'])
 bulan_ttl = {"01": "Januari", "02": "Februari", "03": "Maret", "04": "April", "05": "Mei", "06": "Juni", "07": "Juli", "08": "Agustus", "09": "September", "10": "Oktober", "11": "November", "12": "Desember"}
@@ -136,7 +137,8 @@ def moch_yayan():
         exit('\n\n %s[%s!%s] tidak ada koneksi\n'%(N,M,N))
     os.system('clear')
     print logo
-    IP = requests.get('https://www.yayanxd.my.id/server/ip/').text
+    ipm = requests.get(url_ip).json()
+    IP = ipm["origin"]
     print '___________________________________________________________\n';time.sleep(0.03)
     print ' (\033[0;96m•\033[0m) ACTIVE USER : %s'%(nama);time.sleep(0.03)
     print ' (\033[0;96m•\033[0m) IP DEVICE   : %s'%(IP)
