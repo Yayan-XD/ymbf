@@ -55,7 +55,7 @@ def login_token():
         open('.token.txt', 'a').write(tokenz)
         prints(Panel(f"""[[green]✓[/]] selamat [green]{nama}[/] token kamu valid!
 [[bold red]>[/]] gunakan dengan bijak yah tools nya!"""));time.sleep(0.3)
-        exit(f"\n  [{M}!{N}] jalankan ulang perintah nya dengan ketik python run.py id")
+        exit(f"\n  [{M}!{N}] jalankan ulang perintah nya dengan ketik python run.py")
     except requests.exceptions.ConnectionError:
         prints(Panel("😭[bold red] Tidak ada koneksi internet"));exit()
     except (KeyError,IOError,AttributeError):
@@ -73,7 +73,7 @@ def login_cookie():
         open('.token.txt', 'a').write(tokn)
         prints(Panel(f"""[[green]✓[/]] selamat [green]{nama}[/] cookie kamu valid!
 [[bold red]>[/]] gunakan dengan bijak yah tools nya!"""));time.sleep(0.3)
-        exit(f"\n  [{M}!{N}] jalankan ulang perintah nya dengan ketik python run.py id")
+        exit(f"\n  [{M}!{N}] jalankan ulang perintah nya dengan ketik python run.py")
     except requests.exceptions.ConnectionError:
         prints(Panel("😭[bold red] Tidak ada koneksi internet"));exit()
     except (KeyError,IOError,AttributeError):
