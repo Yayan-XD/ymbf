@@ -1,3 +1,5 @@
+#HALO ANAK NGENTOD:v
+
 import requests, os, bs4, re
 from bs4 import BeautifulSoup
 #---- MODULE RICH IN PYTHON -------
