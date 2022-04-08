@@ -29,9 +29,9 @@ data,data2={},{}
 def gabut():
     try:dirs = os.listdir("results/CP")
     except FileNotFoundError:
-        prints(Panel(f"🙁 {merah}tidak ada file yang mau di cek{hapus}"));time.sleep(3);moch_yayan()
+        prints(Panel(f"🙁 {merah}tidak ada file yang mau di cek{hapus}"));exit()
     if len(dirs)==0:
-        prints(Panel(f"🙁 {merah}tidak ada file yang mau di cek{hapus}"));time.sleep(3);moch_yayan()
+        prints(Panel(f"🙁 {merah}tidak ada file yang mau di cek{hapus}"));exit()
     else:
         prints(Panel("       [[bold cyan] hasil crack yang tersimpan di file anda [/]]"))
         kon = 0
@@ -52,11 +52,11 @@ def gabut():
         file = input(f"  [{M}?{N}] nomor : ")
         try:ajg = tol[file]
         except KeyError:
-            prints(Panel(f"😡 file {merah}{file}{hapus} tidak ada cek nomor nya pler"));time.sleep(3);moch_yayan()
+            prints(Panel(f"😡 file {merah}{file}{hapus} tidak ada cek nomor nya pler"));exit()
         try:
            buka_baju = open(f"results/CP/{ajg}", "r").readlines()
         except IOError:
-            print(f"  [{M}!{N}] file tidak ada");time.sleep(2);moch_yayan()
+            print(f"  [{M}!{N}] file tidak ada");time.sleep(2);exit()
         wwx=input(f"  [{O}?{N}] ubah password ketika tap yes [Y/t]: ")
         if wwx in ["Y","y"]:
             ubahP.append("y")
@@ -79,7 +79,7 @@ def gabut():
         prints(Panel("[bold green]Proses Pengecekan Selesai[/]"))
         try:os.remove(buka_baju)
         except:pass
-        input(f'  [ {O}KEMBALI{N} ] ');moch_yayan()
+        input(f'  [ {O}KEMBALI{N} ] ');exit()
 # ------- CHECKPOINT DETEDTOR --------
 def log_hasil(user, pasw):
     global aman,cp,salah
