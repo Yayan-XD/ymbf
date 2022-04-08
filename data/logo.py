@@ -1,3 +1,5 @@
+# Apalo ajg
+
 import sys, os
 #---- MODULE RICH IN PYTHON -------
 from rich import print as prints
