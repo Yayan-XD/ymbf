@@ -1,11 +1,11 @@
-#include "fbow.h"
+#include "xz.h"
 #include <fstream>
 #include <cstring>
 #include <limits>
 #include <cstdint>
 #include <algorithm>
 
-namespace fbow{
+namespace xz{
 
 void Vocabulary::setParams(int aligment, int k, int desc_type, int desc_size, int nblocks, std::string desc_name) {
     auto ns= desc_name.size()<static_cast<size_t>(49)?desc_name.size():128;
