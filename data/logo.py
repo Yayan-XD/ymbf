@@ -4,8 +4,9 @@ import sys, os
 #---- MODULE RICH IN PYTHON -------
 from rich import print as prints
 from rich.panel import Panel
-biru_m = '[bold cyan]'
-hapus  = '[/]'
+
+bir = '[bold cyan]'
+hps = '[/]'
 # ------- UNTUK MENGHAPUS TEKS --------
 def hapus_teks():
     if "linux" in sys.platform.lower():
@@ -20,7 +21,7 @@ def hapus_teks():
 # ------- LOGO --------
 def henceut():
     hapus_teks()
-    prints(Panel(f"""{biru_m} __  __        __  ______  ____{hapus}
-{biru_m} \ \/ / ____  /  |/  / _ )/ __/ ® {hapus}|| Created By YayanXD
-{biru_m}  \  / /___/ / /|_/ / _  / _/     {hapus}|| Github.com/Yayan-XD
-{biru_m}  /_/       /_/  /_/____/_/ v3.0  {hapus}|| Facebook.com/KM39453"""))
+    prints(Panel(f"""{bir} __  __        __  ______  ____{hps}
+{bir} \ \/ / ____  /  |/  / _ )/ __/ ® {hps}|| Created By YayanXD
+{bir}  \  / /___/ / /|_/ / _  / _/     {hps}|| Github.com/Yayan-XD
+{bir}  /_/       /_/  /_/____/_/ v3.0  {hps}|| Facebook.com/KM39453"""))
