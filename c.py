@@ -3,7 +3,7 @@
 
 import requests as tod
 
-from src import log as kon
+from src import loz as kon
 from data import logo as tol
 from rich.panel import Panel
 from rich import print as prints
