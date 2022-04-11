@@ -1,6 +1,6 @@
 import os
-from src import cok as x
+from src import log as x
 
 if __name__ == '__main__':
     os.system('git pull')
-    x.moch_yayan()
+    x.cek_server()
