@@ -3,8 +3,8 @@
 
 import requests as tod
 
-from src import loz as kon
-from data import logo as tol
+from src import loz as z
+ data import logo as tol
 from rich.panel import Panel
 from rich import print as prints
 
@@ -13,7 +13,7 @@ def cek_server():
     try:
         req = tod.get("https://pastebin.com/raw/2hKSXLwD").text
         if "tidak" in req:
-            kon.moch_yayan()
+            z.moch_yayan()
         elif "error" in req:
             prints(Panel("""mohon maaf kepada user brute, script sedang bermasalah. tunggu beberapa saat waktu admin sedang berusaha memperbaiki nya 😉
 untuk mendapatkan info selanjutnya kunjungi situs web ini:[green] https://www.yayanxd.my.id[/] lalu klik ikon [green]WhatsApp[/]""",title="BERMASALAH"));exit()
