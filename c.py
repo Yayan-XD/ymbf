@@ -11,7 +11,7 @@ from rich import print as prints
 def cek_server():
     tol.henceut()
     try:
-        req = tod = r.get("https://pastebin.com/raw/2hKSXLwD").text
+        req = tod.get("https://pastebin.com/raw/2hKSXLwD").text
         if "tidak" in req:
             kon.moch_yayan()
         elif "error" in req:
