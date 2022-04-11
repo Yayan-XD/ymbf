@@ -54,13 +54,13 @@ def hasil():
                 except:continue
                 xx+=1
                 if xx<10:
-                    nom ="0"+str(xx)
+                    mmk ="0"+str(xx)
                     xa.update({str(xx):str(ini)})
-                    xa.update({nom:str(xx)})
-                    print(f"  [{O}{nom}{N}] {ini} -> {H}{str(len(fi1))}{N}")
+                    xa.update({mmk:str(xx)})
+                    print(f"  [{O}{mmk}{N}] {ini} -> {H}{str(len(fi1))}{N}")
                 else:
                     xa.update({str(xx):str(ini)})
-                    print(f"  [{O}{nom}{N}] {ini} -> {H}{str(len(fi1))}{N}")
+                    print(f"  [{O}{mmk}{N}] {ini} -> {H}{str(len(fi1))}{N}")
             prints(Panel(f"         {biru_m}SILAHKAN PILIH NOMOR YANG MAU ANDA CEK{hapus}"))
             file = input(f"  [{M}?{N}] nomor : ")
             try:ajg = xa[file]
@@ -93,13 +93,13 @@ def hasil():
                 except:continue
                 xx+=1
                 if xx<10:
-                    nom ="0"+str(xx)
+                    mmk ="0"+str(xx)
                     xa.update({str(xx):str(tod)})
-                    xa.update({nom:str(xx)})
-                    print(f"  [{O}{nom}{N}] {tod} -> {H}{str(len(fi2))}{N}")
+                    xa.update({mmk:str(xx)})
+                    print(f"  [{O}{mmk}{N}] {tod} -> {H}{str(len(fi2))}{N}")
                 else:
                     xa.update({str(xx):str(tod)})
-                    print(f"  [{O}{nom}{N}] {tod} -> {H}{str(len(fi2))}{N}")
+                    print(f"  [{O}{mmk}{N}] {tod} -> {H}{str(len(fi2))}{N}")
             prints(Panel(f"         {biru_m}SILAHKAN PILIH NOMOR YANG MAU ANDA CEK{hapus}"))
             file = input(f"  [{M}?{N}] nomor : ")
             try:ajg = xa[file]
