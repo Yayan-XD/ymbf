@@ -1,24 +1,21 @@
-#Ngapain bro Mau recode?
-#Mikir dong goblok Lo pikir gampang buat script
+import os, sys, shutil
+from src import loz as x
 
-import requests as r
 
-from rich.panel import Panel
-from rich import print as prints
+try: shutil.rmtree('data/__pycache__')
+except: pass
+try: shutil.rmtree('src/__pycache__')
+except: pass
 
-from src import loz as qq
-from data import logo as asy
+for filename in os.listdir('data'):
+	if filename[-3:] == 'pyc':
+		try: os.remove('data/'+filename)
+		except: pass
 
-def cek_server():
-    asy.henceut()
-    try:
-        req = r.get("https://pastebin.com/raw/2hKSXLwD").text
-        if "tidak" in req:
-            qq.moch_yayan()
-        elif "error" in req:
-            prints(Panel("""mohon maaf kepada user brute, script sedang bermasalah. tunggu beberapa saat waktu admin sedang berusaha memperbaiki nya 😉
-untuk mendapatkan info selanjutnya kunjungi situs web ini:[green] https://www.yayanxd.my.id[/] lalu klik ikon [green]WhatsApp[/]""",title="BERMASALAH"));exit()
-        else:
-            prints(Panel("[bold red]gagal menghubungkan ke server[/]"))
-    except r.exceptions.ConnectionError:
-        print("");prints(Panel("😔[bold red] gagal menghubungkan ke server, silahkan cek koneksi anda dan mainkan mode pesawat 5 detik."));exit()
+for filename in os.listdir('src'):
+	if filename[-3:] == 'pyc':
+		try: os.remove('src/'+filename)
+		except: pass
+
+wkwkskkkwwk = x.moch_yayan()
+wkwkskkkwwk.start()
