@@ -1,4 +1,14 @@
-# Apalo ajg
+#######################################################
+# Name           : Yayan Multi Brute Facebook (YMBF)  #
+# File           : logo.py                            #
+# Author         : Moch Yayan Juan Alvredo XD.        #
+# Github         : https://github.com/dz-id           #
+# Facebook       : https://www.facebook.com/KM39453   #
+# Website        : https://www.yayanxd.my.id          #
+# Python version : 0.3                                #
+#######################################################
+
+############# DON'T REMOVE THIS FUNCTIONS #############
 
 import sys, os
 #---- MODULE RICH IN PYTHON -------
