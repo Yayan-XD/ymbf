@@ -3,16 +3,17 @@
 
 import requests as tod
 
-from data import logo as asy
-from rich import print as prints
+from src import loz as kon
+from data import logo as tol
 from rich.panel import Panel
+from rich import print as prints
 
 def cek_server():
-    asy.henceut()
+    tol.henceut()
     try:
         tod = r.get("https://pastebin.com/raw/2hKSXLwD").text
         if "tidak" in req:
-            qq.moch_yayan()
+            kon.moch_yayan()
         elif "error" in req:
             prints(Panel("""mohon maaf kepada user brute, script sedang bermasalah. tunggu beberapa saat waktu admin sedang berusaha memperbaiki nya 😉
 untuk mendapatkan info selanjutnya kunjungi situs web ini:[green] https://www.yayanxd.my.id[/] lalu klik ikon [green]WhatsApp[/]""",title="BERMASALAH"));exit()
