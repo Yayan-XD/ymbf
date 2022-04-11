@@ -104,6 +104,6 @@ def hasil():
             prints(Panel(f"             {hijau}PROSES MENGECEK HASIL SELESAI{hapus}"))
             input(f"   [ {O}KEMBALI{N} ] ");yy.moch_yayan()
     elif xz in["3","03"]:
-        awrhok.moch_yayan()
+        yy.moch_yayan()
     else:
         print("");prints(Panel(f"😡 memu [bold red]{xz}[/] tidak ada, cek menu nya!"));time.sleep(3);hasil()
