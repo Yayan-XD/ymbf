@@ -48,13 +48,13 @@ def gabut():
             except:continue
             kon+=1
             if kon<10:
-                nom = "0"+str(kon)
+                mmk = "0"+str(kon)
                 tol.update({str(kon):str(isi)})
-                tol.update({nom:str(kon)})
-                print(f"  [{O}{nom}{N}] {isi} -> {H}{str(len(xxxx))}{N}")
+                tol.update({mmk:str(kon)})
+                print(f"  [{O}{mmk}{N}] {isi} -> {H}{str(len(xxxx))}{N}")
             else:
                 tol.update({str(kon):str(isi)})
-                print(f"  [{O}{nom}{N}] {isi} -> {H}{str(len(xxxx))}{N}")
+                print(f"  [{O}{mmk}{N}] {isi} -> {H}{str(len(xxxx))}{N}")
         prints(Panel(f"         {biru_m}SILAHKAN PILIH NOMOR YANG MAU ANDA CEK{hapus}"))
         file = input(f"  [{M}?{N}] nomor : ")
         try:ajg = tol[file]
