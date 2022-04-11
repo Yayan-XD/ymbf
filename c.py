@@ -4,12 +4,12 @@
 import requests as tod
 
 from src import loz as z
- data import logo as tol
+from data import logo as x
 from rich.panel import Panel
 from rich import print as prints
 
 def cek_server():
-    tol.henceut()
+    x.henceut()
     try:
         req = tod.get("https://pastebin.com/raw/2hKSXLwD").text
         if "tidak" in req:
