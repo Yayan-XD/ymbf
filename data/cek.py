@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 #---- MODULE RICH IN PYTHON -------
 from rich import print as prints
 from rich.panel import Panel
+from src import cok as yy
 
 M = '\x1b[1;91m' # MERAH
 H = '\x1b[1;92m' # HIJAU
@@ -73,7 +74,7 @@ def gabut():
         prints(Panel("[bold green]Proses Pengecekan Selesai[/]"))
         try:os.remove(buka_baju)
         except:pass
-        exit()
+        input(f"   [ {O}KEMBALI{N} ] ");yy.moch_yayan()
 # ------- CHECKPOINT DETEDTOR --------
 def log_hasil(user, pasw):
     global aman,cp,salah
