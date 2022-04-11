@@ -1,3 +1,15 @@
+#######################################################
+# Name           : Yayan Multi Brute Facebook (YMBF)  #
+# File           : cek.py                             #
+# Author         : Moch Yayan Juan Alvredo XD.        #
+# Github         : https://github.com/dz-id           #
+# Facebook       : https://www.facebook.com/KM39453   #
+# Website        : https://www.yayanxd.my.id          #
+# Python version : 0.3                                #
+#######################################################
+
+############# DON'T REMOVE THIS FUNCTIONS #############
+
 import requests, os, bs4, re
 from bs4 import BeautifulSoup
 #---- MODULE RICH IN PYTHON -------
