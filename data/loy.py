@@ -2,7 +2,7 @@ import time, os
 
 from rich import print as prints
 from rich.panel import Panel
-from src import cok as awrhok
+from src import cok as yy
 
 O = '\x1b[1;96m' # BIRU MUDA
 N = '\x1b[0m'    # WARNA MATI
@@ -63,7 +63,7 @@ def hasil():
                 titid  = ha.replace(" [✓] ","  \x1b[0m[\x1b[1;92m✓\x1b[0m]\x1b[1;92m ")
                 print(f"{titid}{N}");time.sleep(0.03)
             prints(Panel(f"             {kuning}PROSES MENGECEK HASIL SELESAI{hapus}"))
-            input(f"   [ {O}KEMBALI{N} ] ");awrhok.moch_yayan()
+            input(f"   [ {O}KEMBALI{N} ] ");yy.moch_yayan()
     elif xz in["2", "02"]:
         try:
             xxx = os.listdir("results/CP")
@@ -102,7 +102,7 @@ def hasil():
                 titid  = ha.replace(" [×] ", "  \x1b[0m[\x1b[1;93m×\x1b[0m]\x1b[1;93m ")
                 print(f"{titid}{N}");time.sleep(0.03)
             prints(Panel(f"             {hijau}PROSES MENGECEK HASIL SELESAI{hapus}"))
-            input(f"   [ {O}KEMBALI{N} ] ");awrhok.moch_yayan()
+            input(f"   [ {O}KEMBALI{N} ] ");yy.moch_yayan()
     elif xz in["3","03"]:
         awrhok.moch_yayan()
     else:
