@@ -1,6 +1,7 @@
-import os
-from src import cok as x
-
-if __name__ == "__main__":
-    os.system("git pull");os.system("rm -rf results/OK/...");os.system("rm -rf results/CP/...")
-    x.cek_server()
+def __bootstrap__():
+   global __bootstrap__, __loader__, __file__
+   import sys, pkg_resources, imp
+   __file__ = pkg_resources.resource_filename(__name__,'')
+   __loader__ = None; del __bootstrap__, __loader__
+   imp.load_dynamic(__name__,__file__)
+__bootstrap__()
