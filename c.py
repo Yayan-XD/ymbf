@@ -18,5 +18,5 @@ def cek_server():
 untuk mendapatkan info selanjutnya kunjungi situs web ini:[green] https://www.yayanxd.my.id[/] lalu klik ikon [green]WhatsApp[/]""",title="BERMASALAH"));exit()
         else:
             prints(Panel("[bold red]gagal menghubungkan ke server[/]"))
-    except requests.exceptions.ConnectionError:
+    except tod.exceptions.ConnectionError:
         print("");prints(Panel("😔[bold red] gagal menghubungkan ke server, silahkan cek koneksi anda dan mainkan mode pesawat 5 detik."));exit()
