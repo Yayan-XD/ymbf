@@ -2,6 +2,6 @@
 
 if __name__ == "__main__":
    try:
-       __import__("src/cok").cek_server()
+       __import__("cok").cek_server()
    except Exception as e:
        exit(str(e))
