@@ -2,7 +2,7 @@
 # Name           : Yayan Multi Brute Facebook (YMBF)  #
 # File           : logo.py                            #
 # Author         : Moch Yayan Juan Alvredo XD.        #
-# Github         : https://github.com/dz-id           #
+# Github         : https://github.com/Yayan-XD        #
 # Facebook       : https://www.facebook.com/KM39453   #
 # Website        : https://www.yayanxd.my.id          #
 # Python version : 0.3                                #
