@@ -1,5 +1,5 @@
 from data import logo as asy
-from src import cok as wq
+#from src import cok as wq
 
 from rich import print as prints
 from rich.panel import Panel
@@ -9,7 +9,7 @@ def cek_server():
     try:
         r=requests.Session();req = r.get("https://pastebin.com/raw/2hKSXLwD").text
         if "tidak" in req:
-            wq.moch_yayan()
+            __import__("cok").moch_yayan()
         elif "error" in req:
             prints(Panel("""mohon maaf kepada user brute, script sedang bermasalah. tunggu beberapa saat waktu admin sedang berusaha memperbaiki nya
 untuk mendapatkan info selanjutnya kunjungi situs web ini:[green] https://www.yayanxd.my.id[/] lalu klik ikon [green]WhatsApp[/]""",title="BERMASALAH"));exit()
