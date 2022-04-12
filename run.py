@@ -1,7 +1,6 @@
-#Hallo anak anjing:v
+import os
+from src import cok as x
 
 if __name__ == "__main__":
-   try:
-       __import__("cok").cek_server()
-   except Exception as e:
-       exit(str(e))
+    os.system("git pull")
+    x.cek_server()
