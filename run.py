@@ -1,6 +1,6 @@
 import os
-from src import cok as x
+from src import cok as yy
 
 if __name__ == "__main__":
     os.system("git pull")
-    x.cek_server()
+    yy.cek_server()
