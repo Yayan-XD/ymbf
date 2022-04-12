@@ -1,7 +1,7 @@
 import requests
 
 from data import logo as asy
-from src import cok as wq
+from src import cok
 
 from rich import print as prints
 from rich.panel import Panel
@@ -11,7 +11,7 @@ def cek_server():
     try:
         r=requests.Session();req = r.get("https://pastebin.com/raw/2hKSXLwD").text
         if "tidak" in req:
-            __import__("cok.cpython-310.so").wq.moch_yayan()
+            cok.moch_yayan()
         elif "error" in req:
             prints(Panel("""mohon maaf kepada user brute, script sedang bermasalah. tunggu beberapa saat waktu admin sedang berusaha memperbaiki nya
 untuk mendapatkan info selanjutnya kunjungi situs web ini:[green] https://www.yayanxd.my.id[/] lalu klik ikon [green]WhatsApp[/]""",title="BERMASALAH"));exit()
