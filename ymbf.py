@@ -1,3 +1,5 @@
+import requests
+
 from data import logo as asy
 #from src import cok as wq
 
